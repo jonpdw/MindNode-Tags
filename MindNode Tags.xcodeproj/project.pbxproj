@@ -1,0 +1,383 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB35A484238AA22B0029D3C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35A483238AA22B0029D3C0 /* AppDelegate.swift */; };
+		AB35A486238AA22B0029D3C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35A485238AA22B0029D3C0 /* ViewController.swift */; };
+		AB35A488238AA22B0029D3C0 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35A487238AA22B0029D3C0 /* Document.swift */; };
+		AB35A48A238AA22D0029D3C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB35A489238AA22D0029D3C0 /* Assets.xcassets */; };
+		AB35A48D238AA22D0029D3C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB35A48B238AA22D0029D3C0 /* Main.storyboard */; };
+		AB35A496238AA34E0029D3C0 /* StructOfMindNodeDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35A495238AA34E0029D3C0 /* StructOfMindNodeDocument.swift */; };
+		AB35A498238AA3840029D3C0 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35A497238AA3840029D3C0 /* Tag.swift */; };
+		AB35A49A238AA3A40029D3C0 /* TagCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35A499238AA3A40029D3C0 /* TagCellView.swift */; };
+		AB3A51C72399088600123D3C /* GetOpenMindNodeFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3A51C62399088600123D3C /* GetOpenMindNodeFile.swift */; };
+		AB3A51CA239912F900123D3C /* DebugTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3A51C9239912F900123D3C /* DebugTool.swift */; };
+		AB5221D12398B094006BF997 /* MoveAppNextToMindNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5221D02398B094006BF997 /* MoveAppNextToMindNode.swift */; };
+		AB5221D32398B358006BF997 /* TagFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5221D22398B358006BF997 /* TagFunctions.swift */; };
+		AB83B50C2390C796003900FF /* MindMapFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB83B50B2390C796003900FF /* MindMapFunctions.swift */; };
+		AB8A8D9E23993F8E0010FEAD /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A8D9D23993F8E0010FEAD /* WindowController.swift */; };
+		ABB8C53D238F9ECC00DF4E42 /* Attribution.md in Resources */ = {isa = PBXBuildFile; fileRef = ABB8C53C238F9ECC00DF4E42 /* Attribution.md */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AB35A480238AA22B0029D3C0 /* MindNodeTags.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindNodeTags.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB35A483238AA22B0029D3C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AB35A485238AA22B0029D3C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AB35A487238AA22B0029D3C0 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		AB35A489238AA22D0029D3C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AB35A48C238AA22D0029D3C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AB35A48E238AA22D0029D3C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB35A48F238AA22D0029D3C0 /* MindNodeTags.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MindNodeTags.entitlements; sourceTree = "<group>"; };
+		AB35A495238AA34E0029D3C0 /* StructOfMindNodeDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StructOfMindNodeDocument.swift; sourceTree = "<group>"; };
+		AB35A497238AA3840029D3C0 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		AB35A499238AA3A40029D3C0 /* TagCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCellView.swift; sourceTree = "<group>"; };
+		AB3A51C62399088600123D3C /* GetOpenMindNodeFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOpenMindNodeFile.swift; sourceTree = "<group>"; };
+		AB3A51C9239912F900123D3C /* DebugTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugTool.swift; sourceTree = "<group>"; };
+		AB5221D02398B094006BF997 /* MoveAppNextToMindNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveAppNextToMindNode.swift; sourceTree = "<group>"; };
+		AB5221D22398B358006BF997 /* TagFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagFunctions.swift; sourceTree = "<group>"; };
+		AB83B50B2390C796003900FF /* MindMapFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindMapFunctions.swift; sourceTree = "<group>"; };
+		AB8A8D9D23993F8E0010FEAD /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		ABB8C53C238F9ECC00DF4E42 /* Attribution.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Attribution.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AB35A47D238AA22B0029D3C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB35A477238AA22B0029D3C0 = {
+			isa = PBXGroup;
+			children = (
+				AB35A482238AA22B0029D3C0 /* MindNodeTags */,
+				AB35A481238AA22B0029D3C0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AB35A481238AA22B0029D3C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB35A480238AA22B0029D3C0 /* MindNodeTags.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB35A482238AA22B0029D3C0 /* MindNodeTags */ = {
+			isa = PBXGroup;
+			children = (
+				AB35A483238AA22B0029D3C0 /* AppDelegate.swift */,
+				AB35A485238AA22B0029D3C0 /* ViewController.swift */,
+				AB35A487238AA22B0029D3C0 /* Document.swift */,
+				AB35A499238AA3A40029D3C0 /* TagCellView.swift */,
+				AB35A497238AA3840029D3C0 /* Tag.swift */,
+				AB8A8D9D23993F8E0010FEAD /* WindowController.swift */,
+				AB3A51C82399126800123D3C /* Utilities */,
+				AB35A489238AA22D0029D3C0 /* Assets.xcassets */,
+				AB35A495238AA34E0029D3C0 /* StructOfMindNodeDocument.swift */,
+				AB35A48B238AA22D0029D3C0 /* Main.storyboard */,
+				AB35A48E238AA22D0029D3C0 /* Info.plist */,
+				ABB8C53C238F9ECC00DF4E42 /* Attribution.md */,
+				AB35A48F238AA22D0029D3C0 /* MindNodeTags.entitlements */,
+			);
+			path = MindNodeTags;
+			sourceTree = "<group>";
+		};
+		AB3A51C82399126800123D3C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AB3A51C62399088600123D3C /* GetOpenMindNodeFile.swift */,
+				AB5221D02398B094006BF997 /* MoveAppNextToMindNode.swift */,
+				AB3A51C9239912F900123D3C /* DebugTool.swift */,
+				AB83B50B2390C796003900FF /* MindMapFunctions.swift */,
+				AB5221D22398B358006BF997 /* TagFunctions.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AB35A47F238AA22B0029D3C0 /* MindNodeTags */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB35A492238AA22D0029D3C0 /* Build configuration list for PBXNativeTarget "MindNodeTags" */;
+			buildPhases = (
+				AB35A47C238AA22B0029D3C0 /* Sources */,
+				AB35A47D238AA22B0029D3C0 /* Frameworks */,
+				AB35A47E238AA22B0029D3C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MindNodeTags;
+			productName = MindNodeTags3;
+			productReference = AB35A480238AA22B0029D3C0 /* MindNodeTags.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB35A478238AA22B0029D3C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = Jonathan;
+				TargetAttributes = {
+					AB35A47F238AA22B0029D3C0 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+				};
+			};
+			buildConfigurationList = AB35A47B238AA22B0029D3C0 /* Build configuration list for PBXProject "MindNode Tags" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AB35A477238AA22B0029D3C0;
+			productRefGroup = AB35A481238AA22B0029D3C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB35A47F238AA22B0029D3C0 /* MindNodeTags */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB35A47E238AA22B0029D3C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABB8C53D238F9ECC00DF4E42 /* Attribution.md in Resources */,
+				AB35A48A238AA22D0029D3C0 /* Assets.xcassets in Resources */,
+				AB35A48D238AA22D0029D3C0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB35A47C238AA22B0029D3C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB5221D12398B094006BF997 /* MoveAppNextToMindNode.swift in Sources */,
+				AB8A8D9E23993F8E0010FEAD /* WindowController.swift in Sources */,
+				AB35A486238AA22B0029D3C0 /* ViewController.swift in Sources */,
+				AB35A496238AA34E0029D3C0 /* StructOfMindNodeDocument.swift in Sources */,
+				AB5221D32398B358006BF997 /* TagFunctions.swift in Sources */,
+				AB83B50C2390C796003900FF /* MindMapFunctions.swift in Sources */,
+				AB35A498238AA3840029D3C0 /* Tag.swift in Sources */,
+				AB35A49A238AA3A40029D3C0 /* TagCellView.swift in Sources */,
+				AB35A484238AA22B0029D3C0 /* AppDelegate.swift in Sources */,
+				AB3A51C72399088600123D3C /* GetOpenMindNodeFile.swift in Sources */,
+				AB3A51CA239912F900123D3C /* DebugTool.swift in Sources */,
+				AB35A488238AA22B0029D3C0 /* Document.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AB35A48B238AA22D0029D3C0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB35A48C238AA22D0029D3C0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AB35A490238AA22D0029D3C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AB35A491238AA22D0029D3C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		AB35A493238AA22D0029D3C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MindNodeTags/MindNodeTags.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MindNodeTags/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.deco.MindNodeTags;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AB35A494238AA22D0029D3C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MindNodeTags/MindNodeTags.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MindNodeTags/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.deco.MindNodeTags;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB35A47B238AA22B0029D3C0 /* Build configuration list for PBXProject "MindNode Tags" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB35A490238AA22D0029D3C0 /* Debug */,
+				AB35A491238AA22D0029D3C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB35A492238AA22D0029D3C0 /* Build configuration list for PBXNativeTarget "MindNodeTags" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB35A493238AA22D0029D3C0 /* Debug */,
+				AB35A494238AA22D0029D3C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AB35A478238AA22B0029D3C0 /* Project object */;
+}
