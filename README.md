@@ -6,7 +6,7 @@ I made this app as I love MindNode but wish that it had tags. This is my first M
 ![Example Image](https://github.com/jonpdw/MindNode-Tags/raw/master/MindNode%20Tag%20Extension%20Simple%20Image.png)
 
 ## Installation instructions
-[Download here](https://github.com/jonpdw/MindNode-Tags/releases/latest/download/)
+Download the `MindNode Tag<xxxx>.zip` file from [here](https://github.com/jonpdw/MindNode-Tags/releases/latest/)
 
 ## Features
 * Drag and organise tags however you want
