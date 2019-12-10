@@ -1,5 +1,5 @@
 # MindNode-Tags
-A extension for MindNode that adds tags. The app runs as a separate applicaiton and works by editing the xml file inside MindNode files.
+MindNode Tags is an extension for MindNode that adds tags and filtering. The app runs as a separate applicaiton and works by editing the xml file inside MindNode files.
 
 I made this app as I love MindNode but wish that it had tags. This is my first Mac applicaiton. Let me know if you find it helpful.
 
