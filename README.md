@@ -14,7 +14,8 @@ Download the `MindNode Tag<xxxx>.zip` file from [here](https://github.com/jonpdw
 ## Warning
 * I am not responsible for any data loss due to my app crashing. 
 
-
+## Compatability
+* I have tested the app on MindNode 2.5.8 and 6.1.2. Let me know if there are any bugs in other versions
 
 ## Known problems
 The app is kinda laggy 
