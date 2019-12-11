@@ -7,7 +7,7 @@
 		<key>MindNodeTags.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<key>MindNodeTags3.xcscheme_^#shared#^_</key>
 		<dict>
@@ -20,7 +20,7 @@
 		<key>AB35A47F238AA22B0029D3C0</key>
 		<dict>
 			<key>primary</key>
-			<true />
+			<true/>
 		</dict>
 	</dict>
 </dict>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "getMindNodeOpenFileUrl():GetOpenMindNodeFile.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "result">
+            </PersistentString>
+            <PersistentString
+               value = "result as! String">
+            </PersistentString>
+            <PersistentString
+               value = "docRef">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Document.read6(url:):Document.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "PropertyListDecoder().decode(MindNode6ContentStruct.self, from: dataObject)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.tagsSet(tagList:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "nsDocumentContent?.loadedVersion == 6">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.nsDocumentMainNodeListSet(nodeList:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "nsDocumentContent?.loadedVersion">
+            </PersistentString>
+            <PersistentString
+               value = "nsDocumentContent?.loadedVersion == 5">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Document.read(from:ofType:):Document.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "loadedVersion">
+            </PersistentString>
+            <PersistentString
+               value = "url.absoluteString">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "moveAppNextToOpenMindNodeDocument():MoveAppNextToMindNode.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "AXIsProcessTrusted()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.nsDocumentMainNodeListGet():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "nsDocumentContent?.loadedVersion">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

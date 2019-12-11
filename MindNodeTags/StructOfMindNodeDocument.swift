@@ -29,7 +29,7 @@ struct strokeStyleStruct: Codable {
 }
 
 struct pathStyleStruct: Codable {
-    var pathType: Int
+    var pathType: Int?
     var strokeStyle: strokeStyleStruct
 }
 
@@ -53,7 +53,7 @@ struct fontStyleStruct: Codable {
     var strikethrough: Bool
     var underline: Bool
 }
-
+// mindNode2
 struct titleStruct: Codable {
     var allowToShrinkWidth: Bool
     var fontStyle: fontStyleStruct?
@@ -71,12 +71,13 @@ struct nodeStruct: Codable {
     var location: String
     var nodeID: String
     var pathStyle: pathStyleStruct
-    var shapeStyle: shapeStyleStruct
+    var shapeStyle: shapeStyleStruct?
     var subnodes: [nodeStruct]
     var title: titleStruct
     
     var willShowInFilter: Bool?
 }
+
 
 
 struct arrowStyleStruc: Codable {

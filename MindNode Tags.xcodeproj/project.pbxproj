@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		081305458DFF3F45B0D12B4F /* Pods_MindNode_Tags.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C57C585BA8545E87EEBD5E6 /* Pods_MindNode_Tags.framework */; };
 		AB35A484238AA22B0029D3C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35A483238AA22B0029D3C0 /* AppDelegate.swift */; };
 		AB35A486238AA22B0029D3C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35A485238AA22B0029D3C0 /* ViewController.swift */; };
 		AB35A488238AA22B0029D3C0 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35A487238AA22B0029D3C0 /* Document.swift */; };
@@ -19,13 +20,22 @@
 		AB3A51CA239912F900123D3C /* DebugTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3A51C9239912F900123D3C /* DebugTool.swift */; };
 		AB5221D12398B094006BF997 /* MoveAppNextToMindNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5221D02398B094006BF997 /* MoveAppNextToMindNode.swift */; };
 		AB5221D32398B358006BF997 /* TagFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5221D22398B358006BF997 /* TagFunctions.swift */; };
+		AB7ED9F123A0BD71009975CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB7ED9F023A0BD71009975CF /* Foundation.framework */; };
 		AB83B50C2390C796003900FF /* MindMapFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB83B50B2390C796003900FF /* MindMapFunctions.swift */; };
 		AB8A8D9E23993F8E0010FEAD /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A8D9D23993F8E0010FEAD /* WindowController.swift */; };
+		AB9A59D723A0332C00F2538C /* contents 2.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB9A59D623A0332B00F2538C /* contents 2.plist */; };
 		ABB8C53D238F9ECC00DF4E42 /* Attribution.md in Resources */ = {isa = PBXBuildFile; fileRef = ABB8C53C238F9ECC00DF4E42 /* Attribution.md */; };
+		ABD720DD239E1339006255E7 /* StructForMindNode6.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD720DC239E1339006255E7 /* StructForMindNode6.swift */; };
+		ABD720DF239E1F48006255E7 /* Example MindNode 6.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABD720DE239E1F48006255E7 /* Example MindNode 6.plist */; };
+		ABD7212D239E5D40006255E7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABD7212C239E5D40006255E7 /* Security.framework */; };
+		ABD72133239E5E0E006255E7 /* PFMoveApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD72131239E5E0E006255E7 /* PFMoveApplication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AB35A480238AA22B0029D3C0 /* MindNodeTags.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindNodeTags.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BD6E62E8561CBEEB9FE20C8 /* Pods-MindNode Tags.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindNode Tags.release.xcconfig"; path = "Target Support Files/Pods-MindNode Tags/Pods-MindNode Tags.release.xcconfig"; sourceTree = "<group>"; };
+		2C57C585BA8545E87EEBD5E6 /* Pods_MindNode_Tags.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindNode_Tags.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EB490C461DB3E98EBC9EB26 /* Pods-MindNode Tags.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindNode Tags.debug.xcconfig"; path = "Target Support Files/Pods-MindNode Tags/Pods-MindNode Tags.debug.xcconfig"; sourceTree = "<group>"; };
+		AB35A480238AA22B0029D3C0 /* MindNode Tags.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MindNode Tags.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB35A483238AA22B0029D3C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB35A485238AA22B0029D3C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AB35A487238AA22B0029D3C0 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
@@ -40,9 +50,17 @@
 		AB3A51C9239912F900123D3C /* DebugTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugTool.swift; sourceTree = "<group>"; };
 		AB5221D02398B094006BF997 /* MoveAppNextToMindNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveAppNextToMindNode.swift; sourceTree = "<group>"; };
 		AB5221D22398B358006BF997 /* TagFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagFunctions.swift; sourceTree = "<group>"; };
+		AB7ED9F023A0BD71009975CF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AB83B50B2390C796003900FF /* MindMapFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindMapFunctions.swift; sourceTree = "<group>"; };
 		AB8A8D9D23993F8E0010FEAD /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		AB9A59D623A0332B00F2538C /* contents 2.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "contents 2.plist"; sourceTree = "<group>"; };
 		ABB8C53C238F9ECC00DF4E42 /* Attribution.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Attribution.md; sourceTree = "<group>"; };
+		ABD720DC239E1339006255E7 /* StructForMindNode6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructForMindNode6.swift; sourceTree = "<group>"; };
+		ABD720DE239E1F48006255E7 /* Example MindNode 6.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "Example MindNode 6.plist"; sourceTree = "<group>"; };
+		ABD7212C239E5D40006255E7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		ABD72131239E5E0E006255E7 /* PFMoveApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFMoveApplication.m; sourceTree = "<group>"; };
+		ABD72132239E5E0E006255E7 /* PFMoveApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFMoveApplication.h; sourceTree = "<group>"; };
+		ABD72134239E5E40006255E7 /* letsMove-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "letsMove-Bridging-Header.h"; path = "MindNodeTags/letsMove-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +68,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABD7212D239E5D40006255E7 /* Security.framework in Frameworks */,
+				AB7ED9F123A0BD71009975CF /* Foundation.framework in Frameworks */,
+				081305458DFF3F45B0D12B4F /* Pods_MindNode_Tags.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,13 +82,15 @@
 			children = (
 				AB35A482238AA22B0029D3C0 /* MindNodeTags */,
 				AB35A481238AA22B0029D3C0 /* Products */,
+				ABD7212B239E5D3F006255E7 /* Frameworks */,
+				F95D5D6B15A1AAC80837F6EE /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		AB35A481238AA22B0029D3C0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AB35A480238AA22B0029D3C0 /* MindNodeTags.app */,
+				AB35A480238AA22B0029D3C0 /* MindNode Tags.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,11 +104,17 @@
 				AB35A499238AA3A40029D3C0 /* TagCellView.swift */,
 				AB35A497238AA3840029D3C0 /* Tag.swift */,
 				AB8A8D9D23993F8E0010FEAD /* WindowController.swift */,
+				ABD72132239E5E0E006255E7 /* PFMoveApplication.h */,
+				ABD72131239E5E0E006255E7 /* PFMoveApplication.m */,
+				ABD72134239E5E40006255E7 /* letsMove-Bridging-Header.h */,
 				AB3A51C82399126800123D3C /* Utilities */,
 				AB35A489238AA22D0029D3C0 /* Assets.xcassets */,
 				AB35A495238AA34E0029D3C0 /* StructOfMindNodeDocument.swift */,
+				ABD720DC239E1339006255E7 /* StructForMindNode6.swift */,
+				ABD720DE239E1F48006255E7 /* Example MindNode 6.plist */,
 				AB35A48B238AA22D0029D3C0 /* Main.storyboard */,
 				AB35A48E238AA22D0029D3C0 /* Info.plist */,
+				AB9A59D623A0332B00F2538C /* contents 2.plist */,
 				ABB8C53C238F9ECC00DF4E42 /* Attribution.md */,
 				AB35A48F238AA22D0029D3C0 /* MindNodeTags.entitlements */,
 			);
@@ -104,24 +133,46 @@
 			name = Utilities;
 			sourceTree = "<group>";
 		};
+		ABD7212B239E5D3F006255E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB7ED9F023A0BD71009975CF /* Foundation.framework */,
+				ABD7212C239E5D40006255E7 /* Security.framework */,
+				2C57C585BA8545E87EEBD5E6 /* Pods_MindNode_Tags.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F95D5D6B15A1AAC80837F6EE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5EB490C461DB3E98EBC9EB26 /* Pods-MindNode Tags.debug.xcconfig */,
+				1BD6E62E8561CBEEB9FE20C8 /* Pods-MindNode Tags.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AB35A47F238AA22B0029D3C0 /* MindNodeTags */ = {
+		AB35A47F238AA22B0029D3C0 /* MindNode Tags */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AB35A492238AA22D0029D3C0 /* Build configuration list for PBXNativeTarget "MindNodeTags" */;
+			buildConfigurationList = AB35A492238AA22D0029D3C0 /* Build configuration list for PBXNativeTarget "MindNode Tags" */;
 			buildPhases = (
+				01E3963D8E7AC258BE267302 /* [CP] Check Pods Manifest.lock */,
 				AB35A47C238AA22B0029D3C0 /* Sources */,
 				AB35A47D238AA22B0029D3C0 /* Frameworks */,
 				AB35A47E238AA22B0029D3C0 /* Resources */,
+				7AC8DA7129532E338647E5E2 /* [CP] Embed Pods Frameworks */,
+				AB9A595F239EA55100F2538C /* Testing Run Script */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MindNodeTags;
+			name = "MindNode Tags";
 			productName = MindNodeTags3;
-			productReference = AB35A480238AA22B0029D3C0 /* MindNodeTags.app */;
+			productReference = AB35A480238AA22B0029D3C0 /* MindNode Tags.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -152,7 +203,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AB35A47F238AA22B0029D3C0 /* MindNodeTags */,
+				AB35A47F238AA22B0029D3C0 /* MindNode Tags */,
 			);
 		};
 /* End PBXProject section */
@@ -164,17 +215,81 @@
 			files = (
 				ABB8C53D238F9ECC00DF4E42 /* Attribution.md in Resources */,
 				AB35A48A238AA22D0029D3C0 /* Assets.xcassets in Resources */,
+				AB9A59D723A0332C00F2538C /* contents 2.plist in Resources */,
+				ABD720DF239E1F48006255E7 /* Example MindNode 6.plist in Resources */,
 				AB35A48D238AA22D0029D3C0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01E3963D8E7AC258BE267302 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MindNode Tags-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AC8DA7129532E338647E5E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MindNode Tags/Pods-MindNode Tags-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MindNode Tags/Pods-MindNode Tags-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MindNode Tags/Pods-MindNode Tags-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB9A595F239EA55100F2538C /* Testing Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Testing Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/testfile.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\necho \"Hello\" > ~/testfile.txt\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AB35A47C238AA22B0029D3C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABD720DD239E1339006255E7 /* StructForMindNode6.swift in Sources */,
 				AB5221D12398B094006BF997 /* MoveAppNextToMindNode.swift in Sources */,
 				AB8A8D9E23993F8E0010FEAD /* WindowController.swift in Sources */,
 				AB35A486238AA22B0029D3C0 /* ViewController.swift in Sources */,
@@ -185,6 +300,7 @@
 				AB35A49A238AA3A40029D3C0 /* TagCellView.swift in Sources */,
 				AB35A484238AA22B0029D3C0 /* AppDelegate.swift in Sources */,
 				AB3A51C72399088600123D3C /* GetOpenMindNodeFile.swift in Sources */,
+				ABD72133239E5E0E006255E7 /* PFMoveApplication.m in Sources */,
 				AB3A51CA239912F900123D3C /* DebugTool.swift in Sources */,
 				AB35A488238AA22B0029D3C0 /* Document.swift in Sources */,
 			);
@@ -215,6 +331,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_OPTIMIZATION_PROFILE_FILE = "";
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -254,7 +371,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -275,6 +392,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_OPTIMIZATION_PROFILE_FILE = "";
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -303,55 +421,66 @@
 				ENABLE_TESTABILITY = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Release;
 		};
 		AB35A493238AA22D0029D3C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EB490C461DB3E98EBC9EB26 /* Pods-MindNode Tags.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				CODE_SIGN_ENTITLEMENTS = MindNodeTags/MindNodeTags.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = XB5U87PMF7;
 				INFOPLIST_FILE = MindNodeTags/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.deco.MindNodeTags;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MindNodeTags/letsMove-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		AB35A494238AA22D0029D3C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BD6E62E8561CBEEB9FE20C8 /* Pods-MindNode Tags.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				CODE_SIGN_ENTITLEMENTS = MindNodeTags/MindNodeTags.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = XB5U87PMF7;
 				INFOPLIST_FILE = MindNodeTags/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.deco.MindNodeTags;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MindNodeTags/letsMove-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -368,7 +497,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AB35A492238AA22D0029D3C0 /* Build configuration list for PBXNativeTarget "MindNodeTags" */ = {
+		AB35A492238AA22D0029D3C0 /* Build configuration list for PBXNativeTarget "MindNode Tags" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AB35A493238AA22D0029D3C0 /* Debug */,

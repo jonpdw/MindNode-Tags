@@ -12,8 +12,35 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     let documentController = NSDocumentController.shared
+    
+    func applicationWillFinishLaunching(_ notification: Notification) {
+        if AXIsProcessTrusted() == false {
+            
+            let alert = NSAlert()
+            alert.messageText = "No Accessability Permissions"
+            alert.informativeText = "The app needs accessability permissions to run.\n\nIf you have just updated the app refresh the permissions by disabling then enableing the them\n"
+            alert.addButton(withTitle: "Quit App")
+            alert.addButton(withTitle: "Show Me How To Fix It")
+            
+            let modalResult = alert.runModal()
+            
+            switch modalResult {
+            case .alertFirstButtonReturn: // NSApplication.ModalResponse.alertFirstButtonReturn
+                NSApplication.shared.terminate(self)
+            case .alertSecondButtonReturn:
+                let url = URL(string: "https://v.usetapes.com/vjkxYbaIHE")!
+                NSWorkspace.shared.open(url)
+            default:
+                print("Something Else Clicked")
+            }
+            
+            
+            
+    }
+    }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+//        PFMoveToApplicationsFolderIfNecessary()
         tryOpenCurrentMindNodeFile()
         
     }
@@ -38,7 +65,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func tryOpenCurrentMindNodeFile() {
-        if let openFileName = getMindNodeOpenFileUrl() {
+        if let openFileName = getMindNodeOpenFileUrlMaster() {
             let openURL = openFileName.appendingPathComponent("contents.xml")
             documentController.openDocument(withContentsOf: openURL, display: true, completionHandler:{ _,_,_  in })
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refeshTagsList"), object: nil)

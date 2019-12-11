@@ -8,6 +8,7 @@
 
 import Cocoa
 import CoreGraphics
+import Sparkle
 
 class tagsClass{
     var list = [Tag]()
@@ -43,8 +44,64 @@ class ViewController: NSViewController {
     }
     
     var nsDocumentMainNodeList: [nodeStruct] {
-        get {return nsDocumentContent!.structOfMindNodeFile.mindMap.mainNodes}
-        set {nsDocumentContent!.structOfMindNodeFile.mindMap.mainNodes = newValue}
+        get {nsDocumentMainNodeListGet()}
+        set {nsDocumentMainNodeListSet(nodeList: newValue)}
+    }
+    
+    func nsDocumentMainNodeListGet() -> [nodeStruct] {
+        if nsDocumentContent!.loadedVersion == .five {
+            return nsDocumentContent!.structOfMindNodeFile.mindMap.mainNodes
+        }
+        if nsDocumentContent!.loadedVersion == .six {
+            return nsDocumentContent!.structOfMindNode6File.canvas.mindMaps.map {$0.mainNode}
+        }
+        return nil!
+    }
+    
+    func nsDocumentMainNodeListSet(nodeList: [nodeStruct]) {
+        if nsDocumentContent!.loadedVersion == .five {
+            nsDocumentContent!.structOfMindNodeFile.mindMap.mainNodes = nodeList
+        }
+        if nsDocumentContent!.loadedVersion == .six {
+            let mindMapsMoc = nsDocumentContent!.structOfMindNode6File.canvas.mindMaps
+            var returnBit: [mindMapsStruct] = []
+            #warning("Fix this function it is broken ")
+            for index in 0..<nodeList.count {
+                var mindMap = mindMapsMoc[index]
+                mindMap.mainNode = nodeList[index]
+                returnBit += [mindMap]
+            
+//            for (index, mindMap) in mindMapsMoc.enumerated() {
+//                var mindMap = mindMap
+//                mindMap.mainNode = nodeList[index]
+//                returnBit += [mindMap]
+            }
+            nsDocumentContent!.structOfMindNode6File.canvas.mindMaps = returnBit
+        }
+        print("nsDocument Set Error")
+//        return nil!
+    }
+    
+    
+    func tagsGet() -> [TagStruct]? {
+        if nsDocumentContent!.loadedVersion == .five {
+            return nsDocumentContent!.structOfMindNodeFile?.tags
+        }
+        if nsDocumentContent!.loadedVersion == .six {
+            return nsDocumentContent!.structOfMindNodeFile?.tags
+        }
+        return nil!
+    }
+    
+    func tagsSet(tagList: [TagStruct]) {
+        if nsDocumentContent!.loadedVersion == .five {
+            nsDocumentContent!.structOfMindNodeFile.tags = tagList
+        }
+        if nsDocumentContent!.loadedVersion == .six {
+            
+            nsDocumentContent!.structOfMindNode6File.tags = tagList
+        }
+        print("Tag set error")
     }
     
 //    var unfilteredDocument: [nodeStruct]!
@@ -56,6 +113,12 @@ class ViewController: NSViewController {
     let itemPasteboardType = NSPasteboard.PasteboardType(rawValue: "jonathan.outlineItem")
     
     let delegate = NSApplication.shared.delegate as! AppDelegate
+    
+    @IBAction func checkForUpdates(_ sender: Any) {
+        let updater = SUUpdater.shared()
+        updater?.feedURL = URL(string: "some mystery location")
+        updater?.checkForUpdates(self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -112,10 +175,10 @@ class ViewController: NSViewController {
         // when the app is hidden then unhidden it also calls this function. But I don't want it to be run again
         if hasAppBeenLaunched == false {
             
-            unfilteredDocumentList = [markWillShowInFilterList(nodeList: nsDocumentMainNodeList, taglist: [], markAllChildren: true)]
+            unfilteredDocumentList = [markWillShowInFilterList(nodeList:  nsDocumentMainNodeList, taglist: [], markAllChildren: true)]
 //            unfilteredDocumentList = [[]]
             documentHistory = [nsDocumentMainNodeList]
-            tags.list = convertTagStructListToTagList(tagStructList: nsDocumentContent!.structOfMindNodeFile.tags ?? [])
+            tags.list = convertTagStructListToTagList(tagStructList: tagsGet() ?? [])
             addNewTagstoTagList()
             DispatchQueue.main.async {
                 // I don't know why but if I don't do this the code doesn't seem to be called properly
@@ -217,7 +280,7 @@ class ViewController: NSViewController {
     @objc func addNewTagstoTagList() {
         
             for row in 0..<tags.flatList().count {
-                if outlineView.item(atRow: 0) != nil {
+                if outlineView.item(atRow: row) != nil {
                     let tagCellView = outlineView.view(atColumn: 0, row: row, makeIfNecessary: false) as! TagCellView
                     tagCellView.checkbox.isEnabled = false
                 }
@@ -239,7 +302,7 @@ class ViewController: NSViewController {
                     }
                     
 //                    writeTags(to: URL(string: "file:///Users/jonathan/Desktop/tags.xml")!, tagList: self.tags.list)
-                    self.nsDocumentContent!.structOfMindNodeFile.tags = convertTagListToTagStructList(tagList: self.tags.list)
+                    self.tagsSet(tagList: convertTagListToTagStructList(tagList: self.tags.list))
                     
                     self.sendActionSaveNSDocument()
                     let selectedIndexes = self.outlineView.selectedRow
@@ -254,8 +317,12 @@ class ViewController: NSViewController {
                                 self.outlineView.selectRowIndexes(IndexSet(arrayLiteral: selectedIndexes), byExtendingSelection: false)
                                 
                                     for row in 0..<self.tags.flatList().count {
-                                    let tagCellView = self.outlineView.view(atColumn: 0, row: row, makeIfNecessary: false) as! TagCellView
-                                    tagCellView.checkbox.isEnabled = true
+                                        if self.outlineView.item(atRow: row+1) != nil {
+                                            #warning("Insure this +1 stuff is legit")
+                                            let tagCellView = self.outlineView.view(atColumn: 0, row: row+1, makeIfNecessary: false) as! TagCellView
+                                            tagCellView.checkbox.isEnabled = true
+                                        }
+                                    
                                 
                                 }
                             }
@@ -435,7 +502,7 @@ extension ViewController: NSOutlineViewDataSource {
         outlineView.expandItem(item)
         outlineView.endUpdates()
         
-        nsDocumentContent!.structOfMindNodeFile.tags = convertTagListToTagStructList(tagList: self.tags.list)
+        tagsSet(tagList: convertTagListToTagStructList(tagList: self.tags.list))
         sendActionSaveNSDocument()
         
         return true

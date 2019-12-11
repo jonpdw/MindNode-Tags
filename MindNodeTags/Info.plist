@@ -38,9 +38,11 @@
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>1.1</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.productivity</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>NSHumanReadableCopyright</key>
@@ -51,6 +53,10 @@
 	<string>NSApplication</string>
 	<key>NSSupportsAutomaticTermination</key>
 	<true/>
+	<key>SUPublicEDKey</key>
+	<string>lsNxHFTEFQkZEUrHaPTNVLYKlvAiSo2N71g6V8B+KOY=</string>
+	<key>SUFeedURL</key>
+	<string>https://jonpdw.github.io/MindNode-Tags/appcast.xml</string>
 	<key>NSSupportsSuddenTermination</key>
 	<true/>
 </dict>

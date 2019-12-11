@@ -16,7 +16,7 @@ func moveAppNextToOpenMindNodeDocument(){
         return
     }
     
-    let openFileName = getMindNodeOpenFileUrl()!.deletingPathExtension().lastPathComponent
+    let openFileName = getMindNodeOpenFileUrlMaster()!.deletingPathExtension().lastPathComponent
     var mindNodeBounds = CGRect(x: 0, y: 0, width: 300, height: 500)
     if let windowList = CGWindowListCopyWindowInfo([.optionAll], kCGNullWindowID) as? [[String: AnyObject]] {
         for window in windowList {
@@ -86,7 +86,7 @@ func moveAppNextToOpenMindNodeDocument(){
         _ = entry[kCGWindowBounds as String] as? [String: Int] // bounds
         let pid = entry[kCGWindowOwnerPID as String] as? Int32
         
-        if owner == "MindNodeTags"
+        if owner == "MindNode Tags"
         {
             let appRef = AXUIElementCreateApplication(pid!);  //TopLevel Accessability Object of PID
             

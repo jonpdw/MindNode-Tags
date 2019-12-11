@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AB35A47F238AA22B0029D3C0"
-               BuildableName = "MindNodeTags.app"
-               BlueprintName = "MindNodeTags"
+               BuildableName = "MindNode Tags.app"
+               BlueprintName = "MindNode Tags"
                ReferencedContainer = "container:MindNode Tags.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,6 +34,8 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      debugAsWhichUser = "root"
+      enableUBSanitizer = "YES"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -46,8 +48,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AB35A47F238AA22B0029D3C0"
-            BuildableName = "MindNodeTags.app"
-            BlueprintName = "MindNodeTags"
+            BuildableName = "MindNode Tags.app"
+            BlueprintName = "MindNode Tags"
             ReferencedContainer = "container:MindNode Tags.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -63,8 +65,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AB35A47F238AA22B0029D3C0"
-            BuildableName = "MindNodeTags.app"
-            BlueprintName = "MindNodeTags"
+            BuildableName = "MindNode Tags.app"
+            BlueprintName = "MindNode Tags"
             ReferencedContainer = "container:MindNode Tags.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
