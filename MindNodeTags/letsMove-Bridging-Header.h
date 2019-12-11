@@ -9,6 +9,9 @@
 #ifndef letsMove_Bridging_Header_h
 #define letsMove_Bridging_Header_h
 
+//@import Foundation;
+//#import <Foundation/Foundation.h>
 #import "PFMoveApplication.h"
+
 
 #endif /* letsMove_Bridging_Header_h */

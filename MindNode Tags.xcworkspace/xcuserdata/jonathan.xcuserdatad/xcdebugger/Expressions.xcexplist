@@ -33,6 +33,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "closure #1 in closure #1 in closure #2 in closure #1 in closure #1 in closure #1 in ViewController.addNewTagstoTagList():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.outlineView.item(atRow: row)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "ViewController.nsDocumentMainNodeListSet(nodeList:):ViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -57,6 +65,9 @@
       <ContextState
          contextName = "moveAppNextToOpenMindNodeDocument():MoveAppNextToMindNode.swift">
          <PersistentStrings>
+            <PersistentString
+               value = "getMindNodeOpenFileUrl(identifier: &quot;com.ideasoncanvas.mindnode.macos&quot;)">
+            </PersistentString>
             <PersistentString
                value = "AXIsProcessTrusted()">
             </PersistentString>

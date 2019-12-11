@@ -38,7 +38,7 @@ func writeTags(to url: URL, tagList: [Tag]) {
         let encodedItem = try encoder.encode(tempRoot)
         try encodedItem.write(to: url)
     } catch {
-        Swift.print("Write error")
+        Swift.print("Write Tags error")
     }
 }
 
@@ -49,7 +49,7 @@ func readTags(from url: URL) -> [Tag]? {
         return convertTagStructListToTagList(tagStructList: DecodedStructVersionOfData.children)
         
     } else {
-        Swift.print("Read Problem")
+        Swift.print("Read Tags Problem")
         return nil
     }
 }

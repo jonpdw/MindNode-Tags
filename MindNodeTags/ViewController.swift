@@ -49,59 +49,51 @@ class ViewController: NSViewController {
     }
     
     func nsDocumentMainNodeListGet() -> [nodeStruct] {
-        if nsDocumentContent!.loadedVersion == .five {
+        switch nsDocumentContent!.loadedVersion {
+        case .five:
             return nsDocumentContent!.structOfMindNodeFile.mindMap.mainNodes
+        case .six:
+             return nsDocumentContent!.structOfMindNode6File.canvas.mindMaps.map {$0.mainNode}
+        case .none:
+            fatalError("nsDocumentMainNodeListGet Switch Error")
         }
-        if nsDocumentContent!.loadedVersion == .six {
-            return nsDocumentContent!.structOfMindNode6File.canvas.mindMaps.map {$0.mainNode}
-        }
-        return nil!
     }
     
     func nsDocumentMainNodeListSet(nodeList: [nodeStruct]) {
-        if nsDocumentContent!.loadedVersion == .five {
+        switch nsDocumentContent!.loadedVersion {
+        case .five:
             nsDocumentContent!.structOfMindNodeFile.mindMap.mainNodes = nodeList
+        case .six:
+            nsDocumentContent!.structOfMindNode6File.canvas.mindMaps =  nodeList.map {mindMapsStruct(branchType: 0, styleAdjustmentType: 0, mainNode: $0, branchWidthType: 0, layoutStyle: 2)}
+        case .none:
+            print("nsDocument Set Error")
         }
-        if nsDocumentContent!.loadedVersion == .six {
-            let mindMapsMoc = nsDocumentContent!.structOfMindNode6File.canvas.mindMaps
-            var returnBit: [mindMapsStruct] = []
-            #warning("Fix this function it is broken ")
-            for index in 0..<nodeList.count {
-                var mindMap = mindMapsMoc[index]
-                mindMap.mainNode = nodeList[index]
-                returnBit += [mindMap]
-            
-//            for (index, mindMap) in mindMapsMoc.enumerated() {
-//                var mindMap = mindMap
-//                mindMap.mainNode = nodeList[index]
-//                returnBit += [mindMap]
-            }
-            nsDocumentContent!.structOfMindNode6File.canvas.mindMaps = returnBit
-        }
-        print("nsDocument Set Error")
-//        return nil!
     }
     
     
     func tagsGet() -> [TagStruct]? {
-        if nsDocumentContent!.loadedVersion == .five {
+        switch nsDocumentContent!.loadedVersion {
+        case .five:
             return nsDocumentContent!.structOfMindNodeFile?.tags
+        case .six:
+            return nsDocumentContent!.structOfMindNode6File?.tags
+        case .none:
+            fatalError("Tag Get Switch Error")
         }
-        if nsDocumentContent!.loadedVersion == .six {
-            return nsDocumentContent!.structOfMindNodeFile?.tags
-        }
-        return nil!
+        
     }
     
     func tagsSet(tagList: [TagStruct]) {
-        if nsDocumentContent!.loadedVersion == .five {
+        switch nsDocumentContent!.loadedVersion {
+        case .five:
             nsDocumentContent!.structOfMindNodeFile.tags = tagList
-        }
-        if nsDocumentContent!.loadedVersion == .six {
-            
+        case .six:
             nsDocumentContent!.structOfMindNode6File.tags = tagList
+        case .none:
+            print("Tag set error")
         }
-        print("Tag set error")
+        
+        
     }
     
 //    var unfilteredDocument: [nodeStruct]!
@@ -209,7 +201,7 @@ class ViewController: NSViewController {
         
         
         let newUnfilteredDocumentList = mergeUnfilteredWithFiltered(unfiltered: unfilteredDocumentList[0], filtered: nsDocumentMainNodeList)
-        print("")
+        
         // this fixes a problem where I unfilter but for some reason it doesn't work. I don't know why but trying it a few times seems to fix it
         
         // I could have added new items while the document was
@@ -245,7 +237,7 @@ class ViewController: NSViewController {
         
         let newFilteredDocumentList = filterNodeListByTag(subnodeList: newUnfilteredDocumentList, tagsToFilterBy: filteredTagsString)
         
-        print("")
+        
         repeat {
             nsDocumentMainNodeList = newFilteredDocumentList
             sendActionSaveNSDocument()
@@ -310,16 +302,16 @@ class ViewController: NSViewController {
                     self.outlineView.expandItem(nil, expandChildren: true)
                     
                     DispatchQueue.global().async(qos: .userInteractive) {
-                        let seconds: Double = 0.01
+                        let seconds: Double = 0.05
+
                         let dispatchTime: DispatchTime = DispatchTime.now() + seconds
                         DispatchQueue.global().asyncAfter(deadline: dispatchTime) {
                             DispatchQueue.main.async {
                                 self.outlineView.selectRowIndexes(IndexSet(arrayLiteral: selectedIndexes), byExtendingSelection: false)
                                 
                                     for row in 0..<self.tags.flatList().count {
-                                        if self.outlineView.item(atRow: row+1) != nil {
-                                            #warning("Insure this +1 stuff is legit")
-                                            let tagCellView = self.outlineView.view(atColumn: 0, row: row+1, makeIfNecessary: false) as! TagCellView
+                                        if self.outlineView.item(atRow: row) != nil {
+                                            let tagCellView = self.outlineView.view(atColumn: 0, row: row, makeIfNecessary: false) as! TagCellView
                                             tagCellView.checkbox.isEnabled = true
                                         }
                                     
@@ -366,11 +358,11 @@ class ViewController: NSViewController {
     override func keyUp(with event: NSEvent) {
         
         if (event.keyCode == 49) {
-            // make a space update the checkbox
-            let selectedView = outlineView.view(atColumn: 0, row: outlineView.selectedRow, makeIfNecessary: false) as! TagCellView
-            selectedView.checkbox.setNextState()
-            // handle check box clicks like mouse checkbox clicks
-            selectedView.checkboxClicked("keyUp")
+//            // make a space update the checkbox
+//            let selectedView = outlineView.view(atColumn: 0, row: outlineView.selectedRow, makeIfNecessary: false) as! TagCellView
+//            selectedView.checkbox.setNextState()
+//            // handle check box clicks like mouse checkbox clicks
+//            selectedView.checkboxClicked("keyUp")
         
         } else if (event.keyCode == 51){
             // delete remove selected row

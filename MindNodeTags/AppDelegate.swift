@@ -18,7 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             
             let alert = NSAlert()
             alert.messageText = "No Accessability Permissions"
-            alert.informativeText = "The app needs accessability permissions to run.\n\nIf you have just updated the app refresh the permissions by disabling then enableing the them\n"
+            alert.informativeText = "MindNode Tags needs accessability permissions to run.\n\nIf you have just updated the app refresh the permissions by disabling then enableing the them\n"
             alert.addButton(withTitle: "Quit App")
             alert.addButton(withTitle: "Show Me How To Fix It")
             

@@ -44,7 +44,6 @@ class Document: NSDocument {
     
 
     override func write(to url: URL, ofType typeName: String) throws {
-        write5(url: url)
         switch loadedVersion {
         case .five:
             write5(url: url)
@@ -95,7 +94,7 @@ class Document: NSDocument {
             structOfMindNodeFile = DecodedStructVersionOfData
             
         } else {
-            Swift.print("Read Problem")
+//            Swift.print("Read Problem")
         }
     }
     
@@ -107,7 +106,7 @@ class Document: NSDocument {
             structOfMindNode6File = DecodedStructVersionOfData
             
         } else {
-            Swift.print("Read Problem")
+//            Swift.print("Read Problem")
         }
     }
 

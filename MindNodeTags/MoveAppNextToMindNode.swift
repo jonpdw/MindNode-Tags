@@ -16,6 +16,11 @@ func moveAppNextToOpenMindNodeDocument(){
         return
     }
     
+    if getMindNodeOpenFileUrlMaster() == nil {
+        print("getMindNodeOpenFileUrlMaster() nil")
+        return
+    }
+    
     let openFileName = getMindNodeOpenFileUrlMaster()!.deletingPathExtension().lastPathComponent
     var mindNodeBounds = CGRect(x: 0, y: 0, width: 300, height: 500)
     if let windowList = CGWindowListCopyWindowInfo([.optionAll], kCGNullWindowID) as? [[String: AnyObject]] {
@@ -48,7 +53,7 @@ func moveAppNextToOpenMindNodeDocument(){
             
             if let windowList = value as? [AXUIElement]
             {
-                if let window = windowList.first
+                if windowList.first != nil
                 {
                     let mainScreenRect = NSScreen.main!.frame
                     let screenWidth = mainScreenRect.size.width
