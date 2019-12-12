@@ -3,7 +3,7 @@ MindNode Tags is an extension for MindNode that adds tags and filtering. The app
 
 I made this app as I love MindNode but wish that it had tags. This is my first Mac applicaiton. Let me know if you find it helpful.
 
-![Example Image](https://github.com/jonpdw/MindNode-Tags/raw/master/MindNode%20Tag%20Extension%20Simple%20Image.png)
+![Example Image](images/MindNode%20Tag%20Extension%20Simple%20Image.png)
 
 ## Download
 Download the `MindNode Tag<xxxx>.zip` file from [here](https://github.com/jonpdw/MindNode-Tags/releases/latest/)
