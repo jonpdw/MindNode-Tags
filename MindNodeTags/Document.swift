@@ -13,6 +13,7 @@ class Document: NSDocument {
     var structOfMindNodeFile: MindNodeContentStruct!
     var structOfMindNode6File: MindNode6ContentStruct!
     var loadedVersion: loadedVersionNumber!
+    var historyBeforeWrite: Int = -1
     
     enum loadedVersionNumber {
         case five
@@ -27,6 +28,14 @@ class Document: NSDocument {
         return false
     }
 
+
+    
+    override func restoreWindow(withIdentifier identifier: NSUserInterfaceItemIdentifier, state: NSCoder, completionHandler: @escaping (NSWindow?, Error?) -> Void) {
+        #warning("See if In can call a new window from here")
+        Swift.print("restoreWindow called")
+    }
+
+    
     override func makeWindowControllers() {
         let storyboard = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
         let windowController = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("Document Window Controller")) as! NSWindowController
@@ -35,7 +44,10 @@ class Document: NSDocument {
     
     override func presentedItemDidChange() {
         // this stops my app from asking if we want to revert to changes
-        guard let currentDocumentURL = self.fileURL else { return }
+        
+        guard let currentDocumentURL = self.fileURL else {
+            Swift.print("currentDocumentURL guard problem")
+            return }
         do {
             try revert(toContentsOf: currentDocumentURL, ofType: "xml")}
         catch { Swift.print("Auto Revert Error")}
@@ -55,6 +67,7 @@ class Document: NSDocument {
     }
     
     func write5(url: URL) {
+        historyBeforeWrite = structOfMindNodeFile.history1?.count ?? -1
         let encoder = PropertyListEncoder()
         encoder.outputFormat = .binary
 
@@ -64,6 +77,7 @@ class Document: NSDocument {
         } catch {
             Swift.print("Write error")
         }
+        
     }
     
     func write6(url: URL) {
@@ -82,6 +96,7 @@ class Document: NSDocument {
     override func read(from url: URL, ofType typeName: String) throws {
         read5(url: url)
         read6(url: url)
+        
         if loadedVersion == nil {fatalError("NSDocument Read: Neither mindNode5 or mindNode6 structs loaded")}
         
     }
@@ -90,11 +105,12 @@ class Document: NSDocument {
         if  let dataObject          = try? Data(contentsOf: url),
             let DecodedStructVersionOfData  = try? PropertyListDecoder().decode(MindNodeContentStruct.self, from: dataObject)
         {
+//            Swift.print("read5 worked")
             loadedVersion = .five
             structOfMindNodeFile = DecodedStructVersionOfData
             
         } else {
-//            Swift.print("Read Problem")
+            Swift.print("Read5 Problem")
         }
     }
     

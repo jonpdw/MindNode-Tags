@@ -129,4 +129,6 @@ struct MindNode6ContentStruct:  Codable {
     var typeOptions: Int
     var version: Int
     var tags: [TagStruct]?
+    var history1: [nodeStructList]?
 }
+

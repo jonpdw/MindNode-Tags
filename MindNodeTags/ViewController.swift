@@ -92,8 +92,30 @@ class ViewController: NSViewController {
         case .none:
             print("Tag set error")
         }
+    }
+    
+    func historyGet() ->  [[nodeStruct]]? {
+        switch nsDocumentContent!.loadedVersion {
+        case .five:
+            return nsDocumentContent!.structOfMindNodeFile.history1?.map {$0.nodeStructVar}
+        case .six:
+            return nsDocumentContent!.structOfMindNode6File.history1?.map {$0.nodeStructVar}
+        case .none:
+            fatalError("History get Switch Error")
+        }
         
-        
+    }
+    
+    func historySet(history: [[nodeStruct]]) {
+        switch nsDocumentContent!.loadedVersion {
+        case .five:
+            let returnBit = history.map {nodeStructList(nodeStructVar: $0)}
+            nsDocumentContent!.structOfMindNodeFile.history1 = returnBit
+        case .six:
+            nsDocumentContent!.structOfMindNode6File.history1 = history.map {nodeStructList(nodeStructVar: $0)}
+        case .none:
+            print("History set error")
+        }
     }
     
 //    var unfilteredDocument: [nodeStruct]!
@@ -129,18 +151,12 @@ class ViewController: NSViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(boldOnSelected), name: NSOutlineView.selectionDidChangeNotification, object: nil)
         
-        Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(saveCurrentDocToHistory), userInfo: nil, repeats: true)
+        
         
         
     }
     
-    @objc func saveCurrentDocToHistory() {
-//        print("Saved Current Document To History")
-        documentHistory.insert(nsDocumentMainNodeList, at: 0)
-        if documentHistory.count > 30 {
-            documentHistory.removeLast()
-        }
-    }
+
     
     var lastCellSelected: TagCellView?
     
@@ -166,16 +182,25 @@ class ViewController: NSViewController {
     override func viewWillAppear() {
         // when the app is hidden then unhidden it also calls this function. But I don't want it to be run again
         if hasAppBeenLaunched == false {
-            
-            unfilteredDocumentList = [markWillShowInFilterList(nodeList:  nsDocumentMainNodeList, taglist: [], markAllChildren: true)]
+            let markedCurrDoc = markWillShowInFilterList(nodeList:  nsDocumentMainNodeList, taglist: [], markAllChildren: true)
+            unfilteredDocumentList = [markedCurrDoc]
+            documentHistory = [markedCurrDoc]
 //            unfilteredDocumentList = [[]]
-            documentHistory = [nsDocumentMainNodeList]
+            
+            if historyGet() == nil {
+                print("View will appear set history")
+                historySet(history: [markedCurrDoc])
+            }
+            
+//            sendActionSaveNSDocument()
+            
             tags.list = convertTagStructListToTagList(tagStructList: tagsGet() ?? [])
             addNewTagstoTagList()
             DispatchQueue.main.async {
                 // I don't know why but if I don't do this the code doesn't seem to be called properly
                 moveAppNextToOpenMindNodeDocument()
             }
+//            Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(saveCurrentDocToHistory), userInfo: nil, repeats: true)
             hasAppBeenLaunched = true
             
             
@@ -230,8 +255,8 @@ class ViewController: NSViewController {
             newUnfilteredDocumentList = mergeUnfilteredWithFiltered(unfiltered: unfilteredDocumentList[0], filtered: nsDocumentMainNodeList)
         }
     
-        
         unfilteredDocumentList.insert(markWillShowInFilterList(nodeList: newUnfilteredDocumentList, taglist: filteredTagsString, markAllChildren: false), at: 0)
+        
 //        unfilteredDocumentList.insert(newUnfilteredDocumentList, at: 0)
         
         
@@ -257,6 +282,7 @@ class ViewController: NSViewController {
             tags.list = replaceTagInTagList(tagList: tags.list, replaceUUID: tagCellView.uuid, replaceCheckbox: tagCellView.checkbox.state)
         }
         
+        
         // unfilter if there are no checkboxes checked. This is here
         let areNoTagsSelected = tags.filterCheckedOnFlat().count == 0
         if areNoTagsSelected {
@@ -267,14 +293,16 @@ class ViewController: NSViewController {
         
         tags.numberOfCheckedTagsBeforeClick = tags.filterCheckedOnFlat().count
         
+        saveCurrentDocToHistory()
+        
     }
     
     @objc func addNewTagstoTagList() {
         
             for row in 0..<tags.flatList().count {
                 if outlineView.item(atRow: row) != nil {
-                    let tagCellView = outlineView.view(atColumn: 0, row: row, makeIfNecessary: false) as! TagCellView
-                    tagCellView.checkbox.isEnabled = false
+                    let tagCellView = outlineView.view(atColumn: 0, row: row, makeIfNecessary: false) as? TagCellView
+                    tagCellView?.checkbox.isEnabled = false
                 }
             }
         
@@ -311,8 +339,8 @@ class ViewController: NSViewController {
                                 
                                     for row in 0..<self.tags.flatList().count {
                                         if self.outlineView.item(atRow: row) != nil {
-                                            let tagCellView = self.outlineView.view(atColumn: 0, row: row, makeIfNecessary: false) as! TagCellView
-                                            tagCellView.checkbox.isEnabled = true
+                                            let tagCellView = self.outlineView.view(atColumn: 0, row: row, makeIfNecessary: false) as? TagCellView
+                                            tagCellView?.checkbox.isEnabled = true
                                         }
                                     
                                 
@@ -331,24 +359,61 @@ class ViewController: NSViewController {
         moveAppNextToOpenMindNodeDocument()
     }
     
+    
+    @objc func saveCurrentDocToHistory() {
+        
+        if historyGet() == nil {
+            print("History is nil. Setting it to blank")
+            historySet(history: [])
+//            return
+        }
+        
+        let newUnfilteredDocumentList: [nodeStruct]
+        if tags.numberOfCheckedTagsBeforeClick == 0 {
+            let unfiltered1 = markWillShowInFilterList(nodeList: unfilteredDocumentList[0], taglist: [], markAllChildren: true)
+            newUnfilteredDocumentList = mergeUnfilteredWithFiltered(unfiltered: unfiltered1, filtered: nsDocumentMainNodeList)
+        } else {
+            newUnfilteredDocumentList = mergeUnfilteredWithFiltered(unfiltered: unfilteredDocumentList[0], filtered: nsDocumentMainNodeList)
+        }
+        print("Saving with \(newUnfilteredDocumentList[0].subnodes.count) nodes")
+        
+        
+        var temp1 = historyGet()!
+        temp1.insert(newUnfilteredDocumentList, at: 0)
+        historySet(history: temp1)
+        
+        if historyGet()!.count > 30 {
+            var temp = historyGet()!
+            temp.removeLast()
+            historySet(history: temp)
+        }
+        for i in 0...3 {
+            historySet(history: temp1)
+            sendActionSaveNSDocument()
+        }
+        
+        print("")
+    }
+    
     @IBAction func changeCurrentDocumentToHistory(_ sender: NSSegmentedControl) {
         
         switch sender.selectedSegment {
         case 0: // back
-            if indexInDocumentHistory < (documentHistory.count-1) {
+            if indexInDocumentHistory < (historyGet()!.count-1) {
                 indexInDocumentHistory += 1
-                nsDocumentMainNodeList = documentHistory[indexInDocumentHistory]
+                nsDocumentMainNodeList = historyGet()![indexInDocumentHistory]
                 sendActionSaveNSDocument()
             }
         case 1: // forward
             if indexInDocumentHistory > 0 {
                 indexInDocumentHistory -= 1
-                nsDocumentMainNodeList = documentHistory[indexInDocumentHistory]
+                nsDocumentMainNodeList = historyGet()![indexInDocumentHistory]
                 sendActionSaveNSDocument()
             }
         default:
             fatalError("Switch case should not exist")
         }
+        print("Current Pointer = \(indexInDocumentHistory)/\(historyGet()!.count-1)")
         
     }
 

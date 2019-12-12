@@ -100,13 +100,20 @@ struct mindMapStruct: Codable {
     var mainNodes: [nodeStruct]
 }
 
+struct nodeStructList: Codable {
+    var nodeStructVar: [nodeStruct]
+}
+
 struct MindNodeContentStruct:  Codable {
     var NSPrintInfo: NSPrintInfoStruct
     var mindMap: mindMapStruct
     var typeOptions: Int
     var version: Int
     var tags: [TagStruct]?
+    var history1: [nodeStructList]?
 }
+
+
 
 func TwoThingsEqual(thing1: nodeStruct, thing2: nodeStruct) -> Bool {
     
