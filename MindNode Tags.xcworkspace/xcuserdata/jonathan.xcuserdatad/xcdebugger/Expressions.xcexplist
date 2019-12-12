@@ -33,6 +33,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "NSOutlineView1.performKeyEquivalent(with:):outlineView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "event.keyCode">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "getMindNodeOpenFileUrl():GetOpenMindNodeFile.swift">
          <PersistentStrings>
             <PersistentString
@@ -185,6 +193,14 @@
             </PersistentString>
             <PersistentString
                value = "indexInDocumentHistory">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.boldOnSelected(_:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "selectedRow">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

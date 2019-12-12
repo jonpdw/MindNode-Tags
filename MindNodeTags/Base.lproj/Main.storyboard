@@ -219,7 +219,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="623"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowHeight="25" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="16" outlineTableColumn="sYA-pZ-iuH" id="a84-cU-XTi">
+                                        <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowHeight="25" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="16" outlineTableColumn="sYA-pZ-iuH" id="a84-cU-XTi" customClass="NSOutlineView1" customModule="MindNode_Tags" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="623"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="3" height="2"/>

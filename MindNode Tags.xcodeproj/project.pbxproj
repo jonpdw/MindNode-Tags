@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		081305458DFF3F45B0D12B4F /* Pods_MindNode_Tags.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C57C585BA8545E87EEBD5E6 /* Pods_MindNode_Tags.framework */; };
+		AB31AE2D23A28E1A000EF305 /* outlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB31AE2C23A28E1A000EF305 /* outlineView.swift */; };
 		AB35A484238AA22B0029D3C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35A483238AA22B0029D3C0 /* AppDelegate.swift */; };
 		AB35A486238AA22B0029D3C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35A485238AA22B0029D3C0 /* ViewController.swift */; };
 		AB35A488238AA22B0029D3C0 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35A487238AA22B0029D3C0 /* Document.swift */; };
@@ -33,6 +34,7 @@
 		1BD6E62E8561CBEEB9FE20C8 /* Pods-MindNode Tags.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindNode Tags.release.xcconfig"; path = "Target Support Files/Pods-MindNode Tags/Pods-MindNode Tags.release.xcconfig"; sourceTree = "<group>"; };
 		2C57C585BA8545E87EEBD5E6 /* Pods_MindNode_Tags.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindNode_Tags.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB490C461DB3E98EBC9EB26 /* Pods-MindNode Tags.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindNode Tags.debug.xcconfig"; path = "Target Support Files/Pods-MindNode Tags/Pods-MindNode Tags.debug.xcconfig"; sourceTree = "<group>"; };
+		AB31AE2C23A28E1A000EF305 /* outlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = outlineView.swift; sourceTree = "<group>"; };
 		AB35A480238AA22B0029D3C0 /* MindNode Tags.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MindNode Tags.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB35A483238AA22B0029D3C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB35A485238AA22B0029D3C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				AB35A499238AA3A40029D3C0 /* TagCellView.swift */,
 				ABF06C3923A2659C00152D6B /* History.swift */,
 				AB35A497238AA3840029D3C0 /* Tag.swift */,
+				AB31AE2C23A28E1A000EF305 /* outlineView.swift */,
 				AB8A8D9D23993F8E0010FEAD /* WindowController.swift */,
 				AB3A51C82399126800123D3C /* Utilities */,
 				AB7ED9F423A0E2B6009975CF /* LetsMove */,
@@ -297,6 +300,7 @@
 				AB35A496238AA34E0029D3C0 /* StructOfMindNodeDocument.swift in Sources */,
 				AB5221D32398B358006BF997 /* TagFunctions.swift in Sources */,
 				AB83B50C2390C796003900FF /* MindMapFunctions.swift in Sources */,
+				AB31AE2D23A28E1A000EF305 /* outlineView.swift in Sources */,
 				AB35A498238AA3840029D3C0 /* Tag.swift in Sources */,
 				AB35A49A238AA3A40029D3C0 /* TagCellView.swift in Sources */,
 				ABF06C3A23A2659C00152D6B /* History.swift in Sources */,

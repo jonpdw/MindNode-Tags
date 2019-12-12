@@ -25,7 +25,7 @@ class tagsClass{
     
     func filterCheckedOnFlat() -> [Tag] {
         
-       flatList().filter {$0.checkedState == .on}
+        flatList().filter {$0.checkedState == .on}
     }
     
 }
@@ -39,6 +39,8 @@ class ViewController: NSViewController {
     var nsDocumentContent: Document? { return view.window?.windowController?.document as? Document}
     
     var history: History!
+    
+    var selectedRow = 0
     
     var nsDocumentMainNode: nodeStruct {
         get {return nsDocumentContent!.structOfMindNodeFile.mindMap.mainNodes[0]}
@@ -55,7 +57,7 @@ class ViewController: NSViewController {
         case .five:
             return nsDocumentContent!.structOfMindNodeFile.mindMap.mainNodes
         case .six:
-             return nsDocumentContent!.structOfMindNode6File.canvas.mindMaps.map {$0.mainNode}
+            return nsDocumentContent!.structOfMindNode6File.canvas.mindMaps.map {$0.mainNode}
         case .none:
             fatalError("nsDocumentMainNodeListGet Switch Error")
         }
@@ -120,7 +122,7 @@ class ViewController: NSViewController {
         }
     }
     
-//    var unfilteredDocument: [nodeStruct]!
+    //    var unfilteredDocument: [nodeStruct]!
     var unfilteredDocumentList: [[nodeStruct]]!
     var documentHistory: [[nodeStruct]]!
     
@@ -158,7 +160,7 @@ class ViewController: NSViewController {
         
     }
     
-
+    
     
     var lastCellSelected: TagCellView?
     
@@ -170,15 +172,15 @@ class ViewController: NSViewController {
             return
         }
         let tagCellView = outlineView.view(atColumn: 0, row: row, makeIfNecessary: false) as! TagCellView
-//        tagCellView.wantsLayer = true
-//        tagCellView.layer?.masksToBounds = false
-
+        //        tagCellView.wantsLayer = true
+        //        tagCellView.layer?.masksToBounds = false
+        
         tagCellView.box.isHidden = false
         
         lastCellSelected = tagCellView
-//        guard let sender1 = sender.object as? TagCellView else {return}
-//        sender1.tagName.textColor = .systemRed
-//        NSLog("Selection Changed")
+        //        guard let sender1 = sender.object as? TagCellView else {return}
+        //        sender1.tagName.textColor = .systemRed
+        //        NSLog("Selection Changed")
     }
     
     override func viewWillAppear() {
@@ -187,7 +189,7 @@ class ViewController: NSViewController {
             let markedCurrDoc = markWillShowInFilterList(nodeList:  nsDocumentMainNodeList, taglist: [], markAllChildren: true)
             unfilteredDocumentList = [markedCurrDoc]
             documentHistory = [markedCurrDoc]
-//            unfilteredDocumentList = [[]]
+            //            unfilteredDocumentList = [[]]
             
             if historyGet() == nil {
                 print("View will appear set history")
@@ -195,7 +197,7 @@ class ViewController: NSViewController {
             }
             
             history = History()
-//            sendActionSaveNSDocument()
+            //            sendActionSaveNSDocument()
             
             tags.list = convertTagStructListToTagList(tagStructList: tagsGet() ?? [])
             addNewTagstoTagList()
@@ -203,28 +205,28 @@ class ViewController: NSViewController {
                 // I don't know why but if I don't do this the code doesn't seem to be called properly
                 moveAppNextToOpenMindNodeDocument()
             }
-//            Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(saveCurrentDocToHistory), userInfo: nil, repeats: true)
+            //            Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(saveCurrentDocToHistory), userInfo: nil, repeats: true)
             hasAppBeenLaunched = true
             
             
         }
         
     }
-        
-        
-        
-        
-        
-//  Code to run load table every 3 seconds. I don't use this becuase when my app is not in focus it will no update the screen
-//        DispatchQueue.main.async {
-//            self.document!.addWindowController(MyWindowController(window: self.view.window!))
-//            let date = Date().addingTimeInterval(1)
-//            let timer = Timer(fireAt: date, interval: 3, target: self, selector: #selector(loadTableFromAppDelegate), userInfo: nil, repeats: true)
-//            RunLoop.main.add(timer, forMode: .common)
-//        }
-        
     
-
+    
+    
+    
+    
+    //  Code to run load table every 3 seconds. I don't use this becuase when my app is not in focus it will no update the screen
+    //        DispatchQueue.main.async {
+    //            self.document!.addWindowController(MyWindowController(window: self.view.window!))
+    //            let date = Date().addingTimeInterval(1)
+    //            let timer = Timer(fireAt: date, interval: 3, target: self, selector: #selector(loadTableFromAppDelegate), userInfo: nil, repeats: true)
+    //            RunLoop.main.add(timer, forMode: .common)
+    //        }
+    
+    
+    
     @IBAction func unfilterCurrentDocument(_ sender: Any) {
         
         
@@ -257,10 +259,10 @@ class ViewController: NSViewController {
         } else {
             newUnfilteredDocumentList = mergeUnfilteredWithFiltered(unfiltered: unfilteredDocumentList[0], filtered: nsDocumentMainNodeList)
         }
-    
+        
         unfilteredDocumentList.insert(markWillShowInFilterList(nodeList: newUnfilteredDocumentList, taglist: filteredTagsString, markAllChildren: false), at: 0)
         
-//        unfilteredDocumentList.insert(newUnfilteredDocumentList, at: 0)
+        //        unfilteredDocumentList.insert(newUnfilteredDocumentList, at: 0)
         
         
         let newFilteredDocumentList = filterNodeListByTag(subnodeList: newUnfilteredDocumentList, tagsToFilterBy: filteredTagsString)
@@ -302,12 +304,12 @@ class ViewController: NSViewController {
     
     @objc func addNewTagstoTagList() {
         
-            for row in 0..<tags.flatList().count {
-                if outlineView.item(atRow: row) != nil {
-                    let tagCellView = outlineView.view(atColumn: 0, row: row, makeIfNecessary: false) as? TagCellView
-                    tagCellView?.checkbox.isEnabled = false
-                }
+        for row in 0..<tags.flatList().count {
+            if outlineView.item(atRow: row) != nil {
+                let tagCellView = outlineView.view(atColumn: 0, row: row, makeIfNecessary: false) as? TagCellView
+                tagCellView?.checkbox.isEnabled = false
             }
+        }
         
         
         
@@ -324,7 +326,7 @@ class ViewController: NSViewController {
                         }
                     }
                     
-//                    writeTags(to: URL(string: "file:///Users/jonathan/Desktop/tags.xml")!, tagList: self.tags.list)
+                    //                    writeTags(to: URL(string: "file:///Users/jonathan/Desktop/tags.xml")!, tagList: self.tags.list)
                     self.tagsSet(tagList: convertTagListToTagStructList(tagList: self.tags.list))
                     
                     self.sendActionSaveNSDocument()
@@ -334,19 +336,19 @@ class ViewController: NSViewController {
                     
                     DispatchQueue.global().async(qos: .userInteractive) {
                         let seconds: Double = 0.05
-
+                        
                         let dispatchTime: DispatchTime = DispatchTime.now() + seconds
                         DispatchQueue.global().asyncAfter(deadline: dispatchTime) {
                             DispatchQueue.main.async {
                                 self.outlineView.selectRowIndexes(IndexSet(arrayLiteral: selectedIndexes), byExtendingSelection: false)
                                 
-                                    for row in 0..<self.tags.flatList().count {
-                                        if self.outlineView.item(atRow: row) != nil {
-                                            let tagCellView = self.outlineView.view(atColumn: 0, row: row, makeIfNecessary: false) as? TagCellView
-                                            tagCellView?.checkbox.isEnabled = true
-                                        }
+                                for row in 0..<self.tags.flatList().count {
+                                    if self.outlineView.item(atRow: row) != nil {
+                                        let tagCellView = self.outlineView.view(atColumn: 0, row: row, makeIfNecessary: false) as? TagCellView
+                                        tagCellView?.checkbox.isEnabled = true
+                                    }
                                     
-                                
+                                    
                                 }
                             }
                         }
@@ -404,23 +406,24 @@ class ViewController: NSViewController {
         print("Current Pointer = \(indexInDocumentHistory+1)/\(history.numberFiles)")
         
     }
-
     
     
-
+    
+    
     override func keyUp(with event: NSEvent) {
         
         if (event.keyCode == 49) {
-//            // make a space update the checkbox
-//            let selectedView = outlineView.view(atColumn: 0, row: outlineView.selectedRow, makeIfNecessary: false) as! TagCellView
-//            selectedView.checkbox.setNextState()
-//            // handle check box clicks like mouse checkbox clicks
-//            selectedView.checkboxClicked("keyUp")
-        
+            //            // make a space update the checkbox
+            //            let selectedView = outlineView.view(atColumn: 0, row: outlineView.selectedRow, makeIfNecessary: false) as! TagCellView
+            //            selectedView.checkbox.setNextState()
+            //            // handle check box clicks like mouse checkbox clicks
+            //            selectedView.checkboxClicked("keyUp")
+            
         } else if (event.keyCode == 51){
             // delete remove selected row
             let rowIndicatingNoSelection = -1
-            if outlineView.selectedRow == rowIndicatingNoSelection {
+            selectedRow = outlineView.selectedRow
+            if selectedRow == rowIndicatingNoSelection {
                 return
             }
             let selectedView = outlineView.view(atColumn: 0, row: outlineView.selectedRow, makeIfNecessary: false) as! TagCellView
@@ -430,15 +433,23 @@ class ViewController: NSViewController {
             tags.list = removeItemList(removeIndex: output!.Index, parentOfItemToRemove: output?.Parent, inputItems: tags.list)
             outlineView.removeItems(at: IndexSet(arrayLiteral: output!.Index), inParent: output?.Parent, withAnimation: .effectFade)
             outlineView.reloadItem(nil, reloadChildren: true)
+            
+            
+            DispatchQueue.main.async {
+                if self.tags.flatList().count == self.selectedRow {
+                    self.selectedRow -= 1
+                }
+                self.outlineView.selectRowIndexes(IndexSet(arrayLiteral: self.selectedRow), byExtendingSelection: false)
+            }
             outlineView.endUpdates()
+            
         }
-        
-        
     }
     
-    func sendActionSaveNSDocument() {
-        NSApp.sendAction(#selector(NSDocument.save(_:)), to: nil, from: self)
-    }
+
+func sendActionSaveNSDocument() {
+    NSApp.sendAction(#selector(NSDocument.save(_:)), to: nil, from: self)
+}
 
 }
 
@@ -458,7 +469,7 @@ extension ViewController: NSOutlineViewDelegate {
 }
 
 extension ViewController: NSOutlineViewDataSource {
-
+    
     
     // number of children
     func outlineView(_ outlineView: NSOutlineView, numberOfChildrenOfItem item: Any?) -> Int {
@@ -522,8 +533,8 @@ extension ViewController: NSOutlineViewDataSource {
             return .move
         }
         
-//        return canDrag ? .move : []
-
+        //        return canDrag ? .move : []
+        
     }
     
     // Handle user dropping item
