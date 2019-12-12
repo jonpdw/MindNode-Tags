@@ -33,6 +33,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "ViewController.viewDidLoad():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "view.window">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "NSOutlineView1.performKeyEquivalent(with:):outlineView.swift">
          <PersistentStrings>
             <PersistentString
@@ -174,6 +182,14 @@
          <PersistentStrings>
             <PersistentString
                value = "historyGet()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Document.makeWindowControllers():Document.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "loadedVersion">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

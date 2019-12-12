@@ -8,6 +8,24 @@
 
 import Cocoa
 
+class Window: NSWindow {
+    
+//    var undesiredButtons: [NSWindow.ButtonType] {
+//        return [.documentIconButton, .documentVersionsButton]
+//    }
+    
+    override func standardWindowButton(_ b: NSWindow.ButtonType) -> NSButton? {
+        return nil
+    }
+}
+
+class NSWindowController1: NSWindowController {
+    
+    override func windowTitle(forDocumentDisplayName displayName: String) -> String {
+        return ""
+    }
+}
+
 class Document: NSDocument {
     
     var structOfMindNodeFile: MindNodeContentStruct!
@@ -37,9 +55,25 @@ class Document: NSDocument {
 
     
     override func makeWindowControllers() {
-        let storyboard = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
+        var storyboard: NSStoryboard
+        if loadedVersion == .five {
+             storyboard = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
+        }
+        else {
+             storyboard = NSStoryboard(name: NSStoryboard.Name("Main6"), bundle: nil)
+        }
+        
+        
+//        self.addWindowController(NSWindowController1())
         let windowController = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("Document Window Controller")) as! NSWindowController
+        
         self.addWindowController(windowController)
+        
+        let window = self.windowForSheet
+        window?.standardWindowButton(.documentIconButton)?.image = nil
+        window?.standardWindowButton(.closeButton)?.isHidden = true
+        window?.standardWindowButton(.miniaturizeButton)?.isHidden = true
+        window?.standardWindowButton(.zoomButton)?.isHidden = true
     }
     
     override func presentedItemDidChange() {
@@ -96,6 +130,7 @@ class Document: NSDocument {
     override func read(from url: URL, ofType typeName: String) throws {
         read5(url: url)
         read6(url: url)
+        #warning("Its probably inifficient to read both once I have done it once")
         
         if loadedVersion == nil {fatalError("NSDocument Read: Neither mindNode5 or mindNode6 structs loaded")}
         
@@ -110,7 +145,7 @@ class Document: NSDocument {
             structOfMindNodeFile = DecodedStructVersionOfData
             
         } else {
-            Swift.print("Read5 Problem")
+//            Swift.print("Read5 Problem")
         }
     }
     

@@ -140,6 +140,7 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         outlineView.delegate = self
         outlineView.dataSource = self
         
@@ -235,11 +236,16 @@ class ViewController: NSViewController {
         // this fixes a problem where I unfilter but for some reason it doesn't work. I don't know why but trying it a few times seems to fix it
         
         // I could have added new items while the document was
-        
+        var counter = 0
         repeat {
+            counter += 1
             nsDocumentMainNodeList = newUnfilteredDocumentList
             sendActionSaveNSDocument()
-            if nsDocumentMainNodeList == newUnfilteredDocumentList {
+            if counter == 10 {
+                print("Broke out of unfilter save check after 10 attemps")
+                break
+            }
+            if (nsDocumentMainNodeList == newUnfilteredDocumentList) {
                 break
             }
         }
@@ -267,10 +273,15 @@ class ViewController: NSViewController {
         
         let newFilteredDocumentList = filterNodeListByTag(subnodeList: newUnfilteredDocumentList, tagsToFilterBy: filteredTagsString)
         
-        
+        var counter = 0
         repeat {
+            counter += 1
             nsDocumentMainNodeList = newFilteredDocumentList
             sendActionSaveNSDocument()
+            if counter == 10 {
+                print("filter: stoped after 10 save attemps")
+                break
+            }
             if nsDocumentMainNodeList == newFilteredDocumentList {
                 break
             }
@@ -281,7 +292,7 @@ class ViewController: NSViewController {
     
     @objc func checkBoxClicked() {
         // update model with checkbox changes
-        
+        view.window?.level = .floating
         for indexOfTag in 0..<tags.totalTags() {
             let tagCellView = outlineView.view(atColumn: 0, row: indexOfTag, makeIfNecessary: false) as! TagCellView
             tags.list = replaceTagInTagList(tagList: tags.list, replaceUUID: tagCellView.uuid, replaceCheckbox: tagCellView.checkbox.state)
@@ -303,6 +314,11 @@ class ViewController: NSViewController {
     }
     
     @objc func addNewTagstoTagList() {
+        
+        if nsDocumentContent == nil {
+            print("This happens when I close with command w")
+            return
+        }
         
         for row in 0..<tags.flatList().count {
             if outlineView.item(atRow: row) != nil {

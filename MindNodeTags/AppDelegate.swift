@@ -68,6 +68,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if let openFileName = getMindNodeOpenFileUrlMaster() {
             let openURL = openFileName.appendingPathComponent("contents.xml")
             documentController.openDocument(withContentsOf: openURL, display: true, completionHandler:{ _,_,_  in })
+            
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refeshTagsList"), object: nil)
         } else {
             print("Unable to find MindNode document to open")

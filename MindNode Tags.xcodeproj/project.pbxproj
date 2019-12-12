@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		081305458DFF3F45B0D12B4F /* Pods_MindNode_Tags.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C57C585BA8545E87EEBD5E6 /* Pods_MindNode_Tags.framework */; };
 		AB31AE2D23A28E1A000EF305 /* outlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB31AE2C23A28E1A000EF305 /* outlineView.swift */; };
+		AB31AE2F23A29516000EF305 /* Main6.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB31AE2E23A29516000EF305 /* Main6.storyboard */; };
 		AB35A484238AA22B0029D3C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35A483238AA22B0029D3C0 /* AppDelegate.swift */; };
 		AB35A486238AA22B0029D3C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35A485238AA22B0029D3C0 /* ViewController.swift */; };
 		AB35A488238AA22B0029D3C0 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35A487238AA22B0029D3C0 /* Document.swift */; };
@@ -35,6 +36,7 @@
 		2C57C585BA8545E87EEBD5E6 /* Pods_MindNode_Tags.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindNode_Tags.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB490C461DB3E98EBC9EB26 /* Pods-MindNode Tags.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindNode Tags.debug.xcconfig"; path = "Target Support Files/Pods-MindNode Tags/Pods-MindNode Tags.debug.xcconfig"; sourceTree = "<group>"; };
 		AB31AE2C23A28E1A000EF305 /* outlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = outlineView.swift; sourceTree = "<group>"; };
+		AB31AE2E23A29516000EF305 /* Main6.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main6.storyboard; sourceTree = "<group>"; };
 		AB35A480238AA22B0029D3C0 /* MindNode Tags.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MindNode Tags.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB35A483238AA22B0029D3C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB35A485238AA22B0029D3C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				AB35A495238AA34E0029D3C0 /* StructOfMindNodeDocument.swift */,
 				ABD720DC239E1339006255E7 /* StructForMindNode6.swift */,
 				AB35A48B238AA22D0029D3C0 /* Main.storyboard */,
+				AB31AE2E23A29516000EF305 /* Main6.storyboard */,
 				AB35A48E238AA22D0029D3C0 /* Info.plist */,
 				ABB8C53C238F9ECC00DF4E42 /* Attribution.md */,
 				AB35A48F238AA22D0029D3C0 /* MindNodeTags.entitlements */,
@@ -221,6 +224,7 @@
 			files = (
 				ABB8C53D238F9ECC00DF4E42 /* Attribution.md in Resources */,
 				AB35A48A238AA22D0029D3C0 /* Assets.xcassets in Resources */,
+				AB31AE2F23A29516000EF305 /* Main6.storyboard in Resources */,
 				AB35A48D238AA22D0029D3C0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
