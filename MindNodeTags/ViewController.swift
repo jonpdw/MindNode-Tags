@@ -38,6 +38,8 @@ class ViewController: NSViewController {
     
     var nsDocumentContent: Document? { return view.window?.windowController?.document as? Document}
     
+    var history: History!
+    
     var nsDocumentMainNode: nodeStruct {
         get {return nsDocumentContent!.structOfMindNodeFile.mindMap.mainNodes[0]}
         set {nsDocumentContent!.structOfMindNodeFile.mindMap.mainNodes[0] = newValue}
@@ -192,6 +194,7 @@ class ViewController: NSViewController {
                 historySet(history: [markedCurrDoc])
             }
             
+            history = History()
 //            sendActionSaveNSDocument()
             
             tags.list = convertTagStructListToTagList(tagStructList: tagsGet() ?? [])
@@ -362,12 +365,6 @@ class ViewController: NSViewController {
     
     @objc func saveCurrentDocToHistory() {
         
-        if historyGet() == nil {
-            print("History is nil. Setting it to blank")
-            historySet(history: [])
-//            return
-        }
-        
         let newUnfilteredDocumentList: [nodeStruct]
         if tags.numberOfCheckedTagsBeforeClick == 0 {
             let unfiltered1 = markWillShowInFilterList(nodeList: unfilteredDocumentList[0], taglist: [], markAllChildren: true)
@@ -376,44 +373,35 @@ class ViewController: NSViewController {
             newUnfilteredDocumentList = mergeUnfilteredWithFiltered(unfiltered: unfilteredDocumentList[0], filtered: nsDocumentMainNodeList)
         }
         print("Saving with \(newUnfilteredDocumentList[0].subnodes.count) nodes")
-        
-        
-        var temp1 = historyGet()!
-        temp1.insert(newUnfilteredDocumentList, at: 0)
-        historySet(history: temp1)
-        
-        if historyGet()!.count > 30 {
-            var temp = historyGet()!
-            temp.removeLast()
-            historySet(history: temp)
+        if history.numberFiles != 0 && newUnfilteredDocumentList == history.get(index: 0) {
+            print("Identical no need to make a backup")
+            return
         }
-        for i in 0...3 {
-            historySet(history: temp1)
-            sendActionSaveNSDocument()
-        }
+        history.add(content: newUnfilteredDocumentList)
         
-        print("")
     }
     
     @IBAction func changeCurrentDocumentToHistory(_ sender: NSSegmentedControl) {
         
         switch sender.selectedSegment {
         case 0: // back
-            if indexInDocumentHistory < (historyGet()!.count-1) {
+            if indexInDocumentHistory < (history.numberFiles-1) {
+                print("Went Back")
                 indexInDocumentHistory += 1
-                nsDocumentMainNodeList = historyGet()![indexInDocumentHistory]
+                nsDocumentMainNodeList = history.get(index: indexInDocumentHistory)
                 sendActionSaveNSDocument()
             }
         case 1: // forward
             if indexInDocumentHistory > 0 {
+                print("Went Forward")
                 indexInDocumentHistory -= 1
-                nsDocumentMainNodeList = historyGet()![indexInDocumentHistory]
+                nsDocumentMainNodeList = history.get(index: indexInDocumentHistory)
                 sendActionSaveNSDocument()
             }
         default:
             fatalError("Switch case should not exist")
         }
-        print("Current Pointer = \(indexInDocumentHistory)/\(historyGet()!.count-1)")
+        print("Current Pointer = \(indexInDocumentHistory+1)/\(history.numberFiles)")
         
     }
 

@@ -26,6 +26,7 @@
 		ABD720DD239E1339006255E7 /* StructForMindNode6.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD720DC239E1339006255E7 /* StructForMindNode6.swift */; };
 		ABD7212D239E5D40006255E7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABD7212C239E5D40006255E7 /* Security.framework */; };
 		ABD72133239E5E0E006255E7 /* PFMoveApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD72131239E5E0E006255E7 /* PFMoveApplication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		ABF06C3A23A2659C00152D6B /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF06C3923A2659C00152D6B /* History.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		ABD72131239E5E0E006255E7 /* PFMoveApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFMoveApplication.m; sourceTree = "<group>"; };
 		ABD72132239E5E0E006255E7 /* PFMoveApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFMoveApplication.h; sourceTree = "<group>"; };
 		ABD72134239E5E40006255E7 /* letsMove-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "letsMove-Bridging-Header.h"; path = "MindNodeTags/letsMove-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		ABF06C3923A2659C00152D6B /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				AB35A485238AA22B0029D3C0 /* ViewController.swift */,
 				AB35A487238AA22B0029D3C0 /* Document.swift */,
 				AB35A499238AA3A40029D3C0 /* TagCellView.swift */,
+				ABF06C3923A2659C00152D6B /* History.swift */,
 				AB35A497238AA3840029D3C0 /* Tag.swift */,
 				AB8A8D9D23993F8E0010FEAD /* WindowController.swift */,
 				AB3A51C82399126800123D3C /* Utilities */,
@@ -296,6 +299,7 @@
 				AB83B50C2390C796003900FF /* MindMapFunctions.swift in Sources */,
 				AB35A498238AA3840029D3C0 /* Tag.swift in Sources */,
 				AB35A49A238AA3A40029D3C0 /* TagCellView.swift in Sources */,
+				ABF06C3A23A2659C00152D6B /* History.swift in Sources */,
 				AB35A484238AA22B0029D3C0 /* AppDelegate.swift in Sources */,
 				AB3A51C72399088600123D3C /* GetOpenMindNodeFile.swift in Sources */,
 				ABD72133239E5E0E006255E7 /* PFMoveApplication.m in Sources */,
