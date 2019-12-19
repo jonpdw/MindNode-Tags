@@ -14,14 +14,15 @@
 		AB35A486238AA22B0029D3C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35A485238AA22B0029D3C0 /* ViewController.swift */; };
 		AB35A488238AA22B0029D3C0 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35A487238AA22B0029D3C0 /* Document.swift */; };
 		AB35A48A238AA22D0029D3C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB35A489238AA22D0029D3C0 /* Assets.xcassets */; };
-		AB35A48D238AA22D0029D3C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB35A48B238AA22D0029D3C0 /* Main.storyboard */; };
-		AB35A496238AA34E0029D3C0 /* StructOfMindNodeDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35A495238AA34E0029D3C0 /* StructOfMindNodeDocument.swift */; };
+		AB35A48D238AA22D0029D3C0 /* Main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB35A48B238AA22D0029D3C0 /* Main2.storyboard */; };
+		AB35A496238AA34E0029D3C0 /* StructForMindNode2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35A495238AA34E0029D3C0 /* StructForMindNode2.swift */; };
 		AB35A498238AA3840029D3C0 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35A497238AA3840029D3C0 /* Tag.swift */; };
 		AB35A49A238AA3A40029D3C0 /* TagCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35A499238AA3A40029D3C0 /* TagCellView.swift */; };
 		AB3A51C72399088600123D3C /* GetOpenMindNodeFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3A51C62399088600123D3C /* GetOpenMindNodeFile.swift */; };
 		AB3A51CA239912F900123D3C /* DebugTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3A51C9239912F900123D3C /* DebugTool.swift */; };
 		AB5221D12398B094006BF997 /* MoveAppNextToMindNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5221D02398B094006BF997 /* MoveAppNextToMindNode.swift */; };
 		AB5221D32398B358006BF997 /* TagFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5221D22398B358006BF997 /* TagFunctions.swift */; };
+		AB61380523AC0EFE00A0EA4F /* SaveImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB61380423AC0EFE00A0EA4F /* SaveImages.swift */; };
 		AB83B50C2390C796003900FF /* MindMapFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB83B50B2390C796003900FF /* MindMapFunctions.swift */; };
 		AB8A8D9E23993F8E0010FEAD /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8A8D9D23993F8E0010FEAD /* WindowController.swift */; };
 		ABB8C53D238F9ECC00DF4E42 /* Attribution.md in Resources */ = {isa = PBXBuildFile; fileRef = ABB8C53C238F9ECC00DF4E42 /* Attribution.md */; };
@@ -42,16 +43,17 @@
 		AB35A485238AA22B0029D3C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AB35A487238AA22B0029D3C0 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		AB35A489238AA22D0029D3C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AB35A48C238AA22D0029D3C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AB35A48C238AA22D0029D3C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main2.storyboard; sourceTree = "<group>"; };
 		AB35A48E238AA22D0029D3C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB35A48F238AA22D0029D3C0 /* MindNodeTags.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MindNodeTags.entitlements; sourceTree = "<group>"; };
-		AB35A495238AA34E0029D3C0 /* StructOfMindNodeDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StructOfMindNodeDocument.swift; sourceTree = "<group>"; };
+		AB35A495238AA34E0029D3C0 /* StructForMindNode2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StructForMindNode2.swift; sourceTree = "<group>"; };
 		AB35A497238AA3840029D3C0 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		AB35A499238AA3A40029D3C0 /* TagCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCellView.swift; sourceTree = "<group>"; };
 		AB3A51C62399088600123D3C /* GetOpenMindNodeFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOpenMindNodeFile.swift; sourceTree = "<group>"; };
 		AB3A51C9239912F900123D3C /* DebugTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugTool.swift; sourceTree = "<group>"; };
 		AB5221D02398B094006BF997 /* MoveAppNextToMindNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveAppNextToMindNode.swift; sourceTree = "<group>"; };
 		AB5221D22398B358006BF997 /* TagFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagFunctions.swift; sourceTree = "<group>"; };
+		AB61380423AC0EFE00A0EA4F /* SaveImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveImages.swift; sourceTree = "<group>"; };
 		AB7ED9F023A0BD71009975CF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AB83B50B2390C796003900FF /* MindMapFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindMapFunctions.swift; sourceTree = "<group>"; };
 		AB8A8D9D23993F8E0010FEAD /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			children = (
 				AB35A483238AA22B0029D3C0 /* AppDelegate.swift */,
 				AB35A485238AA22B0029D3C0 /* ViewController.swift */,
+				AB61380423AC0EFE00A0EA4F /* SaveImages.swift */,
 				AB35A487238AA22B0029D3C0 /* Document.swift */,
 				AB35A499238AA3A40029D3C0 /* TagCellView.swift */,
 				ABF06C3923A2659C00152D6B /* History.swift */,
@@ -109,9 +112,9 @@
 				AB3A51C82399126800123D3C /* Utilities */,
 				AB7ED9F423A0E2B6009975CF /* LetsMove */,
 				AB35A489238AA22D0029D3C0 /* Assets.xcassets */,
-				AB35A495238AA34E0029D3C0 /* StructOfMindNodeDocument.swift */,
+				AB35A495238AA34E0029D3C0 /* StructForMindNode2.swift */,
 				ABD720DC239E1339006255E7 /* StructForMindNode6.swift */,
-				AB35A48B238AA22D0029D3C0 /* Main.storyboard */,
+				AB35A48B238AA22D0029D3C0 /* Main2.storyboard */,
 				AB31AE2E23A29516000EF305 /* Main6.storyboard */,
 				AB35A48E238AA22D0029D3C0 /* Info.plist */,
 				ABB8C53C238F9ECC00DF4E42 /* Attribution.md */,
@@ -173,7 +176,7 @@
 				AB35A47D238AA22B0029D3C0 /* Frameworks */,
 				AB35A47E238AA22B0029D3C0 /* Resources */,
 				7AC8DA7129532E338647E5E2 /* [CP] Embed Pods Frameworks */,
-				AB9A595F239EA55100F2538C /* Testing Run Script */,
+				AB6137E723AB8C0300A0EA4F /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -225,7 +228,7 @@
 				ABB8C53D238F9ECC00DF4E42 /* Attribution.md in Resources */,
 				AB35A48A238AA22D0029D3C0 /* Assets.xcassets in Resources */,
 				AB31AE2F23A29516000EF305 /* Main6.storyboard in Resources */,
-				AB35A48D238AA22D0029D3C0 /* Main.storyboard in Resources */,
+				AB35A48D238AA22D0029D3C0 /* Main2.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +274,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MindNode Tags/Pods-MindNode Tags-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AB9A595F239EA55100F2538C /* Testing Run Script */ = {
+		AB6137E723AB8C0300A0EA4F /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -280,15 +283,14 @@
 			);
 			inputPaths = (
 			);
-			name = "Testing Run Script";
+			name = "Run Script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/testfile.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\necho \"Hello\" > ~/testfile.txt\n";
+			shellPath = /bin/bash;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nosascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"Enable_Permissions\"'\n#rm -r ~/Dropbox/MindNodeTags2/\"MindNode Tags.zip\"\n#rm -r ~/Dropbox/MindNodeTags2/\"MindNode Tags Xcode.zip\"\n#ditto -c -k --sequesterRsrc --keepParent /Users/jonathan/Programming\\ Files/Personal\\ Programming\\ Large/MindNodeTags ~/Dropbox/MindNodeTags2/\"MindNode Tags Xcode.zip\"\n#ditto -c -k --sequesterRsrc --keepParent ${BUILT_PRODUCTS_DIR}/${APPLICATION_NAME}/\"MindNode Tags.app\" ~/Dropbox/MindNodeTags2/\"MindNode Tags.zip\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -301,9 +303,10 @@
 				AB5221D12398B094006BF997 /* MoveAppNextToMindNode.swift in Sources */,
 				AB8A8D9E23993F8E0010FEAD /* WindowController.swift in Sources */,
 				AB35A486238AA22B0029D3C0 /* ViewController.swift in Sources */,
-				AB35A496238AA34E0029D3C0 /* StructOfMindNodeDocument.swift in Sources */,
+				AB35A496238AA34E0029D3C0 /* StructForMindNode2.swift in Sources */,
 				AB5221D32398B358006BF997 /* TagFunctions.swift in Sources */,
 				AB83B50C2390C796003900FF /* MindMapFunctions.swift in Sources */,
+				AB61380523AC0EFE00A0EA4F /* SaveImages.swift in Sources */,
 				AB31AE2D23A28E1A000EF305 /* outlineView.swift in Sources */,
 				AB35A498238AA3840029D3C0 /* Tag.swift in Sources */,
 				AB35A49A238AA3A40029D3C0 /* TagCellView.swift in Sources */,
@@ -319,12 +322,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AB35A48B238AA22D0029D3C0 /* Main.storyboard */ = {
+		AB35A48B238AA22D0029D3C0 /* Main2.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AB35A48C238AA22D0029D3C0 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Main2.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -475,6 +478,7 @@
 			baseConfigurationReference = 1BD6E62E8561CBEEB9FE20C8 /* Pods-MindNode Tags.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_OPTIMIZATION = time;
 				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				CODE_SIGN_ENTITLEMENTS = MindNodeTags/MindNodeTags.entitlements;
 				CODE_SIGN_IDENTITY = "-";

@@ -1,16 +1,20 @@
 PODS:
   - Sparkle (1.22.0)
+  - SwiftSoup (2.2.2)
 
 DEPENDENCIES:
   - Sparkle
+  - SwiftSoup
 
 SPEC REPOS:
   trunk:
     - Sparkle
+    - SwiftSoup
 
 SPEC CHECKSUMS:
   Sparkle: 593ac2e677c07bcb6c3b22d621240e7cbedaab57
+  SwiftSoup: 77147d707df716eb6dbd06c5c24d35ad5ba62ee1
 
-PODFILE CHECKSUM: 6dac8cf3c89cdfea896ddcb6e652e183e3bb339b
+PODFILE CHECKSUM: fa45d726d8fbac3d0be2531e049f90a3c2daf87c
 
 COCOAPODS: 1.8.4

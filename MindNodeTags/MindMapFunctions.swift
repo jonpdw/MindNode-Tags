@@ -7,20 +7,29 @@
 //
 
 import Foundation
+import SwiftSoup
 
-func mergeUnfilteredWithFilteredWithoutReset(unfiltered: nodeStruct, filtered: nodeStruct) -> [nodeStruct] {
+func mergeUnfilteredWithFilteredWithoutReset(unfiltered: nodeStruct, filtered: nodeStruct, parentID: String?) -> [nodeStruct] {
     var unfiltered = unfiltered
 
     // any childless node in 'unfiltered' can be replaced with its equivilent from 'filtered'. I could have added some children to the filtered version
     if (unfiltered.willShowInFilter == true) && (unfiltered.subnodes.count == 0) {
-        let filteredEquivOfUnfilteredNode = findNodeByID(nodeIDToFind: unfiltered.nodeID, subnode: filtered)
-        if filteredEquivOfUnfilteredNode == nil {
+        let (filteredEquivOfUnfilteredNode, parent) = findNodeByID(nodeIDToFind: unfiltered.nodeID, subnode: filtered)
+        // if parents don't match then the node has been dragged to a new spot. Treat it like it has been deleted
+        let doParentsMatch: Bool
+        if parent == nil || parentID == nil {
+            #warning("I am not sure if I have the logic quite right here. What should happen if the parent or parentID are nill. Is giving a false really the right thing to do")
+            doParentsMatch = false
+            
+        } else {
+            doParentsMatch = (parent!.nodeID == parentID!)
+        }
+        if (filteredEquivOfUnfilteredNode == nil) || (doParentsMatch == false) {
             // the node has been deleted
             return []
         } else {
             return [filteredEquivOfUnfilteredNode!]
         }
-        
     }
     var merged: [nodeStruct] = []
     for unfilteredNode in unfiltered.subnodes {
@@ -30,12 +39,14 @@ func mergeUnfilteredWithFilteredWithoutReset(unfiltered: nodeStruct, filtered: n
             merged += [unfilteredNode]
         }
         else {
-            merged += mergeUnfilteredWithFilteredWithoutReset(unfiltered: unfilteredNode, filtered: filtered)
+            
+            
+            merged += mergeUnfilteredWithFilteredWithoutReset(unfiltered: unfilteredNode, filtered: filtered, parentID: unfiltered.nodeID)
         }
     }
     // add newly added branches
     if (unfiltered.willShowInFilter == true) {
-        let filteredNodes = findNodeByID(nodeIDToFind: unfiltered.nodeID, subnode: filtered)
+        let (filteredNodes, _) = findNodeByID(nodeIDToFind: unfiltered.nodeID, subnode: filtered)
         if filteredNodes == nil {
             return []
         }
@@ -57,6 +68,8 @@ func mergeUnfilteredWithFilteredWithoutReset(unfiltered: nodeStruct, filtered: n
 
 
 
+
+
 func mergeUnfilteredWithFiltered(unfiltered: [nodeStruct], filtered: [nodeStruct]) -> [nodeStruct] {
     var mUnfiltered = blankNodeStruct
     mUnfiltered.subnodes = unfiltered
@@ -64,7 +77,7 @@ func mergeUnfilteredWithFiltered(unfiltered: [nodeStruct], filtered: [nodeStruct
     var mFiltered = blankNodeStruct
     mFiltered.subnodes = filtered
     
-    let output = mergeUnfilteredWithFilteredWithoutReset(unfiltered: mUnfiltered, filtered: mFiltered)[0].subnodes
+    let output = mergeUnfilteredWithFilteredWithoutReset(unfiltered: mUnfiltered, filtered: mFiltered, parentID: nil)[0].subnodes
     return output.map({resetWillShowInFilterToNil($0)})
 }
 
@@ -114,15 +127,16 @@ func resetWillShowInFilterToNil(_ subnode: nodeStruct) -> nodeStruct {
     
 }
 
-func findNodeByID(nodeIDToFind: String, subnode: nodeStruct) -> nodeStruct? {
-    if subnode.nodeID == nodeIDToFind { return subnode}
+func findNodeByID(nodeIDToFind: String, subnode: nodeStruct) -> (node: nodeStruct?, parent: nodeStruct?) {
+    if subnode.nodeID == nodeIDToFind { return (subnode, nil)}
     for node in subnode.subnodes {
-        if node.nodeID == nodeIDToFind { return node }
-        if let found = findNodeByID(nodeIDToFind: nodeIDToFind, subnode: node) {
+        if node.nodeID == nodeIDToFind { return (node, subnode) }
+        let found = findNodeByID(nodeIDToFind: nodeIDToFind, subnode: node)
+        if found.node != nil {
             return found
         }
     }
-    return nil
+    return (nil,nil)
 }
 
 func getListOfTagsFromNode(subnode: nodeStruct) -> [Tag] {
@@ -197,10 +211,9 @@ func getTagsFromMindNodeTextString(fullTitle: String) -> [Tag]? {
         let ts: [Tag] = []
         return ts
     } else {
-        let firstIndex = fullTitle.firstIndex(of: ">")!
-        let firstIndexPlusOne = fullTitle.index(after:firstIndex)
-        let lastIndex = fullTitle.lastIndex(of: "<")!
-        let justTitleBit = fullTitle[firstIndexPlusOne..<lastIndex]
+        #warning("this is probably quite an inefficient function to call many times. Go back to a more efficient one")
+        let doc: SwiftSoup.Document = try! SwiftSoup.parse(fullTitle)
+        let justTitleBit = try! doc.body()!.text();
         let splitStr = justTitleBit.split(separator: " ")
         //    NSLog(String(splitStr[3]))
         var tags: [String] = []
@@ -213,7 +226,3 @@ func getTagsFromMindNodeTextString(fullTitle: String) -> [Tag]? {
     }
     
 }
-
-
-
-

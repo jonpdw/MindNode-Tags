@@ -27,7 +27,9 @@ func moveAppNextToOpenMindNodeDocument(){
         for window in windowList {
             let bounds = CGRect(dictionaryRepresentation: window[kCGWindowBounds as String] as! CFDictionary)!
             let name = window[kCGWindowName as String] as? String ?? ""
-            if name == openFileName {
+            let nameCatalina = window[kCGWindowOwnerName as String] as? String ?? ""
+            let onScreen = window[kCGWindowIsOnscreen as String] as? Int ?? 0
+            if name == openFileName || (nameCatalina == "MindNode" && onScreen == 1) {
                 mindNodeBounds = bounds
                 break
             }
@@ -55,6 +57,7 @@ func moveAppNextToOpenMindNodeDocument(){
             {
                 if windowList.first != nil
                 {
+                    
                     let mainScreenRect = NSScreen.main!.frame
                     let screenWidth = mainScreenRect.size.width
                     let maxWidth = mainScreenRect.origin.x + screenWidth
@@ -77,6 +80,9 @@ func moveAppNextToOpenMindNodeDocument(){
                         
                         size = AXValueCreate(AXValueType(rawValue: kAXValueCGSizeType)!,&newSize)!;
                         AXUIElementSetAttributeValue(windowList.first!, kAXSizeAttribute as CFString, size);
+                    }
+                    else {
+                         mindNodeBounds = CGRect(x: mindNodeBounds.origin.x, y: mindNodeBounds.origin.y, width: mindNodeBounds.size.width, height: mindNodeBounds.size.height)
                     }
                 }
             }

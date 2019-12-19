@@ -8,16 +8,6 @@
 
 import Cocoa
 
-class Window: NSWindow {
-    
-//    var undesiredButtons: [NSWindow.ButtonType] {
-//        return [.documentIconButton, .documentVersionsButton]
-//    }
-    
-    override func standardWindowButton(_ b: NSWindow.ButtonType) -> NSButton? {
-        return nil
-    }
-}
 
 class NSWindowController1: NSWindowController {
     
@@ -49,15 +39,17 @@ class Document: NSDocument {
 
     
     override func restoreWindow(withIdentifier identifier: NSUserInterfaceItemIdentifier, state: NSCoder, completionHandler: @escaping (NSWindow?, Error?) -> Void) {
-        #warning("See if In can call a new window from here")
         Swift.print("restoreWindow called")
+        NSApplication.shared.terminate(self)
+//        Swift.print("test")
+
     }
 
     
     override func makeWindowControllers() {
         var storyboard: NSStoryboard
         if loadedVersion == .five {
-             storyboard = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
+             storyboard = NSStoryboard(name: NSStoryboard.Name("Main2"), bundle: nil)
         }
         else {
              storyboard = NSStoryboard(name: NSStoryboard.Name("Main6"), bundle: nil)

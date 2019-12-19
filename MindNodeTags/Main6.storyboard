@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15702"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -198,16 +198,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="220" height="683"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="tq3-ic-IIk">
-                                <rect key="frame" x="0.0" y="550" width="240" height="5"/>
-                            </box>
-                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="27" horizontalPageScroll="10" verticalLineScroll="27" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ma-uY-u4J">
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="28" horizontalPageScroll="10" verticalLineScroll="28" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ma-uY-u4J">
                                 <rect key="frame" x="10" y="10" width="200" height="623"/>
                                 <clipView key="contentView" id="PY0-qu-x2V">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="623"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowHeight="25" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="16" outlineTableColumn="sYA-pZ-iuH" id="a84-cU-XTi" customClass="NSOutlineView1" customModule="MindNode_Tags" customModuleProvider="target">
+                                        <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowHeight="26" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="16" outlineTableColumn="sYA-pZ-iuH" id="a84-cU-XTi" customClass="NSOutlineView1" customModule="MindNode_Tags" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="623"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -216,7 +213,7 @@
                                             <tableColumns>
                                                 <tableColumn width="197" minWidth="40" maxWidth="1000" id="sYA-pZ-iuH">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
-                                                        <font key="font" metaFont="smallSystem"/>
+                                                        <font key="font" metaFont="system" size="17"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -228,13 +225,13 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="cell" id="9WG-os-zPe" customClass="TagCellView" customModule="MindNode_Tags" customModuleProvider="target">
-                                                            <rect key="frame" x="1" y="1" width="197" height="25"/>
+                                                            <rect key="frame" x="1" y="1" width="197" height="26"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <box boxType="custom" borderType="line" cornerRadius="3" translatesAutoresizingMaskIntoConstraints="NO" id="Wuq-mO-5WZ">
-                                                                    <rect key="frame" x="14" y="0.0" width="183" height="25"/>
+                                                                    <rect key="frame" x="14" y="0.0" width="183" height="26"/>
                                                                     <view key="contentView" id="5cy-Lc-41i">
-                                                                        <rect key="frame" x="1" y="1" width="181" height="23"/>
+                                                                        <rect key="frame" x="1" y="1" width="181" height="24"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     </view>
                                                                     <color key="borderColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -252,9 +249,9 @@
                                                                 </button>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="53B-Nk-hgK">
                                                                     <rect key="frame" x="47" y="5" width="96" height="16"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="19g-fV-lup">
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" allowsEditingTextAttributes="YES" id="19g-fV-lup">
                                                                         <font key="font" metaFont="system"/>
-                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
@@ -294,10 +291,7 @@
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="3Ma-uY-u4J" secondAttribute="trailing" constant="10" id="FEQ-R2-xq4"/>
-                            <constraint firstAttribute="trailing" secondItem="tq3-ic-IIk" secondAttribute="trailing" constant="-20" id="GdS-Sn-VBp"/>
-                            <constraint firstItem="tq3-ic-IIk" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" id="ZNd-tO-Uuy"/>
                             <constraint firstItem="3Ma-uY-u4J" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" constant="10" id="dtp-gi-q6m"/>
-                            <constraint firstItem="tq3-ic-IIk" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="90" id="gPe-4z-1H4"/>
                             <constraint firstItem="3Ma-uY-u4J" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="10" id="lug-wl-GnB"/>
                             <constraint firstAttribute="bottom" secondItem="3Ma-uY-u4J" secondAttribute="bottom" constant="10" id="nJZ-jT-XZ6"/>
                         </constraints>

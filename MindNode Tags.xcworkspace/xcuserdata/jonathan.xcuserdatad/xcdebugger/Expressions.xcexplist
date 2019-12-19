@@ -22,6 +22,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "AppDelegate.tryOpenCurrentMindNodeFile():AppDelegate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "openURL.absoluteString">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "ViewController.historySet(history:):ViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -29,6 +37,14 @@
             </PersistentString>
             <PersistentString
                value = "nsDocumentContent!.structOfMindNodeFile.history1">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.sendActionSaveNSDocument():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "NSApp.sendAction(#selector(NSDocument.save(_:)), to: nil, from: self) == true">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -66,7 +82,7 @@
          contextName = "ViewController.addNewTagstoTagList():ViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "nsDocumentContent!.structOfMindNodeFile.history">
+               value = "nsDocumentContent!.structOfMindNode6File.canvas.mindMaps">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -91,7 +107,7 @@
          contextName = "main:AppDelegate.swift">
          <PersistentStrings>
             <PersistentString
-               value = "">
+               value = "tryOpenCurrentMindNodeFile()">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -148,13 +164,35 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "ViewController.unfilterCurrentDocument(_:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "simple(unfilteredDocumentList[0])">
+            </PersistentString>
+            <PersistentString
+               value = "simple(nsDocumentMainNodeList)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "moveAppNextToOpenMindNodeDocument():MoveAppNextToMindNode.swift">
          <PersistentStrings>
             <PersistentString
-               value = "getMindNodeOpenFileUrl(identifier: &quot;com.ideasoncanvas.mindnode.macos&quot;)">
+               value = "AXIsProcessTrusted()">
             </PersistentString>
             <PersistentString
-               value = "AXIsProcessTrusted()">
+               value = "kCGWindowName">
+            </PersistentString>
+            <PersistentString
+               value = "getMindNodeOpenFileUrl(identifier: &quot;com.ideasoncanvas.mindnode.macos&quot;)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SaveImages.addNewImages():History.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "url.absoluteString">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -197,7 +235,10 @@
          contextName = "GLOBAL">
          <PersistentStrings>
             <PersistentString
-               value = "structOfMindNodeFile.history1">
+               value = "simple(unfiltered)">
+            </PersistentString>
+            <PersistentString
+               value = "simple(filtered)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -240,7 +281,13 @@
          contextName = "ViewController.filterCurrentDocumentWithSelectedTags(_:):ViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "nsDocumentContent!.structOfMindNodeFile.history1">
+               value = "simplifyNodeList(nsDocumentMainNodeList)">
+            </PersistentString>
+            <PersistentString
+               value = "simplifyNodeList(newUnfilteredDocumentList)">
+            </PersistentString>
+            <PersistentString
+               value = "nsDocumentContent!.structOfMindNodeFile">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

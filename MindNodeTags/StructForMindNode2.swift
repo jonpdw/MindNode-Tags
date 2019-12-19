@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 import Cocoa
 
 struct NSPrintInfoStruct: Codable {
@@ -41,6 +40,8 @@ struct borderStrokeStyleStruct: Codable {
 
 struct shapeStyleStruct: Codable {
     var borderStrokeStyle: borderStrokeStyleStruct
+    var fillColor: String
+    var shapeType: Int
 }
 
 struct fontStyleStruct: Codable {
@@ -61,6 +62,28 @@ struct titleStruct: Codable {
     var text: String
     
 }
+struct attachmentStruct: Codable {
+    var clipArtName: String?
+    var fileName: String
+    var size: String
+    var tinted: Bool?
+    var type: Int
+}
+
+struct noteStruct: Codable {
+    var text: String
+    var visibleOnCanvas: Bool
+}
+
+struct fileLinkStruct: Codable {
+    var absoluteFilePath: String
+    var bookmarkData: Data
+    var relativeFilePath: String
+}
+
+struct taskStruct: Codable {
+    var state: Int
+}
 
 struct nodeStruct: Codable {
     var decreasingStrokeWidth: Bool?
@@ -74,11 +97,13 @@ struct nodeStruct: Codable {
     var shapeStyle: shapeStyleStruct?
     var subnodes: [nodeStruct]
     var title: titleStruct
-    
     var willShowInFilter: Bool?
+    var attachment: attachmentStruct?
+    var note: noteStruct?
+    var noteIndicatorColor: String?
+    var fileLink: fileLinkStruct?
+    var task: taskStruct?
 }
-
-
 
 struct arrowStyleStruc: Codable {
     var endArrow: Int
@@ -147,9 +172,10 @@ extension nodeStruct: Equatable {
 }
 
 let mborderStrokeStyleStruct = borderStrokeStyleStruct(color: "blank", dash: 0, width: 0)
-let mshapeStyleStruct = shapeStyleStruct(borderStrokeStyle: mborderStrokeStyleStruct)
+let mshapeStyleStruct = shapeStyleStruct(borderStrokeStyle: mborderStrokeStyleStruct, fillColor: "", shapeType: 0)
 let mstrokeStyleStruct = strokeStyleStruct(color: "blank", dash: 0, width: 0)
 let mpathStyleStruct = pathStyleStruct(pathType: 0, strokeStyle: mstrokeStyleStruct)
 let mtitleStruct = titleStruct(allowToShrinkWidth: false, fontStyle: nil, maxWidth: 0, text: "<p style=\'color: rgba(65, 82, 41, 1.000000); font: 18px \"Helvetica Neue\"; text-align: center; -cocoa-font-postscriptname: \"HelveticaNeue-Medium\"; \'>Blank</p>")
+let mattachmentStruct = attachmentStruct(clipArtName: nil, fileName: "", size: "", tinted: nil, type: 0)
 
-let blankNodeStruct = nodeStruct(decreasingStrokeWidth: nil, layoutStyle: nil, hasFoldedSubnodes: false, isLeftAligned: nil, location: "nil", nodeID: "blank_row_id", pathStyle: mpathStyleStruct, shapeStyle: mshapeStyleStruct, subnodes: [], title: mtitleStruct, willShowInFilter: true)
+let blankNodeStruct = nodeStruct(decreasingStrokeWidth: nil, layoutStyle: nil, hasFoldedSubnodes: false, isLeftAligned: nil, location: "nil", nodeID: "blank_row_id", pathStyle: mpathStyleStruct, shapeStyle: mshapeStyleStruct, subnodes: [], title: mtitleStruct, willShowInFilter: true, attachment: mattachmentStruct)

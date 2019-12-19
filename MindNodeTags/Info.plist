@@ -48,7 +48,7 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2019 Jonathan. All rights reserved.</string>
 	<key>NSMainStoryboardFile</key>
-	<string>Main</string>
+	<string>Main2</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>NSSupportsAutomaticTermination</key>

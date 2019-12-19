@@ -22,11 +22,13 @@ struct simpleNodeStruct {
     var title: String
     var nodeID: String
     var children: [simpleNodeStruct]?
+    var childrenTitles: String
     
     init(title: String, nodeID: String,children: [simpleNodeStruct]?) {
         self.title = title
         self.nodeID = nodeID
         self.children = children
+        self.childrenTitles = (children?.map {$0.title})?.joined(separator:" ") ?? "None"
     }
     
     func getChildren() -> String {
@@ -39,19 +41,19 @@ struct simpleNodeStruct {
     }
 }
 
-func simplifyNode(_ subnode: nodeStruct) -> simpleNodeStruct {
+func simple(_ subnode: nodeStruct) -> simpleNodeStruct {
     if subnode.subnodes.count == 0 {
         return simpleNodeStruct(title: getNodeText(fullTitle: subnode.title.text),nodeID: subnode.nodeID, children: nil)
     }
     
     var returnNodes: [simpleNodeStruct] = []
     for node in subnode.subnodes {
-        returnNodes += [simplifyNode(node)]
+        returnNodes += [simple(node)]
     }
     
     return simpleNodeStruct(title: getNodeText(fullTitle: subnode.title.text),nodeID: subnode.nodeID, children: returnNodes)
 }
 
-func simplifyNodeList(_ nodeList: [nodeStruct]) -> [simpleNodeStruct] {
-    return nodeList.map {simplifyNode($0)}
+func simple(_ nodeList: [nodeStruct]) -> [simpleNodeStruct] {
+    return nodeList.map {simple($0)}
 }
