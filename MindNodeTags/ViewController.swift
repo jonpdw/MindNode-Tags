@@ -181,7 +181,6 @@ class ViewController: NSViewController{
                 mindmapsForStruct6 = getMindMaps()
             }
             
-            view.window!.toolbar!.delegate = self
             
 //            if outlineView.acceptsFirstResponder {
 //                self.view.window?.makeFirstResponder(outlineView)

@@ -123,6 +123,7 @@ class noDocumentAlert {
     func run() {
         // the reason we only want to allow another run after the users has pressed the button
         
+        DispatchQueue.main.asyncAfter(deadline: .now(), execute: {
         if self.noDocumentAlertCounter == 0 {
             self.noDocumentAlertCounter += 1
             let alert = NSAlert()
@@ -135,6 +136,7 @@ class noDocumentAlert {
                 
             }
         }
+    })
     }
 }
 

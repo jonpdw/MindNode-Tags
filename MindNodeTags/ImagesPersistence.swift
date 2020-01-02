@@ -38,6 +38,7 @@ class SaveImages {
     }
     
     func saveImagesToBackupFolder() {
+        try? FileManager.default.createDirectory(at: backupURL, withIntermediateDirectories: true)
         for image in images {
             let URLforNewFile = backupURL.appendingPathComponent(image.name)
             let fileExists = (try? URLforNewFile.checkResourceIsReachable()) ?? false
