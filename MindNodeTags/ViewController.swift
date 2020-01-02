@@ -234,7 +234,7 @@ class ViewController: NSViewController {
         saveImagesClass.loadAndSaveEverything()
         
         if nsDocumentContent!.loadedVersion == .six {
-            mindmapsForStruct6 = mindmapsForStruct6?.union(getMindMaps()!)
+            mindmapsForStruct6 = getMindMaps()!.union(mindmapsForStruct6!)
         }
         
         
@@ -394,24 +394,12 @@ class ViewController: NSViewController {
     
     
     func changeTagsCheckbox(to newState: Bool) {
-        switch newState {
-        case false:
             for row in 0..<tags.flatList().count {
                 if outlineView.item(atRow: row) != nil {
                     let tagCellView = outlineView.view(atColumn: 0, row: row, makeIfNecessary: false) as? TagCellView
                     tagCellView?.checkbox.isEnabled = newState
                 }
             }
-        case true:
-            // The main thing this does is keep tags that have 0 instances from being enabled
-            for (rowIndex, row) in self.tags.flatList().enumerated() {
-                let hasZeroInstances = occurancesOfTag(tagInQuestion: row, tagList: getListOfTagsFromListOfNodes(nodeList: self.unfilteredDocumentListToFindTagsIn)) == 0
-                if (self.outlineView.item(atRow: rowIndex) != nil) && (hasZeroInstances == false)  {
-                    let tagCellView = self.outlineView.view(atColumn: 0, row: rowIndex, makeIfNecessary: false) as? TagCellView
-                    tagCellView?.checkbox.isEnabled = true
-                }
-            }
-        }
     }
     
     // MARK: - Backup
