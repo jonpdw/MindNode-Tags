@@ -14,6 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let documentController = CustomNSDocumentController()
     
     let mNoDocumentAlert = noDocumentAlert()
+    let noDocCounter = 0
     
     // the reason we store this is that we don't want the app to open in the background while the alert is still active. i.e you give permissions then click onn the app icon which launches the app
     var appHasAccessabiltyPermissions = false
@@ -64,8 +65,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 #warning("Change the name from 'No MindNode Doc' to something better. As it is called in the no mindnode case and the other case")
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "No MindNode Doc"), object: nil)
             } else {
-//                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "No MindNode Doc"), object: nil)
-                mNoDocumentAlert.run()
+                if documentController.documents.count == 0 {
+                    // for situation where there is not instance of my app open e.g. the app just started and there are no MindNode docuemnts. A notification will not be recived because its part of the window lifecycle
+                    mNoDocumentAlert.run()
+                } else {
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "No MindNode Doc"), object: nil)
+                }
+                
+                
                 
             }
         }
@@ -115,14 +122,15 @@ class noDocumentAlert {
     
     func run() {
         // the reason we only want to allow another run after the users has pressed the button
-        if noDocumentAlertCounter == 0 {
-            noDocumentAlertCounter += 1
+        
+        if self.noDocumentAlertCounter == 0 {
+            self.noDocumentAlertCounter += 1
             let alert = NSAlert()
             alert.messageText = "No MindNode Document Can be Found"
             let modalResult = alert.runModal()
             switch modalResult {
             case .cancel:
-                self.noDocumentAlertCounter = 0
+                DispatchQueue.main.asyncAfter(deadline: .now()+5, execute: { self.noDocumentAlertCounter = 0 })
             default: break
                 
             }

@@ -9,9 +9,10 @@
 import Cocoa
 //import CoreGraphics
 import Sparkle
+  
 
 
-class ViewController: NSViewController {
+class ViewController: NSViewController{
     
     
     
@@ -52,11 +53,9 @@ class ViewController: NSViewController {
     
     
     func changeUIto(newState: Bool) {
-        guard let toolbarItems = view.window?.toolbar?.items else {
-            // sometimes this was nill when creating a new instance of my app. I don't know why. This seems to fix it
-            print("Can't access toolbar items")
-            return
-        }
+        let toolbarItems = view.window?.toolbar?.items ?? []
+        
+//        view.window?.toolbar!.validateVisibleItems()
         uiIsEnabled = newState
         switch newState {
         case true:
@@ -73,7 +72,7 @@ class ViewController: NSViewController {
             outlineView.isEnabled = false
             changeTagsCheckbox(to: false)
 //            view.window?.makeFirstResponder(view.window)
-            for item in view.window!.toolbar!.items {
+            for item in toolbarItems {
                 item.isEnabled = false
             }
         }
@@ -153,6 +152,7 @@ class ViewController: NSViewController {
         outlineView.delegate = self
         outlineView.dataSource = self
         
+        
         // make the entire background layer white. I can't see how to do this on the storyboard
         self.view.wantsLayer = true
         self.view.layer?.backgroundColor = NSColor.white.cgColor;
@@ -180,6 +180,8 @@ class ViewController: NSViewController {
             if nsDocumentContent!.loadedVersion == .six {
                 mindmapsForStruct6 = getMindMaps()
             }
+            
+            view.window!.toolbar!.delegate = self
             
 //            if outlineView.acceptsFirstResponder {
 //                self.view.window?.makeFirstResponder(outlineView)
@@ -227,6 +229,11 @@ class ViewController: NSViewController {
         
         if self.view.window == nil {
         // window can become nill after having two documents open and then closing one. I don't know why the window becomes nill and why adding a check only here seems to stop crashes.
+            return
+        }
+        if nsDocumentContent == nil {
+            // this was nill in some rare situations
+            print("nsDocument nil")
             return
         }
         self.view.window!.makeKey()

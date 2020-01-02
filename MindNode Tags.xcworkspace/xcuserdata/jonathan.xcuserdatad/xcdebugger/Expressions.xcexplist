@@ -31,13 +31,27 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "closure #1 in ViewController.nsDocumentNodeListSet(nodeList:):ViewController.swift">
+         contextName = "ViewController.checkBoxClicked():ViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "self.mindmapsForStruct6!">
+               value = "outlineView. numberOfRows">
             </PersistentString>
             <PersistentString
-               value = "self.nodeList">
+               value = "tags.totalTags()">
+            </PersistentString>
+            <PersistentString
+               value = "historyGet()">
+            </PersistentString>
+            <PersistentString
+               value = "nsDocumentContent">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in noDocumentAlert.run():AppDelegate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "noDocumentAlertCounter">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -78,10 +92,10 @@
          contextName = "ViewController.filterCurrentDocumentWithSelectedTags(_:):ViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "simplifyNodeList(newUnfilteredDocumentList)">
+               value = "simplifyNodeList(nsDocumentMainNodeList)">
             </PersistentString>
             <PersistentString
-               value = "simplifyNodeList(nsDocumentMainNodeList)">
+               value = "simplifyNodeList(newUnfilteredDocumentList)">
             </PersistentString>
             <PersistentString
                value = "nsDocumentContent!.structOfMindNodeFile">
@@ -111,7 +125,13 @@
          contextName = "ViewController.changeUIto(newState:):ViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "view.window!.toolbar">
+               value = "NSApplication.shared().mainWindow">
+            </PersistentString>
+            <PersistentString
+               value = "view.window?.toolbar!">
+            </PersistentString>
+            <PersistentString
+               value = "view.window?.toolbar!.validateVisibleItems()">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -132,13 +152,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "ViewController.nsDocumentMainNodeListGet():ViewController.swift">
+         contextName = "AppDelegate.applicationDidBecomeActive(_:):AppDelegate.swift">
          <PersistentStrings>
             <PersistentString
-               value = "nsDocumentContent?.loadedVersion">
-            </PersistentString>
-            <PersistentString
-               value = "nsDocumentContent!.structOfMindNodeFile.mindMap.mainNodes">
+               value = "documentController.documents">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -151,10 +168,13 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "AppDelegate.applicationDidBecomeActive(_:):AppDelegate.swift">
+         contextName = "ViewController.nsDocumentMainNodeListGet():ViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "documentController.documents">
+               value = "nsDocumentContent?.loadedVersion">
+            </PersistentString>
+            <PersistentString
+               value = "nsDocumentContent!.structOfMindNodeFile.mindMap.mainNodes">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -185,6 +205,14 @@
          <PersistentStrings>
             <PersistentString
                value = "self.outlineView.item(atRow: row)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "noDocumentAlert.run():AppDelegate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "noDocumentAlertCounter">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -300,7 +328,7 @@
          contextName = "ViewController.addNewTagstoTagList():ViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "nsDocumentContent!.structOfMindNode6File.canvas.mindMaps">
+               value = "view.window!">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -332,27 +360,21 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "ViewController.checkBoxClicked():ViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "outlineView. numberOfRows">
-            </PersistentString>
-            <PersistentString
-               value = "tags.totalTags()">
-            </PersistentString>
-            <PersistentString
-               value = "historyGet()">
-            </PersistentString>
-            <PersistentString
-               value = "nsDocumentContent!.loadedVersion">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "ViewController.tagsSet(tagList:):ViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "nsDocumentContent?.loadedVersion == 6">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in ViewController.nsDocumentNodeListSet(nodeList:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.mindmapsForStruct6!">
+            </PersistentString>
+            <PersistentString
+               value = "self.nodeList">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
