@@ -7,75 +7,133 @@
 //
 
 import Cocoa
-import CoreGraphics
+//import CoreGraphics
 import Sparkle
 
-class tagsClass{
-    var list = [Tag]()
-    
-    var numberOfCheckedTagsBeforeClick = 0
-    
-    func flatList() -> [Tag] {
-        return flattenTagList(list)
-    }
-    
-    func totalTags() -> Int {
-        return flatList().count
-    }
-    
-    func filterCheckedOnFlat() -> [Tag] {
-        
-        flatList().filter {$0.checkedState == .on}
-    }
-    
-}
 
 class ViewController: NSViewController {
     
+    
+    
     @IBOutlet weak var outlineView: NSOutlineView!
     
-    var tags = tagsClass()
+    // MARK: -
     
     var nsDocumentContent: Document? { return view.window?.windowController?.document as? Document}
     
-    var history: History!
-    var images: SaveImages!
-    
-    var selectedRow = 0
-    
-    var nsDocumentMainNode: nodeStruct {
-        get {return nsDocumentContent!.structOfMindNodeFile.mindMap.mainNodes[0]}
-        set {nsDocumentContent!.structOfMindNodeFile.mindMap.mainNodes[0] = newValue}
-    }
-    
     var nsDocumentMainNodeList: [nodeStruct] {
-        get {nsDocumentMainNodeListGet()}
-        set {nsDocumentMainNodeListSet(nodeList: newValue)}
+        get {nsDocumentNodeListGet()}
+        set {nsDocumentNodeListSet(nodeList: newValue)}
+    }
+    
+    var tagsInStruct: [TagStruct]? {
+        get {tagsGet()}
+        set {tagsSet(tagList: newValue!)}
     }
     
     
-    func nsDocumentMainNodeListGet() -> [nodeStruct] {
-        switch nsDocumentContent?.loadedVersion {
-        case .five:
-            return nsDocumentContent!.structOfMindNodeFile.mindMap.mainNodes
-        case .six:
-            return nsDocumentContent!.structOfMindNode6File.canvas.mindMaps.map {$0.mainNode}
-        case .none:
-            print("nsDocumentMainNodeListGet Switch None. Probably Caused this being called after the nsDocument has been closed")
-            return [blankNodeStruct]
-//            fatalError("nsDocumentMainNodeListGet Switch Error")
+    var unfilteredDocumentList: [[nodeStruct]]!
+    
+    var unfilteredDocumentListToFindTagsIn: [nodeStruct]!
+
+    var tags = tagsClass()
+    var backupClass = BackupNodeList()
+    var saveImagesClass = SaveImages()
+    var hasAppBeenLaunched = false
+    let itemPasteboardTypeForMyTagCells = NSPasteboard.PasteboardType(rawValue: "jonathan.outlineItem")
+    var selectedRow = 0
+    var lastCellSelected: TagCellView?
+    var uiIsEnabled = true
+    var mindmapsForStruct6: Set<mindMapsStruct6>?
+    var allowAlertForNoOpenDoc = true
+    let mNoDocumentAlert = noDocumentAlert()
+    
+    // MARK: -
+    
+    
+    func changeUIto(newState: Bool) {
+        guard let toolbarItems = view.window?.toolbar?.items else {
+            // sometimes this was nill when creating a new instance of my app. I don't know why. This seems to fix it
+            print("Can't access toolbar items")
+            return
+        }
+        uiIsEnabled = newState
+        switch newState {
+        case true:
+            outlineView.isEnabled = true
+//            view.window?.makeFirstResponder(outlineView)
+            changeTagsCheckbox(to: true)
+            
+            for item in toolbarItems {
+                item.isEnabled = true
+            }
+            
+        case false:
+            outlineView.deselectAll(nil)
+            outlineView.isEnabled = false
+            changeTagsCheckbox(to: false)
+//            view.window?.makeFirstResponder(view.window)
+            for item in view.window!.toolbar!.items {
+                item.isEnabled = false
+            }
         }
     }
     
-    func nsDocumentMainNodeListSet(nodeList: [nodeStruct]) {
+    func getMindMaps() -> Set<mindMapsStruct6>?{
+        // return set
+        // make sure the thing is accessing this
+        let array =  self.nsDocumentContent!.structOfMindNode6File.canvas.mindMaps.map { (input) -> mindMapsStruct6 in
+            var temp = input
+            temp.mainNode.subnodes = []
+            return temp
+        }
+        return Set(array)
+    }
+    
+    func tagsGet() -> [TagStruct]? {
         switch nsDocumentContent!.loadedVersion {
-        case .five:
-            nsDocumentContent!.structOfMindNodeFile.mindMap.mainNodes = nodeList
+        case .two:
+            return nsDocumentContent!.structOfMindNode2File?.tags
+        case .six:
+            return nsDocumentContent!.structOfMindNode6File?.tags
+        case .none:
+            fatalError("Tag Get Switch Error")
+        }
+    }
+    
+    
+    func tagsSet(tagList: [TagStruct]) {
+        switch nsDocumentContent?.loadedVersion {
+        case .two:
+            nsDocumentContent!.structOfMindNode2File.tags = tagList
+        case .six:
+            nsDocumentContent!.structOfMindNode6File.tags = tagList
+        case .none:
+            print("Tag set error")
+        }
+    }
+    
+    func nsDocumentNodeListGet() -> [nodeStruct] {
+        switch nsDocumentContent?.loadedVersion {
+        case .two:
+            return nsDocumentContent!.structOfMindNode2File.mindMap.mainNodes
+        case .six:
+            return nsDocumentContent!.structOfMindNode6File.canvas.mindMaps.map {$0.mainNode}
+        case .none:
+            print("nsDocumentMainNodeListGet Switch None.")
+            return [blankNodeStruct]
+            //            fatalError("nsDocumentMainNodeListGet Switch Error")
+        }
+    }
+    
+    func nsDocumentNodeListSet(nodeList: [nodeStruct]) {
+        switch nsDocumentContent!.loadedVersion {
+        case .two:
+            nsDocumentContent!.structOfMindNode2File.mindMap.mainNodes = nodeList
         case .six:
             nsDocumentContent!.structOfMindNode6File.canvas.mindMaps =  nodeList.map {
                 let currentNode = $0
-                var mindMapsStructTemp = self.nsDocumentContent!.structOfMindNode6File.canvas.mindMaps.first {$0.mainNode.nodeID == currentNode.nodeID} ?? self.nsDocumentContent!.structOfMindNode6File.canvas.mindMaps[0]
-                #warning("in the ?? case I am losing information. This can happen somtimes on an unfilter.")
+                var mindMapsStructTemp = self.mindmapsForStruct6!.first {$0.mainNode.nodeID == currentNode.nodeID}!
                 mindMapsStructTemp.mainNode = currentNode
                 return mindMapsStructTemp
             }
@@ -84,70 +142,10 @@ class ViewController: NSViewController {
         }
     }
     
+//    let delegate = NSApplication.shared.delegate as! AppDelegate
     
-    func tagsGet() -> [TagStruct]? {
-        switch nsDocumentContent!.loadedVersion {
-        case .five:
-            return nsDocumentContent!.structOfMindNodeFile?.tags
-        case .six:
-            return nsDocumentContent!.structOfMindNode6File?.tags
-        case .none:
-            fatalError("Tag Get Switch Error")
-        }
-        
-    }
     
-    func tagsSet(tagList: [TagStruct]) {
-        switch nsDocumentContent?.loadedVersion {
-        case .five:
-            nsDocumentContent!.structOfMindNodeFile.tags = tagList
-        case .six:
-            nsDocumentContent!.structOfMindNode6File.tags = tagList
-        case .none:
-            print("Tag set error")
-        }
-    }
-    
-    func historyGet() ->  [[nodeStruct]]? {
-        switch nsDocumentContent!.loadedVersion {
-        case .five:
-            return nsDocumentContent!.structOfMindNodeFile.history1?.map {$0.nodeStructVar}
-        case .six:
-            return nsDocumentContent!.structOfMindNode6File.history1?.map {$0.nodeStructVar}
-        case .none:
-            fatalError("History get Switch Error")
-        }
-        
-    }
-    
-    func historySet(history: [[nodeStruct]]) {
-        switch nsDocumentContent!.loadedVersion {
-        case .five:
-            let returnBit = history.map {nodeStructList(nodeStructVar: $0)}
-            nsDocumentContent!.structOfMindNodeFile.history1 = returnBit
-        case .six:
-            nsDocumentContent!.structOfMindNode6File.history1 = history.map {nodeStructList(nodeStructVar: $0)}
-        case .none:
-            print("History set error")
-        }
-    }
-    
-    //    var unfilteredDocument: [nodeStruct]!
-    var unfilteredDocumentList: [[nodeStruct]]!
-    var unfilteredDocumentListToFindTagsIn: [nodeStruct]!
-    var documentHistory: [[nodeStruct]]!
-    
-    var indexInDocumentHistory = 0
-    var hasAppBeenLaunched = false
-    let itemPasteboardType = NSPasteboard.PasteboardType(rawValue: "jonathan.outlineItem")
-    
-    let delegate = NSApplication.shared.delegate as! AppDelegate
-    
-    @IBAction func checkForUpdates(_ sender: Any) {
-        let updater = SUUpdater.shared()
-        updater?.feedURL = URL(string: "some mystery location")
-        updater?.checkForUpdates(self)
-    }
+    // MARK: -
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -155,207 +153,257 @@ class ViewController: NSViewController {
         outlineView.delegate = self
         outlineView.dataSource = self
         
+        // make the entire background layer white. I can't see how to do this on the storyboard
         self.view.wantsLayer = true
         self.view.layer?.backgroundColor = NSColor.white.cgColor;
-        outlineView.selectionHighlightStyle = .none
-        // make outline view able to accept drag drop of this made up type
-        outlineView.registerForDraggedTypes([itemPasteboardType])
         
-        NotificationCenter.default.addObserver(self, selector: #selector(addNewTagstoTagList), name: NSNotification.Name(rawValue: "refeshTagsList"), object: nil)
+        outlineView.selectionHighlightStyle = .none
+        
+        // make outline view able to accept drag drop of this made up type
+        outlineView.registerForDraggedTypes([itemPasteboardTypeForMyTagCells])
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(addNewTagstoTagList), name: NSNotification.Name(rawValue: "addNewTagstoTagList"), object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(checkBoxClicked), name: NSNotification.Name(rawValue: "checkBoxClicked"), object: nil)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(boldOnSelected), name: NSOutlineView.selectionDidChangeNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(noMindNodeDoc), name: NSNotification.Name(rawValue: "No MindNode Doc"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(highlightOnSelect), name: NSOutlineView.selectionDidChangeNotification, object: nil)
         
         
-        
-        
-    }
-    
-    
-    
-    var lastCellSelected: TagCellView?
-    
-    @objc func boldOnSelected(_ sender: NSNotification) {
-        lastCellSelected?.box.isHidden = true
-        let row = (sender.object! as! NSOutlineView).selectedRow
-        if row == -1 {
-            // the selectedRow is -1 if there is no row selected
-            return
-        }
-        if (row > (tags.totalTags()-1)) || row < 0 {
-            print("boldOnSelected: Row out of range")
-            return
-        }
-        let tagCellView = outlineView.view(atColumn: 0, row: row, makeIfNecessary: false) as? TagCellView
-        //        tagCellView.wantsLayer = true
-        //        tagCellView.layer?.masksToBounds = false
-        
-        tagCellView?.box.isHidden = false
-        
-        lastCellSelected = tagCellView
-        //        guard let sender1 = sender.object as? TagCellView else {return}
-        //        sender1.tagName.textColor = .systemRed
-        //        NSLog("Selection Changed")
+//        NotificationCenter.default.addObserver(self, selector: #selector(mykeyUp(_:)), name: NSNotification.Name(rawValue: "keyEvent"), object: nil)
     }
     
     override func viewWillAppear() {
         // when the app is hidden then unhidden it also calls this function. But I don't want it to be run again
         if hasAppBeenLaunched == false {
-            let markedCurrDoc = markWillShowInFilterList(nodeList:  nsDocumentMainNodeList, taglist: [], markAllChildren: true)
-            unfilteredDocumentList = [markedCurrDoc]
-            documentHistory = [markedCurrDoc]
-            //            unfilteredDocumentList = [[]]
-            
-            if historyGet() == nil {
-                print("View will appear set history")
-                historySet(history: [markedCurrDoc])
+            if nsDocumentContent!.loadedVersion == .six {
+                mindmapsForStruct6 = getMindMaps()
             }
             
-            history = History()
-            //            sendActionSaveNSDocument()
-            
-            tags.list = convertTagStructListToTagList(tagStructList: tagsGet() ?? [])
-            addNewTagstoTagList()
-//            DispatchQueue.main.async {
-//                // I don't know why but if I don't do this the code doesn't seem to be called properly
-//                moveAppNextToOpenMindNodeDocument()
+//            if outlineView.acceptsFirstResponder {
+//                self.view.window?.makeFirstResponder(outlineView)
 //            }
+//            
+//            outlineView.nextKeyView = outlineView
             
+            unfilteredDocumentList = [markWillShowInFilterList(nodeList:  nsDocumentMainNodeList, taglist: [], markAllChildren: true)]
+            
+            tags.list = convertTagStructListToTagList(tagStructList: tagsInStruct ?? [])
+            addNewTagstoTagList()
+            
+            saveImagesClass.getImagesFromBackup()
+            
+            hasAppBeenLaunched = true
+
             // sometimes a small delay is needed so the function can find the window
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4, execute: {
                 moveAppNextToOpenMindNodeDocument()
             })
-            //            Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(saveCurrentDocToHistory), userInfo: nil, repeats: true)
+        
+            //  Code to run load table every 3 seconds. I don't use this becuase when my app is not in focus it will no update the screen
+            //        DispatchQueue.main.async {
+            //            self.document!.addWindowController(MyWindowController(window: self.view.window!))
+            //            let date = Date().addingTimeInterval(1)
+            //            let timer = Timer(fireAt: date, interval: 3, target: self, selector: #selector(loadTableFromAppDelegate), userInfo: nil, repeats: true)
+            //            RunLoop.main.add(timer, forMode: .common)
+            //        }
             
-            images = SaveImages()
-            images.getImagesFromBackup()
-            hasAppBeenLaunched = true
-            
+            NSEvent.addLocalMonitorForEvents(matching: .keyDown) {
+                if self.myKeyDown(with: $0) {
+                    return nil
+                } else {
+                    return $0
+                }
+            }
             
         }
         
     }
-    
-    
-    
-    
-    
-    //  Code to run load table every 3 seconds. I don't use this becuase when my app is not in focus it will no update the screen
-    //        DispatchQueue.main.async {
-    //            self.document!.addWindowController(MyWindowController(window: self.view.window!))
-    //            let date = Date().addingTimeInterval(1)
-    //            let timer = Timer(fireAt: date, interval: 3, target: self, selector: #selector(loadTableFromAppDelegate), userInfo: nil, repeats: true)
-    //            RunLoop.main.add(timer, forMode: .common)
-    //        }
-    
-    
-    
-    @IBAction func unfilterCurrentDocument(_ sender: Any) {
+
+    // MARK: - Filter Unfilter
+
+    @objc func checkBoxClicked() {
+        
+        if self.view.window == nil {
+        // window can become nill after having two documents open and then closing one. I don't know why the window becomes nill and why adding a check only here seems to stop crashes.
+            return
+        }
+        self.view.window!.makeKey()
+        
+        saveImagesClass.loadAndSaveEverything()
+        
+        if nsDocumentContent!.loadedVersion == .six {
+            mindmapsForStruct6 = mindmapsForStruct6?.union(getMindMaps()!)
+        }
         
         
-        let newUnfilteredDocumentList = mergeUnfilteredWithFiltered(unfiltered: unfilteredDocumentList[0], filtered: nsDocumentMainNodeList)
+        // update model with checkbox changes
+        for indexOfTag in 0..<tags.totalTags() {
+            if let tagCellView = outlineView.view(atColumn: 0, row: indexOfTag, makeIfNecessary: false) as? TagCellView {
+                tags.replaceTagInTagList(replaceUUID: tagCellView.uuid, newCheckboxState: tagCellView.checkbox.state)
+            } else {
+                print("problem updating model with checkbox changes")
+            }
+            
+        }
         
-        // this fixes a problem where I unfilter but for some reason it doesn't work. I don't know why but trying it a few times seems to fix it
+        let areNoTagsSelected = tags.filterCheckedOnFlat().count == 0
+        if areNoTagsSelected {
+            unfilterCurrentDocument("")
+        } else {
+            filterCurrentDocumentWithSelectedTags("")
+        }
         
-        // I could have added new items while the document was
+        tags.numberOfCheckedTagsBeforeClick = tags.filterCheckedOnFlat().count
+        
+        addDocumentToBackup()
+        
+        changeTagsCheckbox(to: false)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+            self.changeTagsCheckbox(to: true)
+        })
+    }
+    
+    func saveDocumentAndCheckSaveWorked(docToSave: [nodeStruct]) {
         var counter = 0
         repeat {
             counter += 1
-            nsDocumentMainNodeList = newUnfilteredDocumentList
+            nsDocumentMainNodeList = docToSave
             
             sendActionSaveNSDocument()
             if counter == 10 {
                 print("Broke out of unfilter save check after 10 attemps")
                 break
             }
-            if (nsDocumentMainNodeList == newUnfilteredDocumentList) {
+            if (nsDocumentMainNodeList == docToSave) {
                 break
             }
         }
-            while nsDocumentMainNodeList != newUnfilteredDocumentList
+            while nsDocumentMainNodeList != docToSave
+    }
+    
+    func getUnfilteredDocument() -> [nodeStruct] {
+        if tags.numberOfCheckedTagsBeforeClick == 0 {
+            return nsDocumentMainNodeList
+        } else {
+            return mergeUnfilteredWithFiltered(unfiltered: unfilteredDocumentList[0], filtered: nsDocumentMainNodeList)
+        }
+    }
+    
+    @IBAction func unfilterCurrentDocument(_ sender: Any) {
+        
+        let newNodeList = mergeUnfilteredWithFiltered(unfiltered: unfilteredDocumentList[0], filtered: nsDocumentMainNodeList)
+    
+        saveDocumentAndCheckSaveWorked(docToSave: newNodeList)
     }
     
     @IBAction func filterCurrentDocumentWithSelectedTags(_ sender: Any) {
-        // get list of tags
-        let filterdTags = tags.filterCheckedOnFlat()
-        let filteredTagsString = filterdTags.map {$0.tagName}
+        let checkedTags = tags.filterCheckedOnFlat()
+        let checkedTagsStringForm = checkedTags.map {$0.tagName}
         
-        let newUnfilteredDocumentList: [nodeStruct]
-        if tags.numberOfCheckedTagsBeforeClick == 0 { // i.e I am going from 0 boxes checked to 1
-            // if this is the first tag we are filtering by anything on the screen couldn have changed. In particular I could have deleted a node. By marknig the unfilteredDocumentList[0] and all its children as 'in the filtered list' it means that the version of this that is saved to unfilteredDocumentList includes things like deleted nodes.
-//            let unfiltered1 = markWillShowInFilterList(nodeList: unfilteredDocumentList[0], taglist: [], markAllChildren: true)
-//            newUnfilteredDocumentList = mergeUnfilteredWithFiltered(unfiltered: unfiltered1, filtered: nsDocumentMainNodeList)
-            newUnfilteredDocumentList = nsDocumentMainNodeList
-        } else {
-            newUnfilteredDocumentList = mergeUnfilteredWithFiltered(unfiltered: unfilteredDocumentList[0], filtered: nsDocumentMainNodeList)
-        }
+        // Update Unfiltered Document
+        let newUnfilteredDocumentList: [nodeStruct] = getUnfilteredDocument()
         
-        unfilteredDocumentList.insert(markWillShowInFilterList(nodeList: newUnfilteredDocumentList, taglist: filteredTagsString, markAllChildren: false), at: 0)
+        unfilteredDocumentList.insert(markWillShowInFilterList(nodeList: newUnfilteredDocumentList, taglist: checkedTagsStringForm, markAllChildren: false), at: 0)
         
-        //        unfilteredDocumentList.insert(newUnfilteredDocumentList, at: 0)
+        // Filter The document
+        let newFilteredDocumentList = filterNodeListByTag(subnodeList: newUnfilteredDocumentList, tagsToFilterBy: checkedTagsStringForm)
         
-        
-        let newFilteredDocumentList = filterNodeListByTag(subnodeList: newUnfilteredDocumentList, tagsToFilterBy: filteredTagsString)
-        
-        var counter = 0
-        repeat {
-            counter += 1
-            nsDocumentMainNodeList = newFilteredDocumentList
-            sendActionSaveNSDocument()
-            if counter == 10 {
-                print("filter: stoped after 10 save attemps")
-                break
-            }
-            if nsDocumentMainNodeList == newFilteredDocumentList {
-                break
-            }
-        }
-            while nsDocumentMainNodeList != newFilteredDocumentList
+        saveDocumentAndCheckSaveWorked(docToSave: newFilteredDocumentList)
         
     }
     
-    @objc func checkBoxClicked() {
-        images.addNewImages()
-        images.saveImagesToBackup()
-        images.saveImages()
-        
-        // update model with checkbox changes
-        for indexOfTag in 0..<tags.totalTags() {
-            let tagCellView = outlineView.view(atColumn: 0, row: indexOfTag, makeIfNecessary: false) as! TagCellView
-            tags.list = replaceTagInTagList(tagList: tags.list, replaceUUID: tagCellView.uuid, replaceCheckbox: tagCellView.checkbox.state)
-        }
-        
-        
-        // unfilter if there are no checkboxes checked. This is here
-        let areNoTagsSelected = tags.filterCheckedOnFlat().count == 0
-        if areNoTagsSelected {
-            unfilterCurrentDocument("checkBoxClicked")
+
+    // MARK: -
+    
+    @objc func noMindNodeDoc() {
+        if getMindNodeOpenFileUrlMaster() == nil {
+            changeUIto(newState: false)
+            mNoDocumentAlert.run()
+            
         } else {
-            filterCurrentDocumentWithSelectedTags("checkBoxClicked")
+            changeUIto(newState: true)
         }
+    }
+    @objc func addNewTagstoTagList() {
         
-        tags.numberOfCheckedTagsBeforeClick = tags.filterCheckedOnFlat().count
+        //This happens when I close with command w
+        if nsDocumentContent == nil {return}
         
-        saveCurrentDocToHistory()
         
-        changeStateCheckbox(to: false)
+        #warning("This function can be removed if I find a solution to the nsDocumentMainNodeListSet for MindNode6 not working when I select a blank tag ")
+//        changeTagsCheckbox(to: false)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
-            self.changeStateCheckbox(to: true)
+        unfilteredDocumentListToFindTagsIn = getUnfilteredDocument()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7, execute: {
+            
+            // Add new tags from document to my list of tags
+            let allTagsInCurrentDoc = getListOfTagsFromListOfNodes(nodeList: self.nsDocumentMainNodeList)
+            for tag in allTagsInCurrentDoc {
+                if self.tags.flatList().filter({$0.tagName == tag.tagName}).count == 0 {
+                    self.tags.list.append(tag)
+                }
+            }
+            
+            // Save my new tags to XML
+            self.tagsInStruct = convertTagsToSavableForm(tagList: self.tags.list)
+            
+            let selectedIndexes = self.outlineView.selectedRow
+            // outlineView gets its tags from tags.list. Trigger refresh after we just added new tags to it
+            self.outlineView.reloadData()
+            
+//            self.outlineView.expandItem(nil, expandChildren: true)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.05, execute: {
+                // Re-highlight selected row
+                self.outlineView.selectRowIndexes(IndexSet(arrayLiteral: selectedIndexes), byExtendingSelection: false)
+                
+//                self.changeTagsCheckbox(to: true)
+                moveAppNextToOpenMindNodeDocument()
+            })
+            
         })
+    }
         
+    
+    // MARK: -
+    @objc func highlightOnSelect(_ sender: NSNotification) {
+        lastCellSelected?.highlightBox.isHidden = true
+        
+        let selectedRow = (sender.object! as! NSOutlineView).selectedRow
+        
+        // Make sure nothing invalid is selected
+        // the selectedRow is -1 if there is no row selected
+        if selectedRow == -1 { return }
+        
+        let totalTagsIndex = tags.totalTags()-1
+        if selectedRow > totalTagsIndex || selectedRow < 0 {
+            print("highlightOnSelect: Row out of range")
+            return
+        }
+        // Select Row
+        let tagCellView = outlineView.view(atColumn: 0, row: selectedRow, makeIfNecessary: false) as? TagCellView
+        tagCellView?.highlightBox.isHidden = false
+        
+        lastCellSelected = tagCellView
     }
     
-    func changeStateCheckbox(to newState: Bool) {
-        if newState == false {
+    
+    
+    func changeTagsCheckbox(to newState: Bool) {
+        switch newState {
+        case false:
             for row in 0..<tags.flatList().count {
                 if outlineView.item(atRow: row) != nil {
                     let tagCellView = outlineView.view(atColumn: 0, row: row, makeIfNecessary: false) as? TagCellView
                     tagCellView?.checkbox.isEnabled = newState
                 }
             }
-        } else {
+        case true:
+            // The main thing this does is keep tags that have 0 instances from being enabled
             for (rowIndex, row) in self.tags.flatList().enumerated() {
                 let hasZeroInstances = occurancesOfTag(tagInQuestion: row, tagList: getListOfTagsFromListOfNodes(nodeList: self.unfilteredDocumentListToFindTagsIn)) == 0
                 if (self.outlineView.item(atRow: rowIndex) != nil) && (hasZeroInstances == false)  {
@@ -366,96 +414,16 @@ class ViewController: NSViewController {
         }
     }
     
-    @objc func addNewTagstoTagList() {
-        
-        if nsDocumentContent == nil {
-            print("This happens when I close with command w")
-            return
-        }
-        
-        #warning("the whole enable disable thing can be removed if I find a solution to the nsDocumentMainNodeListSet for MindNode6 not working when I select a blank tag ")
-        #warning("change this to the new changeStateCheckbox function I created")
-        for row in 0..<tags.flatList().count {
-            if outlineView.item(atRow: row) != nil {
-                let tagCellView = outlineView.view(atColumn: 0, row: row, makeIfNecessary: false) as? TagCellView
-                tagCellView?.checkbox.isEnabled = false
-            }
-        }
-        let newUnfilteredDocumentList: [nodeStruct]
-        if tags.numberOfCheckedTagsBeforeClick == 0 {
-            newUnfilteredDocumentList = nsDocumentMainNodeList
-        } else {
-            newUnfilteredDocumentList = mergeUnfilteredWithFiltered(unfiltered: unfilteredDocumentList[0], filtered: nsDocumentMainNodeList)
-        }
-        unfilteredDocumentListToFindTagsIn = newUnfilteredDocumentList
-        
-        DispatchQueue.global().async(qos: .userInteractive) {
-            // This adds a delay to the process as otherwise when users click and unclick the checkbox very fast it caused problems. I tested a bunch of times and 0.7 seconds was the stable minimum
-            let seconds: Double = 0.7
-            let dispatchTime: DispatchTime = DispatchTime.now() + seconds
-            DispatchQueue.global().asyncAfter(deadline: dispatchTime) {
-                DispatchQueue.main.async {
-                    let allTagsInCurrentDoc = getListOfTagsFromListOfNodes(nodeList: self.nsDocumentMainNodeList)
-                    for tag in allTagsInCurrentDoc {
-                        if self.tags.flatList().filter({$0.tagName == tag.tagName}).count == 0 {
-                            self.tags.list.append(tag)
-                        }
-                    }
-                    
-                    //                    writeTags(to: URL(string: "file:///Users/jonathan/Desktop/tags.xml")!, tagList: self.tags.list)
-                    self.tagsSet(tagList: convertTagListToTagStructList(tagList: self.tags.list))
-                    
-//                    self.sendActionSaveNSDocument()
-                    let selectedIndexes = self.outlineView.selectedRow
-                    self.outlineView.reloadData()
-                    self.outlineView.expandItem(nil, expandChildren: true)
-                    
-                    DispatchQueue.global().async(qos: .userInteractive) {
-                        let seconds: Double = 0.05
-                        
-                        let dispatchTime: DispatchTime = DispatchTime.now() + seconds
-                        DispatchQueue.global().asyncAfter(deadline: dispatchTime) {
-                            DispatchQueue.main.async {
-                                self.outlineView.selectRowIndexes(IndexSet(arrayLiteral: selectedIndexes), byExtendingSelection: false)
-                                
-                                
-                                for (rowIndex, row) in self.tags.flatList().enumerated() {
-                                    let hasZeroInstances = occurancesOfTag(tagInQuestion: row, tagList: getListOfTagsFromListOfNodes(nodeList: self.unfilteredDocumentListToFindTagsIn)) == 0
-                                    if (self.outlineView.item(atRow: rowIndex) != nil) && (hasZeroInstances == false)  {
-                                        let tagCellView = self.outlineView.view(atColumn: 0, row: rowIndex, makeIfNecessary: false) as? TagCellView
-                                        tagCellView?.checkbox.isEnabled = true
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        
-        
-        
-        
-        
-        moveAppNextToOpenMindNodeDocument()
-    }
+    // MARK: - Backup
     
-    
-    @objc func saveCurrentDocToHistory() {
+    @objc func addDocumentToBackup() {
         
-        let newUnfilteredDocumentList: [nodeStruct]
-        if tags.numberOfCheckedTagsBeforeClick == 0 {
-            let unfiltered1 = markWillShowInFilterList(nodeList: unfilteredDocumentList[0], taglist: [], markAllChildren: true)
-            newUnfilteredDocumentList = mergeUnfilteredWithFiltered(unfiltered: unfiltered1, filtered: nsDocumentMainNodeList)
-        } else {
-            newUnfilteredDocumentList = mergeUnfilteredWithFiltered(unfiltered: unfilteredDocumentList[0], filtered: nsDocumentMainNodeList)
-        }
-//        print("Saving with \(newUnfilteredDocumentList[0].subnodes.count) nodes")
-        if history.numberFiles != 0 && newUnfilteredDocumentList == history.get(index: 0) {
-//            print("Identical no need to make a backup")
-            return
-        }
-        history.add(content: newUnfilteredDocumentList)
+        let unfilteredDocument = getUnfilteredDocument()
+        
+        let currentDocMatchesLastSave = unfilteredDocument == backupClass.get(index: 0)?.nodeStruct
+        if currentDocMatchesLastSave {return}
+        
+        backupClass.add(content: unfilteredDocument, mindmapsForStruct61: mindmapsForStruct6)
         
     }
     
@@ -463,187 +431,94 @@ class ViewController: NSViewController {
         
         switch sender.selectedSegment {
         case 0: // back
-            if indexInDocumentHistory < (history.numberFiles-1) {
+            let numFilesIndexForm = backupClass.numberFiles-1
+            if backupClass.indexOfCurrentBackup < numFilesIndexForm {
                 print("Went Back")
-                indexInDocumentHistory += 1
-                nsDocumentMainNodeList = history.get(index: indexInDocumentHistory)
+                backupClass.indexOfCurrentBackup += 1
+                (mindmapsForStruct6, nsDocumentMainNodeList) = backupClass.get(index: backupClass.indexOfCurrentBackup)!
                 sendActionSaveNSDocument()
             }
         case 1: // forward
-            if indexInDocumentHistory > 0 {
+            if backupClass.indexOfCurrentBackup > 0 {
                 print("Went Forward")
-                indexInDocumentHistory -= 1
-                nsDocumentMainNodeList = history.get(index: indexInDocumentHistory)
+                backupClass.indexOfCurrentBackup -= 1
+                (mindmapsForStruct6, nsDocumentMainNodeList) = backupClass.get(index: backupClass.indexOfCurrentBackup)!
                 sendActionSaveNSDocument()
             }
         default:
             fatalError("Switch case should not exist")
         }
-        print("Current Pointer = \(indexInDocumentHistory+1)/\(history.numberFiles)")
+        print("Current Pointer = \(backupClass.indexOfCurrentBackup+1)/\(backupClass.numberFiles)")
+        addNewTagstoTagList()
         
     }
     
+    // MARK: -
+    func isNoRowSelected() -> Bool {
+        selectedRow = outlineView.selectedRow
+        let rowIndicatingNoSelection = -1
+        if selectedRow == rowIndicatingNoSelection {
+            return true
+        }
+        return false
+    }
     
-    
-    
-    override func keyUp(with event: NSEvent) {
+    func myKeyDown(with event: NSEvent) -> Bool {
         
-        if (event.keyCode == 49) {
-            //            // make a space update the checkbox
-            //            let selectedView = outlineView.view(atColumn: 0, row: outlineView.selectedRow, makeIfNecessary: false) as! TagCellView
-            //            selectedView.checkbox.setNextState()
-            //            // handle check box clicks like mouse checkbox clicks
-            //            selectedView.checkboxClicked("keyUp")
-            
-        } else if (event.keyCode == 51){
-            // delete remove selected row
-            let rowIndicatingNoSelection = -1
-            selectedRow = outlineView.selectedRow
-            if selectedRow == rowIndicatingNoSelection {
-                return
-            }
+        // handle keyDown only if current window has focus, i.e. is keyWindow
+        guard let locWindow = self.view.window,
+            NSApplication.shared.keyWindow === locWindow else { return false }
+        
+        switch Int(event.keyCode) {
+        case 49: // space
+            if isNoRowSelected() {return true}
             let selectedView = outlineView.view(atColumn: 0, row: outlineView.selectedRow, makeIfNecessary: false) as! TagCellView
+            selectedView.checkbox.setNextState()
+            // handle check box clicks like mouse checkbox clicks
+            selectedView.checkboxClicked("keyUp")
+            return true
+            
+        case 51: // delete
+            // delete selected row
+            if isNoRowSelected() {return true}
+            selectedRow = outlineView.selectedRow
+            let selectedView = outlineView.view(atColumn: 0, row: selectedRow, makeIfNecessary: false) as! TagCellView
             
             outlineView.beginUpdates()
-            let output = getIndexParentChild(itemToFind: selectedView.uuid, children: tags.list, currentItem: nil)
-            tags.list = removeItemList(removeIndex: output!.Index, parentOfItemToRemove: output?.Parent, inputItems: tags.list)
-            outlineView.removeItems(at: IndexSet(arrayLiteral: output!.Index), inParent: output?.Parent, withAnimation: .effectFade)
+            let (_, parent, index) = tags.findTagAlongWithParentAndIndex(itemsUUIDToFind: selectedView.uuid, currentItem: nil)!
+            tags.list = removeItemList(removeIndex: index, parentOfItemToRemove: parent, inputItems: tags.list)
+            outlineView.removeItems(at: IndexSet(arrayLiteral: index), inParent: parent, withAnimation: .effectFade)
             outlineView.reloadItem(nil, reloadChildren: true)
             
-            
+            // Re select row after outline reload
             DispatchQueue.main.async {
+                // We just deleted a row. There are now one less rows. if the selected row was the last one then we can't select the last row anymore. It must be the last -1
                 if self.tags.flatList().count == self.selectedRow {
                     self.selectedRow -= 1
                 }
                 self.outlineView.selectRowIndexes(IndexSet(arrayLiteral: self.selectedRow), byExtendingSelection: false)
             }
             outlineView.endUpdates()
-            
-        }
-    }
-    
-
-func sendActionSaveNSDocument() {
-//    DispatchQueue.main.asyncAfter(deadline: .now(), execute: thingToDo)
-    // tried calling from inside an asyncAfter and calling: nsDocumentContent!.save("viewcontroller save action")
-    // both froze on me. it seemed like the nsDocument one froze more often
-    NSApp.sendAction(#selector(NSDocument.save(_:)), to: nil, from: self)
-    
-}
-    
-
-}
-
-extension ViewController: NSOutlineViewDelegate {
-    
-    // Make the view that is used in the outline
-    func outlineView(_ outlineView: NSOutlineView, viewFor tableColumn: NSTableColumn?, item: Any) -> NSView? {
-        let item = item as! Tag
-        let cell = outlineView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "cell"), owner: self)
-            as! TagCellView
-        cell.textField?.stringValue = "\(item.tagName)   (\(occurancesOfTag(tagInQuestion: item, tagList: getListOfTagsFromListOfNodes(nodeList: unfilteredDocumentListToFindTagsIn))))"
-//        cell.textField?.font = NSFont(name: "American Typewriter", size: CGFloat(Float(18)))
-        cell.checkbox?.state = item.checkedState
-        cell.uuid = item.uuid
-        cell.box.isHidden = true
-        return cell
-    }
-}
-
-extension ViewController: NSOutlineViewDataSource {
-    
-    
-    // number of children
-    func outlineView(_ outlineView: NSOutlineView, numberOfChildrenOfItem item: Any?) -> Int {
-        if item == nil {
-            return tags.list.count
-        }
-        let item = item as! Tag
-        return item.children.count
-    }
-    // child of item
-    func outlineView(_ outlineView: NSOutlineView, child index: Int, ofItem item: Any?) -> Any {
-        if item == nil {
-            return tags.list[index]
-        }
-        let item = item as! Tag
-        return item.children[index]
-    }
-    // is item expandable
-    func outlineView(_ outlineView: NSOutlineView, isItemExpandable item: Any) -> Bool {
-        return true
-    }
-    
-    // should show triangle thing
-    func outlineView(_ outlineView: NSOutlineView, shouldShowOutlineCellForItem item: Any) -> Bool {
-        let item = item as! Tag
-        if item.children.count > 0 {
             return true
-        } else {
+        default:
             return false
         }
     }
     
-    //
-    // drag and drop
-    //
-    
-    // returns the bit that is stored in the pasteboard. We store a unique string made but UUID
-    func outlineView(_ outlineView: NSOutlineView, pasteboardWriterForItem item: Any) -> NSPasteboardWriting? {
-        let pp = NSPasteboardItem()
-        let item = item as! Tag
-        pp.setString(item.uuid, forType: itemPasteboardType)
-        return pp
-    }
-    
-    // if a proposed drop location should be accepted
-    func outlineView(_ outlineView: NSOutlineView, validateDrop info: NSDraggingInfo, proposedItem item: Any?, proposedChildIndex index: Int) -> NSDragOperation {
-        let pasteboardItem = info.draggingPasteboard.pasteboardItems?.first
-        let theString = pasteboardItem!.string(forType: itemPasteboardType)!
-        let draggedItem = getIndexParentChild(itemToFind: theString, children: tags.list, currentItem: nil)
-        
-        if draggedItem?.Item.uuid == (item as? Tag)?.uuid {
-            return []
-        }
-        
-        let currentRow = outlineView.row(forItem: item)
-        let canDrag = index >= 0
-        let onCurrentRow = currentRow == index
-        if !canDrag {
-            return []
-        } else {
-            return .move
-        }
-        
-        //        return canDrag ? .move : []
+
+    func sendActionSaveNSDocument() {
+        //    DispatchQueue.main.asyncAfter(deadline: .now(), execute: thingToDo)
+        // tried calling from inside an asyncAfter and calling: nsDocumentContent!.save("viewcontroller save action")
+        // both froze on me. it seemed like the nsDocument one froze more often
+        NSApp.sendAction(#selector(NSDocument.save(_:)), to: nil, from: self)
         
     }
     
-    // Handle user dropping item
-    func outlineView(_ outlineView: NSOutlineView, acceptDrop info: NSDraggingInfo, item: Any?, childIndex index: Int) -> Bool {
-        guard
-            let pasteboardItem = info.draggingPasteboard.pasteboardItems?.first,
-            let theString = pasteboardItem.string(forType: itemPasteboardType),
-            let draggedItem = getIndexParentChild(itemToFind: theString, children: tags.list, currentItem: nil)
-            else {return false}
-        var newIndex = index
-        
-        let item = (item as? Tag ?? nil)
-        if (draggedItem.Parent == item) && draggedItem.Index < index {
-            newIndex = index - 1
-        }
-        outlineView.beginUpdates()
-        outlineView.moveItem(at: draggedItem.1, inParent: draggedItem.0, to: newIndex, inParent: item)
-        tags.list = removeItemList(removeIndex: draggedItem.Index, parentOfItemToRemove: draggedItem.Parent, inputItems: tags.list)
-        tags.list = insertItemList(insertIndex: newIndex, parentOfItemToRemove: item, inputItems: tags.list, insertItem: draggedItem.Item)
-        outlineView.reloadItem(nil, reloadChildren: true)
-        outlineView.expandItem(item)
-        outlineView.endUpdates()
-        
-        tagsSet(tagList: convertTagListToTagStructList(tagList: self.tags.list))
-        sendActionSaveNSDocument()
-        
-        return true
+    @IBAction func checkForUpdates(_ sender: Any) {
+        let updater = SUUpdater.shared()
+        //        updater?.feedURL = URL(string: "some mystery location")
+        updater?.checkForUpdates(self)
     }
     
+
 }

@@ -5,17 +5,28 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "370BFECA-F473-4ABB-A904-66747F351E78"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9228F0CD-93B3-4D56-9053-5336E945E0CE"
+            uuid = "B999CAA0-DD68-4457-9866-46A75AE36C86"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MindNodeTags/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "465"
-            endingLineNumber = "465"
+            startingLineNumber = "440"
+            endingLineNumber = "440"
             landmarkName = "changeCurrentDocumentToHistory(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -23,31 +34,31 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "14C01A23-060D-4129-AF92-296B51700938"
+            uuid = "13EFFF51-BCD6-4DEE-A223-6EE9598650E5"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/ViewController.swift"
+            filePath = "MindNodeTags/NodesPersistence.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "432"
-            endingLineNumber = "432"
-            landmarkName = "addNewTagstoTagList()"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "add(content:mindmapsForStruct61:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "81B97AB7-289E-4B7B-8255-69F7A2C1D880"
+            uuid = "05D0241E-779B-4D7B-AB06-87BB58A4529E"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MindNodeTags/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "339"
-            endingLineNumber = "339"
+            startingLineNumber = "236"
+            endingLineNumber = "236"
             landmarkName = "checkBoxClicked()"
             landmarkType = "7">
          </BreakpointContent>
@@ -55,111 +66,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1F2DC7B4-A4D5-42D1-B804-7EF765EC9329"
+            uuid = "F8BA1956-14E3-45C5-9EF7-0882E550114B"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MindNodeTags/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "457"
-            endingLineNumber = "457"
-            landmarkName = "saveCurrentDocToHistory()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B8BA38BC-6640-467E-9C64-08C05E79B726"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/Document.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
-            landmarkName = "read5(url:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CF980532-5146-4D1E-A2A6-6BC083EDEDC6"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
-            landmarkName = "viewWillAppear()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EB1CD3D7-4356-4824-AD5A-6137084859B0"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "211"
-            endingLineNumber = "211"
-            landmarkName = "viewWillAppear()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2523D261-B4A3-49C3-983B-516C49C6EE19"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "274"
-            endingLineNumber = "274"
-            landmarkName = "unfilterCurrentDocument(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E9FB4542-543C-4985-84B3-2DED4BA916C5"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "298"
-            endingLineNumber = "298"
-            landmarkName = "filterCurrentDocumentWithSelectedTags(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "48D17E4C-92CB-41BA-9FDB-02D87440BEA1"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "333"
-            endingLineNumber = "333"
+            startingLineNumber = "260"
+            endingLineNumber = "260"
             landmarkName = "checkBoxClicked()"
             landmarkType = "7">
          </BreakpointContent>
@@ -167,252 +82,107 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "581A2BFD-11F3-4010-A104-25395B46BDBA"
+            uuid = "1EEB2343-4606-4BEF-8564-FD08D91B53D3"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MindNodeTags/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "419"
-            endingLineNumber = "419"
-            landmarkName = "addNewTagstoTagList()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "412ABAE0-3650-4A70-BF5F-1C00B6AF304A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "464"
-            endingLineNumber = "464"
-            landmarkName = "changeCurrentDocumentToHistory(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "73793595-F167-4C99-A328-8E9271B54E12"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/Document.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
-            landmarkName = "write6(url:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BCC74C40-0588-47D5-BD37-1BC7A3B6BA8D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/Document.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "write5(url:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B9E82AC2-A060-4A1F-9478-5866B08053FF"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "456"
-            endingLineNumber = "456"
-            landmarkName = "saveCurrentDocToHistory()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1118DC57-B9E5-44CF-A432-0C76592DE4A2"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "462"
-            endingLineNumber = "462"
-            landmarkName = "changeCurrentDocumentToHistory(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "1118DC57-B9E5-44CF-A432-0C76592DE4A2 - cc971fc9d257db3"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MindNode_Tags.ViewController.changeCurrentDocumentToHistory(__C.NSSegmentedControl) -&gt; ()"
-                  moduleName = "MindNode Tags"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jonathan/Programming%20Files/Personal%20Programming%20Large/MindNodeTags/MindNodeTags/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "395"
-                  endingLineNumber = "395"
-                  offsetFromSymbolStart = "660">
-               </Location>
-               <Location
-                  uuid = "1118DC57-B9E5-44CF-A432-0C76592DE4A2 - cc971fc9d257db3"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MindNode_Tags.ViewController.changeCurrentDocumentToHistory(__C.NSSegmentedControl) -&gt; ()"
-                  moduleName = "MindNode Tags"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jonathan/Programming%20Files/Personal%20Programming%20Large/MindNodeTags/MindNodeTags/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "395"
-                  endingLineNumber = "395"
-                  offsetFromSymbolStart = "705">
-               </Location>
-               <Location
-                  uuid = "1118DC57-B9E5-44CF-A432-0C76592DE4A2 - cc971fc9d257db3"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MindNode_Tags.ViewController.changeCurrentDocumentToHistory(__C.NSSegmentedControl) -&gt; ()"
-                  moduleName = "MindNode Tags"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jonathan/Programming%20Files/Personal%20Programming%20Large/MindNodeTags/MindNodeTags/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "395"
-                  endingLineNumber = "395"
-                  offsetFromSymbolStart = "2895">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "755F76E9-02DA-4C0A-9247-6A62BC6399B4"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/Document.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
-            landmarkName = "read(from:ofType:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0569BDCD-BD44-4CBC-89DB-BA1FBA9EA457"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/Document.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
-            landmarkName = "read5(url:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C6F2598D-EFE2-4AF3-871F-012204114B26"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/Document.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "Document"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "ViewController"
             landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "C6F2598D-EFE2-4AF3-871F-012204114B26 - 5de17f01946d5d86"
+                  uuid = "1EEB2343-4606-4BEF-8564-FD08D91B53D3 - 569c1b189579ce52"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "MindNode_Tags.Document.structOfMindNodeFile.getter : Swift.Optional&lt;MindNode_Tags.MindNodeContentStruct&gt;"
+                  symbolName = "MindNode_Tags.ViewController.backupClass.getter : MindNode_Tags.BackupNodeList"
                   moduleName = "MindNode Tags"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jonathan/Programming%20Files/Personal%20Programming%20Large/MindNodeTags/MindNodeTags/Document.swift"
+                  urlString = "file:///Users/jonathan/Programming%20Files/Personal%20Programming%20Large/MindNodeTags/MindNodeTags/ViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "38">
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "122">
                </Location>
                <Location
-                  uuid = "C6F2598D-EFE2-4AF3-871F-012204114B26 - b688a313cbffdb2"
+                  uuid = "1EEB2343-4606-4BEF-8564-FD08D91B53D3 - 92c9149bdff6be46"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "MindNode_Tags.Document.structOfMindNodeFile.setter : Swift.Optional&lt;MindNode_Tags.MindNodeContentStruct&gt;"
+                  symbolName = "MindNode_Tags.ViewController.backupClass.setter : MindNode_Tags.BackupNodeList"
                   moduleName = "MindNode Tags"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jonathan/Programming%20Files/Personal%20Programming%20Large/MindNodeTags/MindNodeTags/Document.swift"
+                  urlString = "file:///Users/jonathan/Programming%20Files/Personal%20Programming%20Large/MindNodeTags/MindNodeTags/ViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "38">
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "144">
                </Location>
                <Location
-                  uuid = "C6F2598D-EFE2-4AF3-871F-012204114B26 - e3ae9bd5f0ebb583"
+                  uuid = "1EEB2343-4606-4BEF-8564-FD08D91B53D3 - fa5d29bf9a91ea57"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "MindNode_Tags.Document.structOfMindNodeFile.modify : Swift.Optional&lt;MindNode_Tags.MindNodeContentStruct&gt;"
+                  symbolName = "MindNode_Tags.ViewController.backupClass.modify : MindNode_Tags.BackupNodeList"
                   moduleName = "MindNode Tags"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jonathan/Programming%20Files/Personal%20Programming%20Large/MindNodeTags/MindNodeTags/Document.swift"
+                  urlString = "file:///Users/jonathan/Programming%20Files/Personal%20Programming%20Large/MindNodeTags/MindNodeTags/ViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "30">
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
                </Location>
                <Location
-                  uuid = "C6F2598D-EFE2-4AF3-871F-012204114B26 - 4dd1c26657bc8c33"
+                  uuid = "1EEB2343-4606-4BEF-8564-FD08D91B53D3 - 70e28611d0e39d84"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "MindNode_Tags.Document.structOfMindNodeFile.modify : Swift.Optional&lt;MindNode_Tags.MindNodeContentStruct&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  symbolName = "MindNode_Tags.ViewController.backupClass.modify : MindNode_Tags.BackupNodeList with unmangled suffix &quot;.resume.0&quot;"
                   moduleName = "MindNode Tags"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jonathan/Programming%20Files/Personal%20Programming%20Large/MindNodeTags/MindNodeTags/Document.swift"
+                  urlString = "file:///Users/jonathan/Programming%20Files/Personal%20Programming%20Large/MindNodeTags/MindNodeTags/ViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
                   offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "1EEB2343-4606-4BEF-8564-FD08D91B53D3 - a43988a96288e239"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MindNode_Tags.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; MindNode_Tags.ViewController"
+                  moduleName = "MindNode Tags"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jonathan/Programming%20Files/Personal%20Programming%20Large/MindNodeTags/MindNodeTags/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "556">
+               </Location>
+               <Location
+                  uuid = "1EEB2343-4606-4BEF-8564-FD08D91B53D3 - 18cd634114d41266"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MindNode_Tags.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;MindNode_Tags.ViewController&gt;"
+                  moduleName = "MindNode Tags"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jonathan/Programming%20Files/Personal%20Programming%20Large/MindNodeTags/MindNodeTags/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "488">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -420,288 +190,123 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "86D3F8EE-75F4-4CB6-9E16-DB1796D333F3"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/Document.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "write(to:ofType:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CEAB9B8B-6D00-495F-9049-43EFF806EE95"
+            uuid = "BF71FEBB-DF7D-4619-9A24-B0C2DCE5043C"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MindNodeTags/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "204"
-            endingLineNumber = "204"
-            landmarkName = "viewWillAppear()"
-            landmarkType = "7">
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "BF71FEBB-DF7D-4619-9A24-B0C2DCE5043C - 90ccca6b7c6a5656"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MindNode_Tags.ViewController.saveImagesClass.getter : MindNode_Tags.SaveImages"
+                  moduleName = "MindNode Tags"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jonathan/Programming%20Files/Personal%20Programming%20Large/MindNodeTags/MindNodeTags/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "122">
+               </Location>
+               <Location
+                  uuid = "BF71FEBB-DF7D-4619-9A24-B0C2DCE5043C - f32ef666052ed65a"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MindNode_Tags.ViewController.saveImagesClass.setter : MindNode_Tags.SaveImages"
+                  moduleName = "MindNode Tags"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jonathan/Programming%20Files/Personal%20Programming%20Large/MindNodeTags/MindNodeTags/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "BF71FEBB-DF7D-4619-9A24-B0C2DCE5043C - ab895fbbf954466b"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MindNode_Tags.ViewController.saveImagesClass.modify : MindNode_Tags.SaveImages"
+                  moduleName = "MindNode Tags"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jonathan/Programming%20Files/Personal%20Programming%20Large/MindNodeTags/MindNodeTags/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "BF71FEBB-DF7D-4619-9A24-B0C2DCE5043C - e1b8ac4dec287137"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MindNode_Tags.ViewController.saveImagesClass.modify : MindNode_Tags.SaveImages with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "MindNode Tags"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jonathan/Programming%20Files/Personal%20Programming%20Large/MindNodeTags/MindNodeTags/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "BF71FEBB-DF7D-4619-9A24-B0C2DCE5043C - a43988a96288e239"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MindNode_Tags.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; MindNode_Tags.ViewController"
+                  moduleName = "MindNode Tags"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jonathan/Programming%20Files/Personal%20Programming%20Large/MindNodeTags/MindNodeTags/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "680">
+               </Location>
+               <Location
+                  uuid = "BF71FEBB-DF7D-4619-9A24-B0C2DCE5043C - 18cd634114d41266"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MindNode_Tags.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;MindNode_Tags.ViewController&gt;"
+                  moduleName = "MindNode Tags"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jonathan/Programming%20Files/Personal%20Programming%20Large/MindNodeTags/MindNodeTags/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "612">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "96436179-CB64-40FE-9D7E-76701BD9902B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/Document.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
-            landmarkName = "read(from:ofType:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8D464070-C1EA-4260-8495-865F09375283"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            condition = "if structOfMindNodeFile.history1!.count != historyBeforeWrite"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/Document.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
-            landmarkName = "read(from:ofType:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CDFB880E-60C0-449D-A4A2-9F9893BF4EE9"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/Document.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "presentedItemDidChange()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F72076BD-893A-4E01-9332-3AC2BF7012E9"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "314"
-            endingLineNumber = "314"
-            landmarkName = "filterCurrentDocumentWithSelectedTags(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "61627529-DCC0-41E9-B843-643B98E18CA2"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/TagCellView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "checkboxClicked(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8D440897-C693-4DD8-B1CE-6AF4ED55D76D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/Document.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
-            landmarkName = "write6(url:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "10D50143-DF6A-4C1E-8248-076F3AFF26A7"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/Document.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
-            landmarkName = "write6(url:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CD0D55CB-A5D1-4B9E-A7AC-551B5C43229C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/Document.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "write5(url:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "62679943-B64B-4D71-B24A-DB1B20603797"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/Document.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "write5(url:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CD1F2896-D056-4ED8-9B50-8B2ACCE54AB6"
+            uuid = "DD69B8F6-59E4-4C2B-A5EC-D8754E384EDE"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MindNodeTags/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "504"
-            endingLineNumber = "504"
-            landmarkName = "keyUp(with:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6B8699A8-EF24-4F47-AE0A-6FE556FB190F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/outlineView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "performKeyEquivalent(with:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "43733FBF-39E7-4EC2-8C8A-20B172F14815"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "495"
-            endingLineNumber = "495"
-            landmarkName = "keyUp(with:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B992CCDE-3D04-420A-ABC5-8906FA90DDBB"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/Document.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "makeWindowControllers()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "70FA262C-D5C8-41F6-BAD5-BDD72244C839"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/Document.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "makeWindowControllers()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BD308AD0-3F63-41FE-AE37-4A184F4C42C3"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "529132F3-1EA3-449B-9597-EA22BDDA5140"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "343"
-            endingLineNumber = "343"
+            startingLineNumber = "234"
+            endingLineNumber = "234"
             landmarkName = "checkBoxClicked()"
             landmarkType = "7">
          </BreakpointContent>
@@ -709,158 +314,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6C536174-0B1B-4FFE-AFAA-51D793922218"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/AppDelegate.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
-            landmarkName = "applicationShouldTerminateAfterLastWindowClosed(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "6C536174-0B1B-4FFE-AFAA-51D793922218 - 993fd4493a5470c5"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MindNode_Tags.AppDelegate.tryOpenCurrentMindNodeFile() -&gt; ()"
-                  moduleName = "MindNode Tags"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jonathan/Programming%20Files/Personal%20Programming%20Large/MindNodeTags/MindNodeTags/AppDelegate.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "80"
-                  endingLineNumber = "80"
-                  offsetFromSymbolStart = "1680">
-               </Location>
-               <Location
-                  uuid = "6C536174-0B1B-4FFE-AFAA-51D793922218 - 5d21f9eb9fd1571f"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.NSDocument&gt;, Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MindNode_Tags.AppDelegate.tryOpenCurrentMindNodeFile() -&gt; ()"
-                  moduleName = "MindNode Tags"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jonathan/Programming%20Files/Personal%20Programming%20Large/MindNodeTags/MindNodeTags/AppDelegate.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "80"
-                  endingLineNumber = "80"
-                  offsetFromSymbolStart = "4">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A6E3DC29-4D0C-4D45-B117-94305E1FD4CC"
+            uuid = "F2CED2BA-BA24-4B91-B745-2B46FF0C47B6"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MindNodeTags/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "262"
-            endingLineNumber = "262"
-            landmarkName = "unfilterCurrentDocument(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3B52AC6E-B5C9-4902-AD1B-E729CD15B75D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/MindMapFunctions.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
-            landmarkName = "filterNodeByTag(subnode:tagsToFilterBy:)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "13C70BA2-22B4-4CBE-82D2-3F69C9B3797F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/MindMapFunctions.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "212"
-            endingLineNumber = "212"
-            landmarkName = "getTagsFromMindNodeTextString(fullTitle:)"
-            landmarkType = "9">
-            <Locations>
-               <Location
-                  uuid = "13C70BA2-22B4-4CBE-82D2-3F69C9B3797F - 90c783c5236d0bc8"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MindNode_Tags.getTagsFromMindNodeTextString(fullTitle: Swift.String) -&gt; Swift.Optional&lt;Swift.Array&lt;MindNode_Tags.Tag&gt;&gt;"
-                  moduleName = "MindNode Tags"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jonathan/Programming%20Files/Personal%20Programming%20Large/MindNodeTags/MindNodeTags/MindMapFunctions.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "212"
-                  endingLineNumber = "212"
-                  offsetFromSymbolStart = "6616">
-               </Location>
-               <Location
-                  uuid = "13C70BA2-22B4-4CBE-82D2-3F69C9B3797F - 765eada8db30e5c8"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.String) -&gt; MindNode_Tags.Tag in MindNode_Tags.getTagsFromMindNodeTextString(fullTitle: Swift.String) -&gt; Swift.Optional&lt;Swift.Array&lt;MindNode_Tags.Tag&gt;&gt;"
-                  moduleName = "MindNode Tags"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jonathan/Programming%20Files/Personal%20Programming%20Large/MindNodeTags/MindNodeTags/MindMapFunctions.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "212"
-                  endingLineNumber = "212"
-                  offsetFromSymbolStart = "27">
-               </Location>
-               <Location
-                  uuid = "13C70BA2-22B4-4CBE-82D2-3F69C9B3797F - 765eada8db30e5c8"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.String) -&gt; MindNode_Tags.Tag in MindNode_Tags.getTagsFromMindNodeTextString(fullTitle: Swift.String) -&gt; Swift.Optional&lt;Swift.Array&lt;MindNode_Tags.Tag&gt;&gt;"
-                  moduleName = "MindNode Tags"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jonathan/Programming%20Files/Personal%20Programming%20Large/MindNodeTags/MindNodeTags/MindMapFunctions.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "212"
-                  endingLineNumber = "212"
-                  offsetFromSymbolStart = "276">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A9FC43F7-1970-4F0C-9A2E-46FA7C6707FE"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "346"
-            endingLineNumber = "346"
+            startingLineNumber = "238"
+            endingLineNumber = "238"
             landmarkName = "checkBoxClicked()"
             landmarkType = "7">
          </BreakpointContent>
@@ -868,31 +330,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9AC7D83A-4EE4-451A-BDB9-3B818242507E"
+            uuid = "A44F0126-0231-4D1B-8F67-20254B7EF8AF"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MindNodeTags/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "267"
-            endingLineNumber = "267"
-            landmarkName = "unfilterCurrentDocument(_:)"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "changeUIto(newState:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9A494842-591B-4219-923B-9603E02BF986"
+            uuid = "41341EC0-3047-4E10-B7B8-800EA21326B5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MindNodeTags/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "changeUIto(newState:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E92C9852-3147-4573-8AB5-460AA6082D1D"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MindNodeTags/AppDelegate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "applicationDidBecomeActive(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -900,527 +378,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F5D6687A-FAFD-4ECF-B327-60C099E0D897"
+            uuid = "166FE1A0-E338-45FD-A867-5D54FE4D93FB"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MindNodeTags/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "294"
-            endingLineNumber = "294"
-            landmarkName = "filterCurrentDocumentWithSelectedTags(_:)"
+            startingLineNumber = "322"
+            endingLineNumber = "322"
+            landmarkName = "noMindNodeDoc()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4301DAA7-B7B5-41C2-87F6-65275D241252"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "288"
-            endingLineNumber = "288"
-            landmarkName = "filterCurrentDocumentWithSelectedTags(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FFAC8D84-BE84-4702-B03E-EFBD3C6DC9C2"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "305"
-            endingLineNumber = "305"
-            landmarkName = "filterCurrentDocumentWithSelectedTags(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CC2A77AF-6701-47FC-A28C-420C487E9B4B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "515"
-            endingLineNumber = "515"
-            landmarkName = "keyUp(with:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "53655ACF-DA9A-4B0D-9DE7-3F7A18D92834"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "257"
-            endingLineNumber = "257"
-            landmarkName = "unfilterCurrentDocument(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9413DDCF-FC51-4B31-905F-5A9211859DF7"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/MindMapFunctions.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "mergeUnfilteredWithFilteredWithoutReset(unfiltered:filtered:parentID:)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "85367A8C-3FCC-469E-AA72-5CD1D10BB05A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/MindMapFunctions.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "mergeUnfilteredWithFilteredWithoutReset(unfiltered:filtered:parentID:)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F5BEE6DF-843B-41E5-98FE-FF8EEFAEB902"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "256"
-            endingLineNumber = "256"
-            landmarkName = "unfilterCurrentDocument(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CAB12B36-54D5-4376-89DE-C2FE5DEB96D1"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
-            landmarkName = "ViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B4C22292-E421-4988-80AE-6F3888D8BAC5"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/MoveAppNextToMindNode.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "moveAppNextToOpenMindNodeDocument()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DCEE0436-4CF5-4698-A7D9-41781B1CCD48"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/MoveAppNextToMindNode.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "moveAppNextToOpenMindNodeDocument()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4AAFC6F6-19AE-4607-B3A2-5D78B2A9C939"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/MoveAppNextToMindNode.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "moveAppNextToOpenMindNodeDocument()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4DDC7B07-1B12-439E-B80F-01338AF3D6DE"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/MoveAppNextToMindNode.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
-            landmarkName = "moveAppNextToOpenMindNodeDocument()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1468083A-6CB7-4850-8C8E-DF709B5C5ED6"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/MoveAppNextToMindNode.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "moveAppNextToOpenMindNodeDocument()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "ABF93103-25E2-4F6C-9F3B-FC71ACBE8E5C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/MoveAppNextToMindNode.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "moveAppNextToOpenMindNodeDocument()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "AB12C4ED-027A-4063-B9DA-64771578A50B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/MoveAppNextToMindNode.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "moveAppNextToOpenMindNodeDocument()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5AD41C5D-65DC-435B-A8A7-9324F8D1F947"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/MoveAppNextToMindNode.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
-            landmarkName = "moveAppNextToOpenMindNodeDocument()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A473D42C-A959-49EA-8DBD-53EBFA2FE4DC"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/MoveAppNextToMindNode.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "moveAppNextToOpenMindNodeDocument()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4F4D8066-2925-44CE-BE7F-0B586E7F1561"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/MoveAppNextToMindNode.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "moveAppNextToOpenMindNodeDocument()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "29ED8AA7-3210-4996-A4D8-87FA2AD32AEE"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/MoveAppNextToMindNode.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "moveAppNextToOpenMindNodeDocument()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EF714C85-E8C5-47DC-A4FD-32D02457C538"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/MoveAppNextToMindNode.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "moveAppNextToOpenMindNodeDocument()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "586EA54A-6C66-4461-9545-9BAA94F2F30E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/MoveAppNextToMindNode.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "moveAppNextToOpenMindNodeDocument()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2FF8B42F-14BE-482B-AB74-33C6B41E8661"
+            uuid = "6C8158FA-7329-447C-AED9-D2A5D2D27969"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MindNodeTags/AppDelegate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "restoreWindow(withIdentifier:state:completionHandler:)"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "tryOpenCurrentMindNodeFile()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "36FC0009-7F5C-4E86-A18B-A7EEA9CD3897"
+            uuid = "D9899C04-B2BE-4D61-928C-99C0D90FBF14"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MindNodeTags/AppDelegate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "accessabilityCheck()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "36FC0009-7F5C-4E86-A18B-A7EEA9CD3897 - c6835cc1f9e15ee9"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MindNode_Tags.AppDelegate.accessabilityCheck() -&gt; ()"
-                  moduleName = "MindNode Tags"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jonathan/Programming%20Files/Personal%20Programming%20Large/MindNodeTags/MindNodeTags/AppDelegate.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "904">
-               </Location>
-               <Location
-                  uuid = "36FC0009-7F5C-4E86-A18B-A7EEA9CD3897 - c6835cc1f9e15ee9"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MindNode_Tags.AppDelegate.accessabilityCheck() -&gt; ()"
-                  moduleName = "MindNode Tags"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jonathan/Programming%20Files/Personal%20Programming%20Large/MindNodeTags/MindNodeTags/AppDelegate.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "1211">
-               </Location>
-               <Location
-                  uuid = "36FC0009-7F5C-4E86-A18B-A7EEA9CD3897 - c6835cc1f9e15ee9"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MindNode_Tags.AppDelegate.accessabilityCheck() -&gt; ()"
-                  moduleName = "MindNode Tags"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jonathan/Programming%20Files/Personal%20Programming%20Large/MindNodeTags/MindNodeTags/AppDelegate.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "1911">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1AB5F334-2B5B-4B4F-A032-A8727CE1C550"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/AppDelegate.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "applicationWillTerminate(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "62E7D569-0ABF-497F-BD0D-96BD72427BFE"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/AppDelegate.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "applicationWillUnhide(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7CA521E7-ED0C-47AE-A2F1-C11BB4AEADCC"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220"
-            landmarkName = "viewWillAppear()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "7CA521E7-ED0C-47AE-A2F1-C11BB4AEADCC - ce418556863b0eb7"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MindNode_Tags.ViewController.viewWillAppear() -&gt; ()"
-                  moduleName = "MindNode Tags"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jonathan/Programming%20Files/Personal%20Programming%20Large/MindNodeTags/MindNodeTags/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "219"
-                  endingLineNumber = "219"
-                  offsetFromSymbolStart = "1514">
-               </Location>
-               <Location
-                  uuid = "7CA521E7-ED0C-47AE-A2F1-C11BB4AEADCC - 1895d6b2467b64bb"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in MindNode_Tags.ViewController.viewWillAppear() -&gt; ()"
-                  moduleName = "MindNode Tags"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jonathan/Programming%20Files/Personal%20Programming%20Large/MindNodeTags/MindNodeTags/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "221"
-                  endingLineNumber = "221"
-                  offsetFromSymbolStart = "4">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C3FA97CD-EFEE-4A55-900A-76BC26EF2DC9"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MindNodeTags/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "222"
-            endingLineNumber = "222"
-            landmarkName = "viewWillAppear()"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "tryOpenCurrentMindNodeFile()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

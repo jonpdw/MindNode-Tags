@@ -10,11 +10,11 @@ import Foundation
 import Cocoa
 
 func getMindNodeOpenFileUrlMaster() -> URL? {
-    if let try1 = getMindNodeOpenFileUrl(identifier: "com.ideasoncanvas.MindNodeMac") {
-        return try1
+    if let urlOfMindNode2Doc = getMindNodeOpenFileUrl(identifier: "com.ideasoncanvas.MindNodeMac") {
+        return urlOfMindNode2Doc
     }
-    if let try2 = getMindNodeOpenFileUrl(identifier: "com.ideasoncanvas.mindnode.macos") {
-        return try2
+    if let urlOfMindNode6Doc = getMindNodeOpenFileUrl(identifier: "com.ideasoncanvas.mindnode.macos") {
+        return urlOfMindNode6Doc
     }
     return nil
 }
@@ -26,13 +26,10 @@ func getMindNodeOpenFileUrl(identifier: String) -> URL? {
         print("No Accesability Permissions")
         return nil
     }
+    
     let mindNodeIdentifier = identifier
-//    let mindNodeIdentifier = "com.ideasoncanvas.MindNodeMac"
-//        let mindNodeIdentifier = "com.ideasoncanvas.mindnode.macos"
-
     
-    
-    let MindNodeApp : NSRunningApplication? = NSRunningApplication
+    let MindNodeApp: NSRunningApplication? = NSRunningApplication
         .runningApplications(withBundleIdentifier: mindNodeIdentifier).last as NSRunningApplication?
     
     if let pid = MindNodeApp?.processIdentifier {
@@ -51,16 +48,9 @@ func getMindNodeOpenFileUrl(identifier: String) -> URL? {
         if AXUIElementCopyAttributeValue(result_first, "AXDocument" as CFString, &docRef) == .success {
             let result = docRef as! AXUIElement
             
-//            print("Result = \(result)")
+//            let filePath = "\(result)"
             
-            
-//            let filePath = result as! String
-            let filePath = "\(result)"
-//            print("filePath = \(result)")
-//            if filePath == nil {
-//                print("Nil File Path")
-//                return nil
-//            }
+            let filePath = String(describing: result)
             let filePathURL = URL(string: filePath)
             return filePathURL
         }

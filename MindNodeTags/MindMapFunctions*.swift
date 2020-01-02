@@ -66,10 +66,6 @@ func mergeUnfilteredWithFilteredWithoutReset(unfiltered: nodeStruct, filtered: n
 
 
 
-
-
-
-
 func mergeUnfilteredWithFiltered(unfiltered: [nodeStruct], filtered: [nodeStruct]) -> [nodeStruct] {
     var mUnfiltered = blankNodeStruct
     mUnfiltered.subnodes = unfiltered
@@ -106,6 +102,7 @@ func markWillShowInFilter(node: nodeStruct, taglist: [String], markAllChildren: 
     node.subnodes = returnBit
     return [node]
 }
+
 func markWillShowInFilterList(nodeList: [nodeStruct], taglist: [String], markAllChildren: Bool) -> [nodeStruct] {
     return nodeList.map {markWillShowInFilter(node: $0, taglist: taglist, markAllChildren: markAllChildren)[0]}
 }

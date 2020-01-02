@@ -6,30 +6,71 @@
 //  Copyright © 2019 Jonathan. All rights reserved.
 //
 
-
-
-
 import Cocoa
-
-class myNSDocumentController: NSDocumentController {
-    
-    override class func restoreWindow(withIdentifier identifier: NSUserInterfaceItemIdentifier, state: NSCoder, completionHandler: @escaping (NSWindow?, Error?) -> Void) {
-        let preventDocumentRestoration = true
-        if preventDocumentRestoration {
-            // you need to decide when this var is true
-            print("inside myNSDocumentController")
-            completionHandler(nil, NSError(domain: NSCocoaErrorDomain, code: NSUserCancelledError, userInfo: nil))
-        } else {
-            super.restoreWindow(withIdentifier: identifier, state: state, completionHandler: completionHandler)
-        }
-    }
-}
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
-    let documentController = myNSDocumentController()
-    var hasBeenTrusted = false
+    let documentController = CustomNSDocumentController()
+    
+    let mNoDocumentAlert = noDocumentAlert()
+    
+    // the reason we store this is that we don't want the app to open in the background while the alert is still active. i.e you give permissions then click onn the app icon which launches the app
+    var appHasAccessabiltyPermissions = false
+    
+    func applicationWillFinishLaunching(_ notification: Notification) {
+        accessabilityCheck()
+    }
+    
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
+        tryOpenCurrentMindNodeFile()
+        
+    }
+    
+    func applicationDidBecomeActive(_ notification: Notification) {
+        tryOpenCurrentMindNodeFile()
+    }
+    
+    
+     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+    // When the user clicks on the icon. In most cases applicationDidBecomeActive would activate at the same time as this but when the user closes the last window and then clicks on the icon applicationDidBecomeActive is not called
+        tryOpenCurrentMindNodeFile()
+        return true
+    }
+
+
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        return false
+    }
+    
+    func applicationShouldOpenUntitledFile(_ sender: NSApplication) -> Bool {
+        return false
+    }
+    
+    func tryOpenCurrentMindNodeFile() {
+        if appHasAccessabiltyPermissions == true {
+            if  let openMindNodeFileName = getMindNodeOpenFileUrlMaster() {
+                
+                // only keep the tags document matching the current MindNode document open
+                for tagsDocument in documentController.documents {
+                    // document.fileURL includes /.contents.xml but openFileName doesn't. This standardises them
+                    if tagsDocument.fileURL!.deletingLastPathComponent() != openMindNodeFileName {tagsDocument.close()}
+                }
+                
+                let contentsXML_URL = openMindNodeFileName.appendingPathComponent("contents.xml")
+                documentController.openDocument(withContentsOf: contentsXML_URL, display: true, completionHandler:{ _,_,_  in })
+                // When applicationDidFinishLaunching calls this addNewTagstoTagList is probably not needed. But it is important to call when applicationDidBecomeActive calls this function
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "addNewTagstoTagList"), object: nil)
+                #warning("Change the name from 'No MindNode Doc' to something better. As it is called in the no mindnode case and the other case")
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "No MindNode Doc"), object: nil)
+            } else {
+//                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "No MindNode Doc"), object: nil)
+                mNoDocumentAlert.run()
+                
+            }
+        }
+        
+    }
     
     func accessabilityCheck() {
         if AXIsProcessTrusted() == false {
@@ -44,16 +85,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let modalResult = alert.runModal()
             
             switch modalResult {
-            case .alertFirstButtonReturn: // NSApplication.ModalResponse.alertFirstButtonReturn
+            case .alertFirstButtonReturn: // Quit
                 NSApplication.shared.terminate(self)
-            case .alertSecondButtonReturn:
+            case .alertSecondButtonReturn: // Get Help
                 let url = URL(string: "https://v.usetapes.com/vjkxYbaIHE")!
                 NSWorkspace.shared.open(url)
-            case .alertThirdButtonReturn:
+            case .alertThirdButtonReturn: // Recheck
                 if AXIsProcessTrusted() == false {
                     accessabilityCheck()
                 } else {
-                    hasBeenTrusted = true
+                    appHasAccessabiltyPermissions = true
                     tryOpenCurrentMindNodeFile()
                 }
                 
@@ -62,64 +103,31 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 print("Something Else Clicked")
             }
         } else {
-            hasBeenTrusted = true
+            appHasAccessabiltyPermissions = true
         }
     }
     
-    func applicationWillFinishLaunching(_ notification: Notification) {
-        accessabilityCheck()
-    }
-    
-    func applicationWillTerminate(_ notification: Notification) {
-        print("will terminate")
-    }
-    
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        //        PFMoveToApplicationsFolderIfNecessary()
-        tryOpenCurrentMindNodeFile()
-        
-    }
-    
-    func applicationDidBecomeActive(_ notification: Notification) {
-        //            nsc.documents[0].addWindowController(MyWindowController(window: NSApplication.shared.mainWindow!))
-        if hasBeenTrusted == true {
-        tryOpenCurrentMindNodeFile()
-        }
-    }
-    
-     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
-        if hasBeenTrusted == true {
-            tryOpenCurrentMindNodeFile()
-        }
-        return true
-    }
+}
 
+
+class noDocumentAlert {
+    var noDocumentAlertCounter = 0
     
-    func applicationWillUnhide(_ notification: Notification) {
-        print("UnHide")
-    }
-    
-    
-    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
-        return false
-    }
-    
-    func applicationShouldOpenUntitledFile(_ sender: NSApplication) -> Bool {
-        return false
-    }
-    
-    func tryOpenCurrentMindNodeFile() {
-        if let openFileName = getMindNodeOpenFileUrlMaster() {
-            let openURL = openFileName.appendingPathComponent("contents.xml")
-            documentController.openDocument(withContentsOf: openURL, display: true, completionHandler:{ _,_,_  in })
-            
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refeshTagsList"), object: nil)
-        } else {
-            print("Unable to find MindNode document to open")
+    func run() {
+        // the reason we only want to allow another run after the users has pressed the button
+        if noDocumentAlertCounter == 0 {
+            noDocumentAlertCounter += 1
+            let alert = NSAlert()
+            alert.messageText = "No MindNode Document Can be Found"
+            let modalResult = alert.runModal()
+            switch modalResult {
+            case .cancel:
+                self.noDocumentAlertCounter = 0
+            default: break
+                
+            }
         }
-        
     }
-    
 }
 
 

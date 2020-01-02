@@ -9,114 +9,12 @@
 import Foundation
 import Cocoa
 
-struct NSPrintInfoStruct: Codable {
-    var NSFirstPage: Int
-    var NSHorizonalPagination: Int
-    var NSHorizontallyCentered: Bool
-    var NSLastPage: Int
-    var NSOrientation: Int
-    var NSPrintAllPages: Bool
-    var NSScalingFactor: Int
-    var NSVerticalPagination: Int
-    var NSVerticallyCentered: Bool
-}
-
-struct strokeStyleStruct: Codable {
-    var color: String
-    var dash: Int
-    var width: Int
-}
-
-struct pathStyleStruct: Codable {
-    var pathType: Int?
-    var strokeStyle: strokeStyleStruct
-}
-
-struct borderStrokeStyleStruct: Codable {
-    var color: String
-    var dash: Int
-    var width: Int
-}
-
-struct shapeStyleStruct: Codable {
-    var borderStrokeStyle: borderStrokeStyleStruct
-    var fillColor: String
-    var shapeType: Int
-}
-
-struct fontStyleStruct: Codable {
-    var alignment: Int
-    var bold: Bool
-    var color: String
-    var fontName: String
-    var fontSize: Int
-    var italic: Bool
-    var strikethrough: Bool
-    var underline: Bool
-}
-// mindNode2
-struct titleStruct: Codable {
-    var allowToShrinkWidth: Bool
-    var fontStyle: fontStyleStruct?
-    var maxWidth: Int
-    var text: String
-    
-}
-struct attachmentStruct: Codable {
-    var clipArtName: String?
-    var fileName: String
-    var size: String
-    var tinted: Bool?
-    var type: Int
-}
-
-struct noteStruct: Codable {
-    var text: String
-    var visibleOnCanvas: Bool
-}
-
-struct fileLinkStruct: Codable {
-    var absoluteFilePath: String
-    var bookmarkData: Data
-    var relativeFilePath: String
-}
-
-struct taskStruct: Codable {
-    var state: Int
-}
-
-struct nodeStruct: Codable {
-    var decreasingStrokeWidth: Bool?
-    var layoutStyle: Int?
-    
-    var hasFoldedSubnodes: Bool
-    var isLeftAligned: Bool?
-    var location: String
-    var nodeID: String
-    var pathStyle: pathStyleStruct
-    var shapeStyle: shapeStyleStruct?
-    var subnodes: [nodeStruct]
-    var title: titleStruct
-    var willShowInFilter: Bool?
-    var attachment: attachmentStruct?
-    var note: noteStruct?
-    var noteIndicatorColor: String?
-    var fileLink: fileLinkStruct?
-    var task: taskStruct?
-}
-
-struct arrowStyleStruc: Codable {
-    var endArrow: Int
-    var startArrow: Int
-}
-
-struct crossConnectionsStruct: Codable {
-    var arrowStyle: arrowStyleStruc
-    var endNodeID: String
-    var pathStyle: pathStyleStruct
-    var startNodeID: String
-    var title: titleStruct
-    var wayPointOffset: String
+struct MindNode2ContentStruct:  Codable {
+    var NSPrintInfo: NSPrintInfoStruct
+    var mindMap: mindMapStruct
+    var typeOptions: Int
+    var version: Int
+    var tags: [TagStruct]?
 }
 
 struct mindMapStruct: Codable {
@@ -124,20 +22,6 @@ struct mindMapStruct: Codable {
     var crossConnections: [crossConnectionsStruct]?
     var mainNodes: [nodeStruct]
 }
-
-struct nodeStructList: Codable {
-    var nodeStructVar: [nodeStruct]
-}
-
-struct MindNodeContentStruct:  Codable {
-    var NSPrintInfo: NSPrintInfoStruct
-    var mindMap: mindMapStruct
-    var typeOptions: Int
-    var version: Int
-    var tags: [TagStruct]?
-    var history1: [nodeStructList]?
-}
-
 
 
 func TwoThingsEqual(thing1: nodeStruct, thing2: nodeStruct) -> Bool {
@@ -171,11 +55,11 @@ extension nodeStruct: Equatable {
     
 }
 
-let mborderStrokeStyleStruct = borderStrokeStyleStruct(color: "blank", dash: 0, width: 0)
+let mborderStrokeStyleStruct = strokeStyleStruct(color: "blank", dash: 0, width: 0)
 let mshapeStyleStruct = shapeStyleStruct(borderStrokeStyle: mborderStrokeStyleStruct, fillColor: "", shapeType: 0)
 let mstrokeStyleStruct = strokeStyleStruct(color: "blank", dash: 0, width: 0)
 let mpathStyleStruct = pathStyleStruct(pathType: 0, strokeStyle: mstrokeStyleStruct)
-let mtitleStruct = titleStruct(allowToShrinkWidth: false, fontStyle: nil, maxWidth: 0, text: "<p style=\'color: rgba(65, 82, 41, 1.000000); font: 18px \"Helvetica Neue\"; text-align: center; -cocoa-font-postscriptname: \"HelveticaNeue-Medium\"; \'>Blank</p>")
+let mtitleStruct = titleStruct(fontStyle: nil, maxWidth: 0, allowToShrinkWidth: true, text: "<p style=\'color: rgba(65, 82, 41, 1.000000); font: 18px \"Helvetica Neue\"; text-align: center; -cocoa-font-postscriptname: \"HelveticaNeue-Medium\"; \'>Blank</p>")
 let mattachmentStruct = attachmentStruct(clipArtName: nil, fileName: "", size: "", tinted: nil, type: 0)
 
 let blankNodeStruct = nodeStruct(decreasingStrokeWidth: nil, layoutStyle: nil, hasFoldedSubnodes: false, isLeftAligned: nil, location: "nil", nodeID: "blank_row_id", pathStyle: mpathStyleStruct, shapeStyle: mshapeStyleStruct, subnodes: [], title: mtitleStruct, willShowInFilter: true, attachment: mattachmentStruct)
