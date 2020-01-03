@@ -48,6 +48,7 @@ class ViewController: NSViewController{
     var mindmapsForStruct6: Set<mindMapsStruct6>?
     var allowAlertForNoOpenDoc = true
     let mNoDocumentAlert = noDocumentAlert()
+    var delayBetweenClicks = 1.5
     
     // MARK: -
     
@@ -170,8 +171,23 @@ class ViewController: NSViewController{
         
         NotificationCenter.default.addObserver(self, selector: #selector(highlightOnSelect), name: NSOutlineView.selectionDidChangeNotification, object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(preferencesChanged), name: UserDefaults.didChangeNotification, object: nil)
+        
         
 //        NotificationCenter.default.addObserver(self, selector: #selector(mykeyUp(_:)), name: NSNotification.Name(rawValue: "keyEvent"), object: nil)
+    }
+    
+    @objc func preferencesChanged() {
+        let showButtonsBool = UserDefaults.standard.bool(forKey: "showButtons")
+        closeHideFullScreenButtons(hide: showButtonsBool)
+        
+        delayBetweenClicks = UserDefaults.standard.double(forKey: "delayBetweenClicks")
+    }
+    
+    func closeHideFullScreenButtons(hide bool: Bool) {
+        view.window?.standardWindowButton(.closeButton)?.isHidden = bool
+        view.window?.standardWindowButton(.miniaturizeButton)?.isHidden = bool
+        view.window?.standardWindowButton(.zoomButton)?.isHidden = bool
     }
     
     override func viewWillAppear() {
@@ -180,6 +196,10 @@ class ViewController: NSViewController{
             if nsDocumentContent!.loadedVersion == .six {
                 mindmapsForStruct6 = getMindMaps()
             }
+            
+            // get preferences values
+            let defaults = ["showButtons": NSNumber(value: false), "delayBetweenClicks": NSNumber(value: 1.5)]
+            UserDefaults.standard.register(defaults: defaults)
             
             
 //            if outlineView.acceptsFirstResponder {
@@ -267,7 +287,7 @@ class ViewController: NSViewController{
         
         changeTagsCheckbox(to: false)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + delayBetweenClicks, execute: {
             self.changeTagsCheckbox(to: true)
         })
     }

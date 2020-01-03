@@ -15,7 +15,7 @@
                         <tabViewItem identifier="" image="NSPreferencesGeneral" id="eBO-M6-m95"/>
                     </tabViewItems>
                     <tabView key="tabView" type="noTabsNoBorder" id="dl1-9S-mtB">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="585" height="80"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <font key="font" metaFont="system"/>
                         <connections>
@@ -28,7 +28,7 @@
                     </connections>
                 </tabViewController>
             </objects>
-            <point key="canvasLocation" x="1289" y="208"/>
+            <point key="canvasLocation" x="781.5" y="555"/>
         </scene>
         <!--General-->
         <scene sceneID="Oof-dx-Dvv">
@@ -36,25 +36,135 @@
                 <customObject id="h67-Oe-uEJ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController title="General" id="pJ9-92-fBR" sceneMemberID="viewController">
                     <view key="view" id="hgy-q4-6Ih">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="656" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ikS-Eh-j6f">
-                                <rect key="frame" x="38" y="236" width="271" height="18"/>
+                                <rect key="frame" x="191" y="250" width="271" height="18"/>
                                 <buttonCell key="cell" type="check" title="Hide Close, Hide and Full Screen Buttons" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="I0h-Xh-rip">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <binding destination="4vm-Ko-8tv" name="value" keyPath="values.showButtons" id="7NA-m8-Mii"/>
+                                </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Xcd-nz-pnI">
+                                <rect key="frame" x="99" y="251" width="88" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Appearance:  " id="4eh-NR-lk5">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cK5-FS-4eU">
+                                <rect key="frame" x="73" y="95" width="114" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="FgP-dQ-VTd"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Crash Protection: " id="HFQ-L4-b88">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <slider verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cCI-YM-9Qo">
+                                <rect key="frame" x="191" y="89" width="208" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="204" id="BlM-ww-d8R"/>
+                                </constraints>
+                                <sliderCell key="cell" alignment="left" maxValue="3" doubleValue="1.5" tickMarkPosition="below" numberOfTickMarks="11" allowsTickMarkValuesOnly="YES" sliderType="linear" id="fvT-zb-9AF"/>
+                                <connections>
+                                    <binding destination="4vm-Ko-8tv" name="value" keyPath="values.delayBetweenClicks" id="iiK-Bf-olJ"/>
+                                </connections>
+                            </slider>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="VvN-b5-VTW">
+                                <rect key="frame" x="191" y="203" width="282" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="278" id="ixk-av-dJA"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Minimum Deley Between Tag Checkbox Clicks" id="otI-1i-EXd">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dZa-y0-Ycu">
+                                <rect key="frame" x="191" y="74" width="32" height="14"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="None" id="Bry-Yj-irL">
+                                    <font key="font" metaFont="message" size="11"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ijk-7C-awE">
+                                <rect key="frame" x="388" y="74" width="11" height="14"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="3" id="jmi-PB-qhP">
+                                    <font key="font" metaFont="message" size="11"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="Su9-Qg-agh">
+                                <rect key="frame" x="101" y="233" width="411" height="4"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="411" id="15I-bW-ye8"/>
+                                    <constraint firstAttribute="height" id="Kqb-vE-qeY"/>
+                                </constraints>
+                            </box>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aJe-Tu-MTb">
+                                <rect key="frame" x="291" y="74" width="27" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="23" id="VgA-Yc-iAG"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="1.5" id="axH-FC-TC6">
+                                    <font key="font" metaFont="message" size="11"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="RKY-K4-alb">
+                                <rect key="frame" x="191" y="125" width="323" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="319" id="vi8-xu-dPa"/>
+                                </constraints>
+                                <textFieldCell key="cell" selectable="YES" id="jAR-ok-T3B">
+                                    <font key="font" metaFont="message" size="11"/>
+                                    <string key="title">There is a bug that causes the app to freeze if the user presses a tag checkbox too quickly in sucsession. 
+
+Lower this value and see if the app crashes for you. Faster machines seem to need a lower value</string>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="ikS-Eh-j6f" firstAttribute="top" secondItem="hgy-q4-6Ih" secondAttribute="top" constant="48" id="KjK-g7-uVn"/>
-                            <constraint firstItem="ikS-Eh-j6f" firstAttribute="leading" secondItem="hgy-q4-6Ih" secondAttribute="leading" constant="40" id="oxG-cH-yte"/>
+                            <constraint firstItem="RKY-K4-alb" firstAttribute="leading" secondItem="VvN-b5-VTW" secondAttribute="leading" id="3JP-dR-Zuk"/>
+                            <constraint firstItem="VvN-b5-VTW" firstAttribute="leading" secondItem="ikS-Eh-j6f" secondAttribute="leading" id="Al7-L0-EFM"/>
+                            <constraint firstItem="Ijk-7C-awE" firstAttribute="top" secondItem="cCI-YM-9Qo" secondAttribute="bottom" constant="2" id="CAx-UR-Pdf"/>
+                            <constraint firstItem="cCI-YM-9Qo" firstAttribute="firstBaseline" secondItem="RKY-K4-alb" secondAttribute="baseline" constant="24" id="L5W-fL-R6z"/>
+                            <constraint firstItem="aJe-Tu-MTb" firstAttribute="leading" secondItem="dZa-y0-Ycu" secondAttribute="trailing" constant="72" id="N7s-Zy-qjf"/>
+                            <constraint firstItem="cCI-YM-9Qo" firstAttribute="leading" secondItem="cK5-FS-4eU" secondAttribute="trailing" constant="8" id="OpG-zU-LqX"/>
+                            <constraint firstItem="Xcd-nz-pnI" firstAttribute="top" secondItem="hgy-q4-6Ih" secondAttribute="top" constant="33" id="Q6y-OY-eYg"/>
+                            <constraint firstItem="dZa-y0-Ycu" firstAttribute="firstBaseline" secondItem="cCI-YM-9Qo" secondAttribute="baseline" constant="27" id="Y8x-Jz-Tf4"/>
+                            <constraint firstItem="cK5-FS-4eU" firstAttribute="trailing" secondItem="Xcd-nz-pnI" secondAttribute="trailing" id="aA4-jJ-jIR"/>
+                            <constraint firstItem="cK5-FS-4eU" firstAttribute="top" secondItem="Xcd-nz-pnI" secondAttribute="bottom" constant="140" id="eSd-Hc-0c6"/>
+                            <constraint firstItem="dZa-y0-Ycu" firstAttribute="leading" secondItem="cCI-YM-9Qo" secondAttribute="leading" id="iiF-5l-TME"/>
+                            <constraint firstItem="ikS-Eh-j6f" firstAttribute="leading" secondItem="Xcd-nz-pnI" secondAttribute="trailing" constant="8" id="mgW-AJ-fd2"/>
+                            <constraint firstItem="Xcd-nz-pnI" firstAttribute="leading" secondItem="hgy-q4-6Ih" secondAttribute="leading" constant="101" id="n3h-I6-e1t"/>
+                            <constraint firstItem="aJe-Tu-MTb" firstAttribute="top" secondItem="cCI-YM-9Qo" secondAttribute="bottom" constant="2" id="o48-TN-KmQ"/>
+                            <constraint firstItem="ikS-Eh-j6f" firstAttribute="firstBaseline" secondItem="Xcd-nz-pnI" secondAttribute="firstBaseline" id="uQk-gN-KHJ"/>
+                            <constraint firstItem="VvN-b5-VTW" firstAttribute="firstBaseline" secondItem="ikS-Eh-j6f" secondAttribute="baseline" constant="48" id="uiB-6m-cBY"/>
+                            <constraint firstItem="Ijk-7C-awE" firstAttribute="trailing" secondItem="cCI-YM-9Qo" secondAttribute="trailing" id="wIy-0f-nUx"/>
+                            <constraint firstItem="Su9-Qg-agh" firstAttribute="firstBaseline" secondItem="ikS-Eh-j6f" secondAttribute="baseline" constant="19" id="wNa-zd-1Jk"/>
+                            <constraint firstItem="RKY-K4-alb" firstAttribute="top" secondItem="VvN-b5-VTW" secondAttribute="bottom" constant="8" id="xc3-dQ-TVV"/>
+                            <constraint firstItem="Su9-Qg-agh" firstAttribute="leading" secondItem="hgy-q4-6Ih" secondAttribute="leading" constant="101" id="yXh-ja-qRc"/>
                         </constraints>
                     </view>
                 </viewController>
+                <userDefaultsController representsSharedInstance="YES" id="4vm-Ko-8tv"/>
             </objects>
-            <point key="canvasLocation" x="1832" y="208"/>
+            <point key="canvasLocation" x="781" y="930"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="edb-Mg-rpB">
@@ -62,10 +172,11 @@
                 <customObject id="Aa3-Wy-w97" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <windowController storyboardIdentifier="PreferenceWindowController" id="63l-ix-xX4" sceneMemberID="viewController">
                     <window key="window" title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="dzo-oK-1RU">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="294" y="362" width="480" height="270"/>
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+                        <rect key="contentRect" x="545" y="464" width="613" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
+                        <value key="minSize" type="size" width="600" height="270"/>
+                        <value key="maxSize" type="size" width="600" height="270"/>
                         <connections>
                             <outlet property="delegate" destination="63l-ix-xX4" id="G7P-p2-Cdt"/>
                         </connections>
@@ -75,7 +186,7 @@
                     </connections>
                 </windowController>
             </objects>
-            <point key="canvasLocation" x="710" y="208"/>
+            <point key="canvasLocation" x="776.5" y="208"/>
         </scene>
     </scenes>
     <resources>
