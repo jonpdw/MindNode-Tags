@@ -11,9 +11,21 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
+    lazy var preferencesWindowController: NSWindowController? = {
+            let storyboard: NSStoryboard? = NSStoryboard(name: "Preferences", bundle: nil)
+            var windowController = storyboard?.instantiateController(withIdentifier: "PreferenceWindowController") as! NSWindowController
+            return windowController
+    }()
+    
+    @IBAction func showPreferences(_ sender: Any) {
+        preferencesWindowController?.showWindow(sender)
+        
+    }
+    
     let documentController = CustomNSDocumentController()
     
     let mNoDocumentAlert = noDocumentAlert()
+    
     let noDocCounter = 0
     
     // the reason we store this is that we don't want the app to open in the background while the alert is still active. i.e you give permissions then click onn the app icon which launches the app

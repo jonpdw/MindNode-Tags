@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15702"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab View Controller-->
+        <scene sceneID="xD9-7b-O3Q">
+            <objects>
+                <customObject id="Sqg-J5-sfa" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <tabViewController storyboardIdentifier="TabViewController" selectedTabViewItemIndex="0" tabStyle="toolbar" id="kBd-lX-OMs" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem identifier="" image="NSPreferencesGeneral" id="eBO-M6-m95"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="dl1-9S-mtB">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="system"/>
+                        <connections>
+                            <outlet property="delegate" destination="kBd-lX-OMs" id="QSi-yh-JAp"/>
+                        </connections>
+                    </tabView>
+                    <connections>
+                        <outlet property="tabView" destination="dl1-9S-mtB" id="LHz-it-bT0"/>
+                        <segue destination="pJ9-92-fBR" kind="relationship" relationship="tabItems" id="eKP-ZR-O8l"/>
+                    </connections>
+                </tabViewController>
+            </objects>
+            <point key="canvasLocation" x="1289" y="208"/>
+        </scene>
+        <!--General-->
+        <scene sceneID="Oof-dx-Dvv">
+            <objects>
+                <customObject id="h67-Oe-uEJ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <viewController title="General" id="pJ9-92-fBR" sceneMemberID="viewController">
+                    <view key="view" id="hgy-q4-6Ih">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ikS-Eh-j6f">
+                                <rect key="frame" x="38" y="236" width="271" height="18"/>
+                                <buttonCell key="cell" type="check" title="Hide Close, Hide and Full Screen Buttons" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="I0h-Xh-rip">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ikS-Eh-j6f" firstAttribute="top" secondItem="hgy-q4-6Ih" secondAttribute="top" constant="48" id="KjK-g7-uVn"/>
+                            <constraint firstItem="ikS-Eh-j6f" firstAttribute="leading" secondItem="hgy-q4-6Ih" secondAttribute="leading" constant="40" id="oxG-cH-yte"/>
+                        </constraints>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1832" y="208"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="edb-Mg-rpB">
+            <objects>
+                <customObject id="Aa3-Wy-w97" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <windowController storyboardIdentifier="PreferenceWindowController" id="63l-ix-xX4" sceneMemberID="viewController">
+                    <window key="window" title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="dzo-oK-1RU">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="294" y="362" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
+                        <connections>
+                            <outlet property="delegate" destination="63l-ix-xX4" id="G7P-p2-Cdt"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="kBd-lX-OMs" kind="relationship" relationship="window.shadowedContentViewController" id="GZ8-0E-99T"/>
+                    </connections>
+                </windowController>
+            </objects>
+            <point key="canvasLocation" x="710" y="208"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NSPreferencesGeneral" width="32" height="32"/>
+    </resources>
+</document>
