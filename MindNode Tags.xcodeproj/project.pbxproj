@@ -561,6 +561,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XB5U87PMF7;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = MindNodeTags/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

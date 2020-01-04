@@ -44,7 +44,8 @@ class Document: NSDocument {
     
     
     override func read(from url: URL, ofType typeName: String) throws {
-        let dataObject = try! Data(contentsOf: url)
+        
+        let dataObject = try Data(contentsOf: url)
         
         switch loadedVersion {
         case .two:

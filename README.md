@@ -7,6 +7,7 @@ I made this app as I love MindNode but wish that it had tags. This is my first M
 
 ## [Download](https://github.com/jonpdw/MindNode-Tags/releases/latest/download/MindNode_Tags_Application.zip)
 
+
 ## Compatability
 * I have tested the app on MindNode 2.5.8 and 6.1.2. Let me know if there are any bugs in other versions
 
@@ -14,3 +15,6 @@ I made this app as I love MindNode but wish that it had tags. This is my first M
 
 Send me a [message](https://m.me/107546807437328)
 
+## Known Problem 
+* In some cases changes to a note will be lost. If you change a note then filter the mindmap. To stop this either click elsewhere on the map or save the document before filtering
+* The program only works when the file type is "Package" and not "Single File"
