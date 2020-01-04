@@ -36,7 +36,7 @@
                 <customObject id="h67-Oe-uEJ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController title="General" id="pJ9-92-fBR" sceneMemberID="viewController">
                     <view key="view" id="hgy-q4-6Ih">
-                        <rect key="frame" x="0.0" y="0.0" width="656" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="635" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ikS-Eh-j6f">
@@ -164,7 +164,7 @@ Lower this value and see if the app crashes for you. Faster machines seem to nee
                 </viewController>
                 <userDefaultsController representsSharedInstance="YES" id="4vm-Ko-8tv"/>
             </objects>
-            <point key="canvasLocation" x="781" y="930"/>
+            <point key="canvasLocation" x="770.5" y="930"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="edb-Mg-rpB">
@@ -172,11 +172,11 @@ Lower this value and see if the app crashes for you. Faster machines seem to nee
                 <customObject id="Aa3-Wy-w97" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <windowController storyboardIdentifier="PreferenceWindowController" id="63l-ix-xX4" sceneMemberID="viewController">
                     <window key="window" title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="dzo-oK-1RU">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" resizable="YES"/>
                         <rect key="contentRect" x="545" y="464" width="613" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
-                        <value key="minSize" type="size" width="600" height="270"/>
-                        <value key="maxSize" type="size" width="600" height="270"/>
+                        <value key="minSize" type="size" width="613" height="270"/>
+                        <value key="maxSize" type="size" width="613" height="270"/>
                         <connections>
                             <outlet property="delegate" destination="63l-ix-xX4" id="G7P-p2-Cdt"/>
                         </connections>

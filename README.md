@@ -5,28 +5,12 @@ I made this app as I love MindNode but wish that it had tags. This is my first M
 
 ![Example Image](images/IntroGif.gif)
 
-## Download
-Download the `MindNode Tag<xxxx>.zip` file from [here](https://github.com/jonpdw/MindNode-Tags/releases/latest/)
-
-## Features
-* Drag and organise tags however you want
-
-## Warning
-* I am not responsible for any data loss due to my app crashing. 
+## [Download](https://github.com/jonpdw/MindNode-Tags/releases/latest/download/MindNode_Tags_Application.zip)
 
 ## Compatability
 * I have tested the app on MindNode 2.5.8 and 6.1.2. Let me know if there are any bugs in other versions
 
-## Known problems
-The app is kinda laggy 
-
-## Problems and support
-
 ## Help
 
-Problem: 
-Try: It might not have accessability permissions
-
-Problem: The app crashed while I was inside a filter and I lost all my data
-Try: Either try and revert to a version from the MindNode menu or use the back button on the app after launch
+Send me a [message](m.me/107546807437328)
 
