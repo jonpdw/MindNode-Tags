@@ -12,5 +12,5 @@ I made this app as I love MindNode but wish that it had tags. This is my first M
 
 ## Help
 
-Send me a [message](m.me/107546807437328)
+Send me a [message](https://m.me/107546807437328)
 
