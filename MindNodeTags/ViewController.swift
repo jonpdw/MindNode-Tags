@@ -14,7 +14,7 @@ import Sparkle
 
 class ViewController: NSViewController{
     
-    
+    // a new comment has been added
     
     @IBOutlet weak var outlineView: NSOutlineView!
     

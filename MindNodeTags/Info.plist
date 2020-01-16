@@ -56,7 +56,7 @@
 	<key>SUPublicEDKey</key>
 	<string>lsNxHFTEFQkZEUrHaPTNVLYKlvAiSo2N71g6V8B+KOY=</string>
 	<key>SUFeedURL</key>
-	<string>https://jonpdw.github.io/MindNode-Tags/appcast.xml</string>
+	<string>https://github.com/jonpdw/MindNodeTags-Appcast/raw/master/appcast.xml</string>
 	<key>NSSupportsSuddenTermination</key>
 	<true/>
 </dict>
