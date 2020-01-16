@@ -554,14 +554,14 @@
 			baseConfigurationReference = 1BD6E62E8561CBEEB9FE20C8 /* Pods-MindNode Tags.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_OPTIMIZATION = time;
+				ASSETCATALOG_COMPILER_OPTIMIZATION = "";
 				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				CODE_SIGN_ENTITLEMENTS = MindNodeTags/MindNodeTags.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XB5U87PMF7;
-				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_OPTIMIZATION_LEVEL = 3;
 				INFOPLIST_FILE = MindNodeTags/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

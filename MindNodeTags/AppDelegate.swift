@@ -38,7 +38,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         PFMoveToApplicationsFolderIfNecessary()
         tryOpenCurrentMindNodeFile()
-        //comment for life
         
     }
     
