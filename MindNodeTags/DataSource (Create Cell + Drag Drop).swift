@@ -103,6 +103,10 @@ extension ViewController: NSOutlineViewDataSource {
         
         outlineView.beginUpdates()
         
+        changeTagsCheckbox(to: false)
+        
+        
+        
         // move the visuals
         outlineView.moveItem(at: draggedItemTuple.Index, inParent: draggedItemTuple.Parent, to: proposedIndexInsideParent, inParent: proposedParent)
         
@@ -117,6 +121,10 @@ extension ViewController: NSOutlineViewDataSource {
         
         tagsInStruct = convertTagsToSavableForm(tagList: self.tags.list)
         sendActionSaveNSDocument()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + delayBetweenClicks, execute: {
+            self.changeTagsCheckbox(to: true)
+        })
         
         return true
     }

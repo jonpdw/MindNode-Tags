@@ -571,6 +571,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.deco.MindNodeTags;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MindNodeTags/letsMove-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
