@@ -66,6 +66,8 @@
 		AB83B50B2390C796003900FF /* MindMapFunctions*.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MindMapFunctions*.swift"; sourceTree = "<group>"; };
 		AB8A8D9D23993F8E0010FEAD /* WindowControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowControllers.swift; sourceTree = "<group>"; };
 		ABB8C53C238F9ECC00DF4E42 /* Attribution.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Attribution.md; sourceTree = "<group>"; };
+		ABBC69ED23D2FC9B001D8D0E /* MindNode Tags copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MindNode Tags copy-Info.plist"; path = "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/MindNode Tags copy-Info.plist"; sourceTree = "<absolute>"; };
+		ABBC6A1523D317F9001D8D0E /* MindNode Tags copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MindNode Tags copy2-Info.plist"; path = "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/MindNode Tags copy2-Info.plist"; sourceTree = "<absolute>"; };
 		ABD720DC239E1339006255E7 /* StructForMindNode6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructForMindNode6.swift; sourceTree = "<group>"; };
 		ABD7212C239E5D40006255E7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		ABD72131239E5E0E006255E7 /* PFMoveApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFMoveApplication.m; sourceTree = "<group>"; };
@@ -96,6 +98,8 @@
 				AB35A481238AA22B0029D3C0 /* Products */,
 				ABD7212B239E5D3F006255E7 /* Frameworks */,
 				F95D5D6B15A1AAC80837F6EE /* Pods */,
+				ABBC69ED23D2FC9B001D8D0E /* MindNode Tags copy-Info.plist */,
+				ABBC6A1523D317F9001D8D0E /* MindNode Tags copy2-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -348,7 +352,7 @@
 		};
 		AB6137E723AB8C0300A0EA4F /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -561,7 +565,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XB5U87PMF7;
-				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = MindNodeTags/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -571,7 +575,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.deco.MindNodeTags;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MindNodeTags/letsMove-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
