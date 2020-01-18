@@ -1,0 +1,176 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "CustomNSOutlineView"
+provides-nominal:
+- "13MindNode_Tags19CustomNSOutlineViewC"
+provides-member:
+- ["13MindNode_Tags19CustomNSOutlineViewC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "CustomNSOutlineView"
+- "NSOutlineView"
+depends-member:
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "init"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- ["13MindNode_Tags19CustomNSOutlineViewC", "deinit"]
+- ["13MindNode_Tags19CustomNSOutlineViewC", "init"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "init"]
+- ["SQ", ""]
+- !private ["SQ", "init"]
+- ["SH", ""]
+- !private ["SH", "init"]
+- ["So22NSAccessibilityElementP", ""]
+- !private ["So22NSAccessibilityElementP", "init"]
+- ["So20NSAccessibilityGroupP", ""]
+- !private ["So20NSAccessibilityGroupP", "init"]
+- ["So22NSAccessibilityOutlineP", ""]
+- !private ["So22NSAccessibilityOutlineP", "init"]
+- ["So15NSAccessibilityP", ""]
+- !private ["So15NSAccessibilityP", "init"]
+- ["So20NSAccessibilityTableP", ""]
+- !private ["So20NSAccessibilityTableP", "init"]
+- ["So29NSAnimatablePropertyContainerP", ""]
+- !private ["So29NSAnimatablePropertyContainerP", "init"]
+- ["So25NSAppearanceCustomizationP", ""]
+- !private ["So25NSAppearanceCustomizationP", "init"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "init"]
+- ["So9NSControlC", "init"]
+- ["So21NSDraggingDestinationP", ""]
+- !private ["So21NSDraggingDestinationP", "init"]
+- ["So16NSDraggingSourceP", ""]
+- !private ["So16NSDraggingSourceP", "init"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "init"]
+- ["So13NSOutlineViewC", ""]
+- ["So13NSOutlineViewC", "init"]
+- ["So11NSResponderC", "init"]
+- ["So30NSStandardKeyBindingRespondingP", ""]
+- !private ["So30NSStandardKeyBindingRespondingP", "init"]
+- ["So11NSTableViewC", "init"]
+- ["So14NSTextDelegateP", ""]
+- !private ["So14NSTextDelegateP", "init"]
+- ["So18NSTextViewDelegateP", ""]
+- !private ["So18NSTextViewDelegateP", "init"]
+- ["So18NSTouchBarProviderP", ""]
+- !private ["So18NSTouchBarProviderP", "init"]
+- ["So23NSUserActivityRestoringP", ""]
+- !private ["So23NSUserActivityRestoringP", "init"]
+- ["So33NSUserInterfaceItemIdentificationP", ""]
+- !private ["So33NSUserInterfaceItemIdentificationP", "init"]
+- ["So26NSUserInterfaceValidationsP", ""]
+- !private ["So26NSUserInterfaceValidationsP", "init"]
+- ["So6NSViewC", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", ""]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "init"]
+depends-nominal:
+- "s7CVarArgP"
+- "s28CustomDebugStringConvertibleP"
+- "13MindNode_Tags19CustomNSOutlineViewC"
+- "s23CustomStringConvertibleP"
+- "SQ"
+- "SH"
+- "So22NSAccessibilityElementP"
+- "So20NSAccessibilityGroupP"
+- "So22NSAccessibilityOutlineP"
+- "So15NSAccessibilityP"
+- "So20NSAccessibilityTableP"
+- "So29NSAnimatablePropertyContainerP"
+- "So25NSAppearanceCustomizationP"
+- "So8NSCodingP"
+- "So9NSControlC"
+- "So21NSDraggingDestinationP"
+- "So16NSDraggingSourceP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "So13NSOutlineViewC"
+- "So11NSResponderC"
+- "So30NSStandardKeyBindingRespondingP"
+- "So11NSTableViewC"
+- "So14NSTextDelegateP"
+- "So18NSTextViewDelegateP"
+- "So18NSTouchBarProviderP"
+- "So23NSUserActivityRestoringP"
+- "So33NSUserInterfaceItemIdentificationP"
+- "So26NSUserInterfaceValidationsP"
+- "So6NSViewC"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- "s38__DefaultCustomPlaygroundQuickLookableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/swift/XPC.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/swift/ObjectiveC.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/swift/CoreData.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/swift/CoreImage.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/swift/QuartzCore.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/swift/Dispatch.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/swift/Metal.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/swift/Darwin.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/swift/Foundation.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/swift/CoreFoundation.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/swift/CoreGraphics.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/swift/Swift.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/swift/IOKit.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/swift/AppKit.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Combine.framework/Modules/Combine.swiftmodule/x86_64-apple-macos.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/XPC.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreData.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Combine.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Metal.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Swift.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/IOKit.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/AppKit.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SPUDownloadData.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SPUDownloaderDeprecated.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/Sparkle.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SPUDownloaderDelegate.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SUUpdaterDelegate.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SUVersionComparisonProtocol.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SPUDownloaderProtocol.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SUVersionDisplayProtocol.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SUAppcastItem.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SPUDownloaderSession.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/MindNodeTags/PFMoveApplication.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/MindNodeTags/letsMove-Bridging-Header.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SPUDownloader.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SUCodeSigningVerifier.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SUUpdater.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SUStandardVersionComparator.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SUErrors.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SUExport.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SUAppcast.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SPUURLRequest.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/xpc/XPC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "c4fbe5d2416fa4bbafae238037b57470"

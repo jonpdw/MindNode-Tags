@@ -1,0 +1,782 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+- "13MindNode_Tags14ViewControllerC"
+provides-member:
+- ["13MindNode_Tags14ViewControllerC", ""]
+provides-dynamic-lookup:
+- "outlineView"
+depends-top-level:
+- !private "!="
+- !private "&&"
+- !private "+"
+- !private "-"
+- !private "<"
+- !private "=="
+- !private ">"
+- !private ">="
+- !private "??"
+- "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
+- "CastingPrecedence"
+- !private "DispatchQueue"
+- !private "FloatLiteralType"
+- "Int"
+- !private "IntegerLiteralType"
+- "NSDragOperation"
+- "NSDraggingInfo"
+- "NSOutlineView"
+- "NSOutlineViewDataSource"
+- !private "NSPasteboardItem"
+- "NSPasteboardWriting"
+- !private "Tag"
+- "ViewController"
+- !private "convertTagsToSavableForm"
+depends-member:
+- !private ["Sa", "count"]
+- !private ["Sa", "first"]
+- !private ["Sa", "subscript"]
+- !private ["SK", "count"]
+- !private ["SK", "first"]
+- !private ["SK", "subscript"]
+- !private ["s7CVarArgP", "DispatchQueue"]
+- !private ["s7CVarArgP", "NSPasteboardItem"]
+- !private ["s7CVarArgP", "asyncAfter"]
+- !private ["s7CVarArgP", "beginUpdates"]
+- !private ["s7CVarArgP", "changeTagsCheckbox"]
+- !private ["s7CVarArgP", "children"]
+- !private ["s7CVarArgP", "convertTagsToSavableForm"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "delayBetweenClicks"]
+- !private ["s7CVarArgP", "endUpdates"]
+- !private ["s7CVarArgP", "expandItem"]
+- !private ["s7CVarArgP", "first"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "itemPasteboardTypeForMyTagCells"]
+- !private ["s7CVarArgP", "main"]
+- !private ["s7CVarArgP", "moveItem"]
+- ["s7CVarArgP", "outlineView"]
+- !private ["s7CVarArgP", "pasteboardItems"]
+- !private ["s7CVarArgP", "reloadItem"]
+- !private ["s7CVarArgP", "sendActionSaveNSDocument"]
+- !private ["s7CVarArgP", "setString"]
+- !private ["s7CVarArgP", "string"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "tags"]
+- !private ["s7CVarArgP", "tagsInStruct"]
+- !private ["s7CVarArgP", "uuid"]
+- !private ["Sl", "count"]
+- !private ["Sl", "first"]
+- !private ["Sl", "subscript"]
+- !private ["SL", "now"]
+- !private ["10Foundation15ContiguousBytesP", "count"]
+- !private ["10Foundation15ContiguousBytesP", "first"]
+- !private ["10Foundation15ContiguousBytesP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "DispatchQueue"]
+- !private ["s28CustomDebugStringConvertibleP", "NSPasteboardItem"]
+- !private ["s28CustomDebugStringConvertibleP", "asyncAfter"]
+- !private ["s28CustomDebugStringConvertibleP", "beginUpdates"]
+- !private ["s28CustomDebugStringConvertibleP", "changeTagsCheckbox"]
+- !private ["s28CustomDebugStringConvertibleP", "children"]
+- !private ["s28CustomDebugStringConvertibleP", "convertTagsToSavableForm"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "delayBetweenClicks"]
+- !private ["s28CustomDebugStringConvertibleP", "endUpdates"]
+- !private ["s28CustomDebugStringConvertibleP", "expandItem"]
+- !private ["s28CustomDebugStringConvertibleP", "first"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "itemPasteboardTypeForMyTagCells"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "moveItem"]
+- ["s28CustomDebugStringConvertibleP", "outlineView"]
+- !private ["s28CustomDebugStringConvertibleP", "pasteboardItems"]
+- !private ["s28CustomDebugStringConvertibleP", "reloadItem"]
+- !private ["s28CustomDebugStringConvertibleP", "sendActionSaveNSDocument"]
+- !private ["s28CustomDebugStringConvertibleP", "setString"]
+- !private ["s28CustomDebugStringConvertibleP", "string"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "tags"]
+- !private ["s28CustomDebugStringConvertibleP", "tagsInStruct"]
+- !private ["s28CustomDebugStringConvertibleP", "uuid"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "first"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "DispatchQueue"]
+- !private ["s23CustomStringConvertibleP", "NSPasteboardItem"]
+- !private ["s23CustomStringConvertibleP", "asyncAfter"]
+- !private ["s23CustomStringConvertibleP", "beginUpdates"]
+- !private ["s23CustomStringConvertibleP", "changeTagsCheckbox"]
+- !private ["s23CustomStringConvertibleP", "children"]
+- !private ["s23CustomStringConvertibleP", "convertTagsToSavableForm"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "delayBetweenClicks"]
+- !private ["s23CustomStringConvertibleP", "endUpdates"]
+- !private ["s23CustomStringConvertibleP", "expandItem"]
+- !private ["s23CustomStringConvertibleP", "first"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "itemPasteboardTypeForMyTagCells"]
+- !private ["s23CustomStringConvertibleP", "main"]
+- !private ["s23CustomStringConvertibleP", "moveItem"]
+- ["s23CustomStringConvertibleP", "outlineView"]
+- !private ["s23CustomStringConvertibleP", "pasteboardItems"]
+- !private ["s23CustomStringConvertibleP", "reloadItem"]
+- !private ["s23CustomStringConvertibleP", "sendActionSaveNSDocument"]
+- !private ["s23CustomStringConvertibleP", "setString"]
+- !private ["s23CustomStringConvertibleP", "string"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "tags"]
+- !private ["s23CustomStringConvertibleP", "tagsInStruct"]
+- !private ["s23CustomStringConvertibleP", "uuid"]
+- !private ["10Foundation12DataProtocolP", "count"]
+- !private ["10Foundation12DataProtocolP", "first"]
+- !private ["10Foundation12DataProtocolP", "subscript"]
+- !private ["Se", "count"]
+- !private ["Se", "first"]
+- !private ["Se", "subscript"]
+- !private ["So18OS_dispatch_objectC", "asyncAfter"]
+- !private ["So18OS_dispatch_objectC", "main"]
+- !private ["So17OS_dispatch_queueC", "asyncAfter"]
+- !private ["So17OS_dispatch_queueC", "main"]
+- !private ["8Dispatch0A4TimeV", "now"]
+- !private ["SE", "count"]
+- !private ["SE", "first"]
+- !private ["SE", "subscript"]
+- !private ["SQ", "DispatchQueue"]
+- !private ["SQ", "NSPasteboardItem"]
+- !private ["SQ", "asyncAfter"]
+- !private ["SQ", "beginUpdates"]
+- !private ["SQ", "changeTagsCheckbox"]
+- !private ["SQ", "children"]
+- !private ["SQ", "convertTagsToSavableForm"]
+- !private ["SQ", "count"]
+- !private ["SQ", "delayBetweenClicks"]
+- !private ["SQ", "endUpdates"]
+- !private ["SQ", "expandItem"]
+- !private ["SQ", "first"]
+- !private ["SQ", "init"]
+- !private ["SQ", "itemPasteboardTypeForMyTagCells"]
+- !private ["SQ", "main"]
+- !private ["SQ", "move"]
+- !private ["SQ", "moveItem"]
+- !private ["SQ", "now"]
+- ["SQ", "outlineView"]
+- !private ["SQ", "pasteboardItems"]
+- !private ["SQ", "reloadItem"]
+- !private ["SQ", "sendActionSaveNSDocument"]
+- !private ["SQ", "setString"]
+- !private ["SQ", "string"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "tags"]
+- !private ["SQ", "tagsInStruct"]
+- !private ["SQ", "uuid"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s25ExpressibleByArrayLiteralP", "first"]
+- !private ["s25ExpressibleByArrayLiteralP", "move"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["SH", "DispatchQueue"]
+- !private ["SH", "NSPasteboardItem"]
+- !private ["SH", "asyncAfter"]
+- !private ["SH", "beginUpdates"]
+- !private ["SH", "changeTagsCheckbox"]
+- !private ["SH", "children"]
+- !private ["SH", "convertTagsToSavableForm"]
+- !private ["SH", "count"]
+- !private ["SH", "delayBetweenClicks"]
+- !private ["SH", "endUpdates"]
+- !private ["SH", "expandItem"]
+- !private ["SH", "first"]
+- !private ["SH", "init"]
+- !private ["SH", "itemPasteboardTypeForMyTagCells"]
+- !private ["SH", "main"]
+- !private ["SH", "moveItem"]
+- ["SH", "outlineView"]
+- !private ["SH", "pasteboardItems"]
+- !private ["SH", "reloadItem"]
+- !private ["SH", "sendActionSaveNSDocument"]
+- !private ["SH", "setString"]
+- !private ["SH", "string"]
+- !private ["SH", "subscript"]
+- !private ["SH", "tags"]
+- !private ["SH", "tagsInStruct"]
+- !private ["SH", "uuid"]
+- !private ["SM", "count"]
+- !private ["SM", "first"]
+- !private ["SM", "subscript"]
+- !private ["10Foundation19MutableDataProtocolP", "count"]
+- !private ["10Foundation19MutableDataProtocolP", "first"]
+- !private ["10Foundation19MutableDataProtocolP", "subscript"]
+- !private ["So22NSAccessibilityElementP", "beginUpdates"]
+- !private ["So22NSAccessibilityElementP", "endUpdates"]
+- !private ["So22NSAccessibilityElementP", "expandItem"]
+- !private ["So22NSAccessibilityElementP", "moveItem"]
+- !private ["So22NSAccessibilityElementP", "reloadItem"]
+- !private ["So20NSAccessibilityGroupP", "beginUpdates"]
+- !private ["So20NSAccessibilityGroupP", "endUpdates"]
+- !private ["So20NSAccessibilityGroupP", "expandItem"]
+- !private ["So20NSAccessibilityGroupP", "moveItem"]
+- !private ["So20NSAccessibilityGroupP", "reloadItem"]
+- !private ["So22NSAccessibilityOutlineP", "beginUpdates"]
+- !private ["So22NSAccessibilityOutlineP", "endUpdates"]
+- !private ["So22NSAccessibilityOutlineP", "expandItem"]
+- !private ["So22NSAccessibilityOutlineP", "moveItem"]
+- !private ["So22NSAccessibilityOutlineP", "reloadItem"]
+- !private ["So15NSAccessibilityP", "beginUpdates"]
+- !private ["So15NSAccessibilityP", "endUpdates"]
+- !private ["So15NSAccessibilityP", "expandItem"]
+- !private ["So15NSAccessibilityP", "moveItem"]
+- !private ["So15NSAccessibilityP", "reloadItem"]
+- !private ["So20NSAccessibilityTableP", "beginUpdates"]
+- !private ["So20NSAccessibilityTableP", "endUpdates"]
+- !private ["So20NSAccessibilityTableP", "expandItem"]
+- !private ["So20NSAccessibilityTableP", "moveItem"]
+- !private ["So20NSAccessibilityTableP", "reloadItem"]
+- !private ["So29NSAnimatablePropertyContainerP", "beginUpdates"]
+- !private ["So29NSAnimatablePropertyContainerP", "endUpdates"]
+- !private ["So29NSAnimatablePropertyContainerP", "expandItem"]
+- !private ["So29NSAnimatablePropertyContainerP", "moveItem"]
+- !private ["So29NSAnimatablePropertyContainerP", "reloadItem"]
+- !private ["So25NSAppearanceCustomizationP", "beginUpdates"]
+- !private ["So25NSAppearanceCustomizationP", "endUpdates"]
+- !private ["So25NSAppearanceCustomizationP", "expandItem"]
+- !private ["So25NSAppearanceCustomizationP", "moveItem"]
+- !private ["So25NSAppearanceCustomizationP", "reloadItem"]
+- !private ["So8NSCodingP", "DispatchQueue"]
+- !private ["So8NSCodingP", "NSPasteboardItem"]
+- !private ["So8NSCodingP", "beginUpdates"]
+- !private ["So8NSCodingP", "changeTagsCheckbox"]
+- !private ["So8NSCodingP", "convertTagsToSavableForm"]
+- !private ["So8NSCodingP", "delayBetweenClicks"]
+- !private ["So8NSCodingP", "endUpdates"]
+- !private ["So8NSCodingP", "expandItem"]
+- !private ["So8NSCodingP", "itemPasteboardTypeForMyTagCells"]
+- !private ["So8NSCodingP", "moveItem"]
+- ["So8NSCodingP", "outlineView"]
+- !private ["So8NSCodingP", "reloadItem"]
+- !private ["So8NSCodingP", "sendActionSaveNSDocument"]
+- !private ["So8NSCodingP", "tags"]
+- !private ["So8NSCodingP", "tagsInStruct"]
+- !private ["So9NSControlC", "beginUpdates"]
+- !private ["So9NSControlC", "endUpdates"]
+- !private ["So9NSControlC", "expandItem"]
+- !private ["So9NSControlC", "moveItem"]
+- !private ["So9NSControlC", "reloadItem"]
+- !private ["So28NSControlTextEditingDelegateP", "DispatchQueue"]
+- !private ["So28NSControlTextEditingDelegateP", "NSPasteboardItem"]
+- !private ["So28NSControlTextEditingDelegateP", "changeTagsCheckbox"]
+- !private ["So28NSControlTextEditingDelegateP", "convertTagsToSavableForm"]
+- !private ["So28NSControlTextEditingDelegateP", "delayBetweenClicks"]
+- !private ["So28NSControlTextEditingDelegateP", "itemPasteboardTypeForMyTagCells"]
+- ["So28NSControlTextEditingDelegateP", "outlineView"]
+- !private ["So28NSControlTextEditingDelegateP", "sendActionSaveNSDocument"]
+- !private ["So28NSControlTextEditingDelegateP", "tags"]
+- !private ["So28NSControlTextEditingDelegateP", "tagsInStruct"]
+- !private ["So15NSDragOperationV", "move"]
+- !private ["So21NSDraggingDestinationP", "beginUpdates"]
+- !private ["So21NSDraggingDestinationP", "endUpdates"]
+- !private ["So21NSDraggingDestinationP", "expandItem"]
+- !private ["So21NSDraggingDestinationP", "moveItem"]
+- !private ["So21NSDraggingDestinationP", "reloadItem"]
+- !private ["So14NSDraggingInfoP", "draggingPasteboard"]
+- !private ["So16NSDraggingSourceP", "beginUpdates"]
+- !private ["So16NSDraggingSourceP", "endUpdates"]
+- !private ["So16NSDraggingSourceP", "expandItem"]
+- !private ["So16NSDraggingSourceP", "moveItem"]
+- !private ["So16NSDraggingSourceP", "reloadItem"]
+- !private ["So8NSEditorP", "DispatchQueue"]
+- !private ["So8NSEditorP", "NSPasteboardItem"]
+- !private ["So8NSEditorP", "changeTagsCheckbox"]
+- !private ["So8NSEditorP", "convertTagsToSavableForm"]
+- !private ["So8NSEditorP", "delayBetweenClicks"]
+- !private ["So8NSEditorP", "itemPasteboardTypeForMyTagCells"]
+- ["So8NSEditorP", "outlineView"]
+- !private ["So8NSEditorP", "sendActionSaveNSDocument"]
+- !private ["So8NSEditorP", "tags"]
+- !private ["So8NSEditorP", "tagsInStruct"]
+- !private ["So26NSExtensionRequestHandlingP", "DispatchQueue"]
+- !private ["So26NSExtensionRequestHandlingP", "NSPasteboardItem"]
+- !private ["So26NSExtensionRequestHandlingP", "changeTagsCheckbox"]
+- !private ["So26NSExtensionRequestHandlingP", "convertTagsToSavableForm"]
+- !private ["So26NSExtensionRequestHandlingP", "delayBetweenClicks"]
+- !private ["So26NSExtensionRequestHandlingP", "itemPasteboardTypeForMyTagCells"]
+- ["So26NSExtensionRequestHandlingP", "outlineView"]
+- !private ["So26NSExtensionRequestHandlingP", "sendActionSaveNSDocument"]
+- !private ["So26NSExtensionRequestHandlingP", "tags"]
+- !private ["So26NSExtensionRequestHandlingP", "tagsInStruct"]
+- ["So8NSObjectC", "Bool"]
+- !private ["So8NSObjectC", "DispatchQueue"]
+- ["So8NSObjectC", "Int"]
+- ["So8NSObjectC", "NSDragOperation"]
+- ["So8NSObjectC", "NSDraggingInfo"]
+- ["So8NSObjectC", "NSOutlineView"]
+- !private ["So8NSObjectC", "NSPasteboardItem"]
+- ["So8NSObjectC", "NSPasteboardWriting"]
+- !private ["So8NSObjectC", "Tag"]
+- !private ["So8NSObjectC", "asyncAfter"]
+- !private ["So8NSObjectC", "beginUpdates"]
+- !private ["So8NSObjectC", "changeTagsCheckbox"]
+- !private ["So8NSObjectC", "children"]
+- !private ["So8NSObjectC", "convertTagsToSavableForm"]
+- !private ["So8NSObjectC", "delayBetweenClicks"]
+- !private ["So8NSObjectC", "endUpdates"]
+- !private ["So8NSObjectC", "expandItem"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "itemPasteboardTypeForMyTagCells"]
+- !private ["So8NSObjectC", "main"]
+- !private ["So8NSObjectC", "moveItem"]
+- ["So8NSObjectC", "outlineView"]
+- !private ["So8NSObjectC", "pasteboardItems"]
+- !private ["So8NSObjectC", "reloadItem"]
+- !private ["So8NSObjectC", "sendActionSaveNSDocument"]
+- !private ["So8NSObjectC", "setString"]
+- !private ["So8NSObjectC", "string"]
+- !private ["So8NSObjectC", "tags"]
+- !private ["So8NSObjectC", "tagsInStruct"]
+- !private ["So8NSObjectC", "uuid"]
+- !private ["So8NSObjectP", "DispatchQueue"]
+- !private ["So8NSObjectP", "NSPasteboardItem"]
+- !private ["So8NSObjectP", "asyncAfter"]
+- !private ["So8NSObjectP", "beginUpdates"]
+- !private ["So8NSObjectP", "changeTagsCheckbox"]
+- !private ["So8NSObjectP", "children"]
+- !private ["So8NSObjectP", "convertTagsToSavableForm"]
+- !private ["So8NSObjectP", "delayBetweenClicks"]
+- !private ["So8NSObjectP", "draggingPasteboard"]
+- !private ["So8NSObjectP", "endUpdates"]
+- !private ["So8NSObjectP", "expandItem"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "itemPasteboardTypeForMyTagCells"]
+- !private ["So8NSObjectP", "main"]
+- !private ["So8NSObjectP", "moveItem"]
+- ["So8NSObjectP", "outlineView"]
+- !private ["So8NSObjectP", "pasteboardItems"]
+- !private ["So8NSObjectP", "reloadItem"]
+- !private ["So8NSObjectP", "sendActionSaveNSDocument"]
+- !private ["So8NSObjectP", "setString"]
+- !private ["So8NSObjectP", "string"]
+- !private ["So8NSObjectP", "tags"]
+- !private ["So8NSObjectP", "tagsInStruct"]
+- !private ["So8NSObjectP", "uuid"]
+- !private ["So13NSOutlineViewC", "beginUpdates"]
+- !private ["So13NSOutlineViewC", "endUpdates"]
+- !private ["So13NSOutlineViewC", "expandItem"]
+- !private ["So13NSOutlineViewC", "moveItem"]
+- !private ["So13NSOutlineViewC", "reloadItem"]
+- !private ["So23NSOutlineViewDataSourceP", "DispatchQueue"]
+- !private ["So23NSOutlineViewDataSourceP", "NSPasteboardItem"]
+- ["So23NSOutlineViewDataSourceP", ""]
+- !private ["So23NSOutlineViewDataSourceP", "changeTagsCheckbox"]
+- !private ["So23NSOutlineViewDataSourceP", "convertTagsToSavableForm"]
+- !private ["So23NSOutlineViewDataSourceP", "delayBetweenClicks"]
+- !private ["So23NSOutlineViewDataSourceP", "itemPasteboardTypeForMyTagCells"]
+- ["So23NSOutlineViewDataSourceP", "outlineView"]
+- !private ["So23NSOutlineViewDataSourceP", "sendActionSaveNSDocument"]
+- !private ["So23NSOutlineViewDataSourceP", "tags"]
+- !private ["So23NSOutlineViewDataSourceP", "tagsInStruct"]
+- !private ["So21NSOutlineViewDelegateP", "DispatchQueue"]
+- !private ["So21NSOutlineViewDelegateP", "NSPasteboardItem"]
+- !private ["So21NSOutlineViewDelegateP", "changeTagsCheckbox"]
+- !private ["So21NSOutlineViewDelegateP", "convertTagsToSavableForm"]
+- !private ["So21NSOutlineViewDelegateP", "delayBetweenClicks"]
+- !private ["So21NSOutlineViewDelegateP", "itemPasteboardTypeForMyTagCells"]
+- ["So21NSOutlineViewDelegateP", "outlineView"]
+- !private ["So21NSOutlineViewDelegateP", "sendActionSaveNSDocument"]
+- !private ["So21NSOutlineViewDelegateP", "tags"]
+- !private ["So21NSOutlineViewDelegateP", "tagsInStruct"]
+- !private ["So12NSPasteboardC", "pasteboardItems"]
+- !private ["So16NSPasteboardItemC", "init"]
+- !private ["So16NSPasteboardItemC", "setString"]
+- !private ["So16NSPasteboardItemC", "string"]
+- !private ["So19NSPasteboardReadingP", "init"]
+- !private ["So19NSPasteboardReadingP", "setString"]
+- !private ["So19NSPasteboardReadingP", "string"]
+- !private ["So19NSPasteboardWritingP", "init"]
+- !private ["So19NSPasteboardWritingP", "setString"]
+- !private ["So19NSPasteboardWritingP", "string"]
+- ["So11NSResponderC", "Bool"]
+- !private ["So11NSResponderC", "DispatchQueue"]
+- ["So11NSResponderC", "Int"]
+- ["So11NSResponderC", "NSDragOperation"]
+- ["So11NSResponderC", "NSDraggingInfo"]
+- ["So11NSResponderC", "NSOutlineView"]
+- !private ["So11NSResponderC", "NSPasteboardItem"]
+- ["So11NSResponderC", "NSPasteboardWriting"]
+- !private ["So11NSResponderC", "Tag"]
+- !private ["So11NSResponderC", "beginUpdates"]
+- !private ["So11NSResponderC", "changeTagsCheckbox"]
+- !private ["So11NSResponderC", "convertTagsToSavableForm"]
+- !private ["So11NSResponderC", "delayBetweenClicks"]
+- !private ["So11NSResponderC", "endUpdates"]
+- !private ["So11NSResponderC", "expandItem"]
+- !private ["So11NSResponderC", "itemPasteboardTypeForMyTagCells"]
+- !private ["So11NSResponderC", "moveItem"]
+- ["So11NSResponderC", "outlineView"]
+- !private ["So11NSResponderC", "reloadItem"]
+- !private ["So11NSResponderC", "sendActionSaveNSDocument"]
+- !private ["So11NSResponderC", "tags"]
+- !private ["So11NSResponderC", "tagsInStruct"]
+- !private ["So17NSSeguePerformingP", "DispatchQueue"]
+- !private ["So17NSSeguePerformingP", "NSPasteboardItem"]
+- !private ["So17NSSeguePerformingP", "changeTagsCheckbox"]
+- !private ["So17NSSeguePerformingP", "convertTagsToSavableForm"]
+- !private ["So17NSSeguePerformingP", "delayBetweenClicks"]
+- !private ["So17NSSeguePerformingP", "itemPasteboardTypeForMyTagCells"]
+- ["So17NSSeguePerformingP", "outlineView"]
+- !private ["So17NSSeguePerformingP", "sendActionSaveNSDocument"]
+- !private ["So17NSSeguePerformingP", "tags"]
+- !private ["So17NSSeguePerformingP", "tagsInStruct"]
+- !private ["So30NSStandardKeyBindingRespondingP", "DispatchQueue"]
+- !private ["So30NSStandardKeyBindingRespondingP", "NSPasteboardItem"]
+- !private ["So30NSStandardKeyBindingRespondingP", "beginUpdates"]
+- !private ["So30NSStandardKeyBindingRespondingP", "changeTagsCheckbox"]
+- !private ["So30NSStandardKeyBindingRespondingP", "convertTagsToSavableForm"]
+- !private ["So30NSStandardKeyBindingRespondingP", "delayBetweenClicks"]
+- !private ["So30NSStandardKeyBindingRespondingP", "endUpdates"]
+- !private ["So30NSStandardKeyBindingRespondingP", "expandItem"]
+- !private ["So30NSStandardKeyBindingRespondingP", "itemPasteboardTypeForMyTagCells"]
+- !private ["So30NSStandardKeyBindingRespondingP", "moveItem"]
+- ["So30NSStandardKeyBindingRespondingP", "outlineView"]
+- !private ["So30NSStandardKeyBindingRespondingP", "reloadItem"]
+- !private ["So30NSStandardKeyBindingRespondingP", "sendActionSaveNSDocument"]
+- !private ["So30NSStandardKeyBindingRespondingP", "tags"]
+- !private ["So30NSStandardKeyBindingRespondingP", "tagsInStruct"]
+- !private ["So11NSTableViewC", "beginUpdates"]
+- !private ["So11NSTableViewC", "endUpdates"]
+- !private ["So11NSTableViewC", "expandItem"]
+- !private ["So11NSTableViewC", "moveItem"]
+- !private ["So11NSTableViewC", "reloadItem"]
+- !private ["So14NSTextDelegateP", "beginUpdates"]
+- !private ["So14NSTextDelegateP", "endUpdates"]
+- !private ["So14NSTextDelegateP", "expandItem"]
+- !private ["So14NSTextDelegateP", "moveItem"]
+- !private ["So14NSTextDelegateP", "reloadItem"]
+- !private ["So18NSTextViewDelegateP", "beginUpdates"]
+- !private ["So18NSTextViewDelegateP", "endUpdates"]
+- !private ["So18NSTextViewDelegateP", "expandItem"]
+- !private ["So18NSTextViewDelegateP", "moveItem"]
+- !private ["So18NSTextViewDelegateP", "reloadItem"]
+- !private ["So18NSTouchBarProviderP", "DispatchQueue"]
+- !private ["So18NSTouchBarProviderP", "NSPasteboardItem"]
+- !private ["So18NSTouchBarProviderP", "beginUpdates"]
+- !private ["So18NSTouchBarProviderP", "changeTagsCheckbox"]
+- !private ["So18NSTouchBarProviderP", "convertTagsToSavableForm"]
+- !private ["So18NSTouchBarProviderP", "delayBetweenClicks"]
+- !private ["So18NSTouchBarProviderP", "endUpdates"]
+- !private ["So18NSTouchBarProviderP", "expandItem"]
+- !private ["So18NSTouchBarProviderP", "itemPasteboardTypeForMyTagCells"]
+- !private ["So18NSTouchBarProviderP", "moveItem"]
+- ["So18NSTouchBarProviderP", "outlineView"]
+- !private ["So18NSTouchBarProviderP", "reloadItem"]
+- !private ["So18NSTouchBarProviderP", "sendActionSaveNSDocument"]
+- !private ["So18NSTouchBarProviderP", "tags"]
+- !private ["So18NSTouchBarProviderP", "tagsInStruct"]
+- !private ["So23NSUserActivityRestoringP", "DispatchQueue"]
+- !private ["So23NSUserActivityRestoringP", "NSPasteboardItem"]
+- !private ["So23NSUserActivityRestoringP", "beginUpdates"]
+- !private ["So23NSUserActivityRestoringP", "changeTagsCheckbox"]
+- !private ["So23NSUserActivityRestoringP", "convertTagsToSavableForm"]
+- !private ["So23NSUserActivityRestoringP", "delayBetweenClicks"]
+- !private ["So23NSUserActivityRestoringP", "endUpdates"]
+- !private ["So23NSUserActivityRestoringP", "expandItem"]
+- !private ["So23NSUserActivityRestoringP", "itemPasteboardTypeForMyTagCells"]
+- !private ["So23NSUserActivityRestoringP", "moveItem"]
+- ["So23NSUserActivityRestoringP", "outlineView"]
+- !private ["So23NSUserActivityRestoringP", "reloadItem"]
+- !private ["So23NSUserActivityRestoringP", "sendActionSaveNSDocument"]
+- !private ["So23NSUserActivityRestoringP", "tags"]
+- !private ["So23NSUserActivityRestoringP", "tagsInStruct"]
+- !private ["So33NSUserInterfaceItemIdentificationP", "DispatchQueue"]
+- !private ["So33NSUserInterfaceItemIdentificationP", "NSPasteboardItem"]
+- !private ["So33NSUserInterfaceItemIdentificationP", "beginUpdates"]
+- !private ["So33NSUserInterfaceItemIdentificationP", "changeTagsCheckbox"]
+- !private ["So33NSUserInterfaceItemIdentificationP", "convertTagsToSavableForm"]
+- !private ["So33NSUserInterfaceItemIdentificationP", "delayBetweenClicks"]
+- !private ["So33NSUserInterfaceItemIdentificationP", "endUpdates"]
+- !private ["So33NSUserInterfaceItemIdentificationP", "expandItem"]
+- !private ["So33NSUserInterfaceItemIdentificationP", "itemPasteboardTypeForMyTagCells"]
+- !private ["So33NSUserInterfaceItemIdentificationP", "moveItem"]
+- ["So33NSUserInterfaceItemIdentificationP", "outlineView"]
+- !private ["So33NSUserInterfaceItemIdentificationP", "reloadItem"]
+- !private ["So33NSUserInterfaceItemIdentificationP", "sendActionSaveNSDocument"]
+- !private ["So33NSUserInterfaceItemIdentificationP", "tags"]
+- !private ["So33NSUserInterfaceItemIdentificationP", "tagsInStruct"]
+- !private ["So26NSUserInterfaceValidationsP", "beginUpdates"]
+- !private ["So26NSUserInterfaceValidationsP", "endUpdates"]
+- !private ["So26NSUserInterfaceValidationsP", "expandItem"]
+- !private ["So26NSUserInterfaceValidationsP", "moveItem"]
+- !private ["So26NSUserInterfaceValidationsP", "reloadItem"]
+- !private ["So6NSViewC", "beginUpdates"]
+- !private ["So6NSViewC", "endUpdates"]
+- !private ["So6NSViewC", "expandItem"]
+- !private ["So6NSViewC", "moveItem"]
+- !private ["So6NSViewC", "reloadItem"]
+- ["So16NSViewControllerC", "Bool"]
+- !private ["So16NSViewControllerC", "DispatchQueue"]
+- ["So16NSViewControllerC", "Int"]
+- ["So16NSViewControllerC", "NSDragOperation"]
+- ["So16NSViewControllerC", "NSDraggingInfo"]
+- ["So16NSViewControllerC", "NSOutlineView"]
+- !private ["So16NSViewControllerC", "NSPasteboardItem"]
+- ["So16NSViewControllerC", "NSPasteboardWriting"]
+- !private ["So16NSViewControllerC", "Tag"]
+- !private ["So16NSViewControllerC", "changeTagsCheckbox"]
+- !private ["So16NSViewControllerC", "convertTagsToSavableForm"]
+- !private ["So16NSViewControllerC", "delayBetweenClicks"]
+- !private ["So16NSViewControllerC", "itemPasteboardTypeForMyTagCells"]
+- ["So16NSViewControllerC", "outlineView"]
+- !private ["So16NSViewControllerC", "sendActionSaveNSDocument"]
+- !private ["So16NSViewControllerC", "tags"]
+- !private ["So16NSViewControllerC", "tagsInStruct"]
+- !private ["So9OS_objectC", "asyncAfter"]
+- !private ["So9OS_objectC", "main"]
+- !private ["s9OptionSetP", "move"]
+- !private ["Sk", "count"]
+- !private ["Sk", "first"]
+- !private ["Sk", "subscript"]
+- !private ["Sm", "count"]
+- !private ["Sm", "first"]
+- !private ["Sm", "subscript"]
+- !private ["SY", "move"]
+- !private ["7Combine9SchedulerP", "asyncAfter"]
+- !private ["7Combine9SchedulerP", "main"]
+- !private ["ST", "count"]
+- !private ["ST", "first"]
+- !private ["ST", "subscript"]
+- !private ["s10SetAlgebraP", "move"]
+- !private ["13MindNode_Tags3TagC", "children"]
+- !private ["13MindNode_Tags3TagC", "deinit"]
+- !private ["13MindNode_Tags3TagC", "uuid"]
+- ["13MindNode_Tags14ViewControllerC", "Bool"]
+- !private ["13MindNode_Tags14ViewControllerC", "DispatchQueue"]
+- ["13MindNode_Tags14ViewControllerC", "Int"]
+- ["13MindNode_Tags14ViewControllerC", "NSDragOperation"]
+- ["13MindNode_Tags14ViewControllerC", "NSDraggingInfo"]
+- ["13MindNode_Tags14ViewControllerC", "NSOutlineView"]
+- !private ["13MindNode_Tags14ViewControllerC", "NSPasteboardItem"]
+- ["13MindNode_Tags14ViewControllerC", "NSPasteboardWriting"]
+- !private ["13MindNode_Tags14ViewControllerC", "Tag"]
+- !private ["13MindNode_Tags14ViewControllerC", "changeTagsCheckbox"]
+- !private ["13MindNode_Tags14ViewControllerC", "convertTagsToSavableForm"]
+- ["13MindNode_Tags14ViewControllerC", "deinit"]
+- !private ["13MindNode_Tags14ViewControllerC", "delayBetweenClicks"]
+- !private ["13MindNode_Tags14ViewControllerC", "itemPasteboardTypeForMyTagCells"]
+- ["13MindNode_Tags14ViewControllerC", "outlineView"]
+- !private ["13MindNode_Tags14ViewControllerC", "sendActionSaveNSDocument"]
+- !private ["13MindNode_Tags14ViewControllerC", "tags"]
+- !private ["13MindNode_Tags14ViewControllerC", "tagsInStruct"]
+- !private ["s14_ArrayProtocolP", "count"]
+- !private ["s14_ArrayProtocolP", "first"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s24_DestructorSafeContainerP", "count"]
+- !private ["s24_DestructorSafeContainerP", "first"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s19_HasContiguousBytesP", "count"]
+- !private ["s19_HasContiguousBytesP", "first"]
+- !private ["s19_HasContiguousBytesP", "subscript"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "first"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSPasteboardItem"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "asyncAfter"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "beginUpdates"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "changeTagsCheckbox"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "children"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "convertTagsToSavableForm"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "delayBetweenClicks"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "endUpdates"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "expandItem"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "itemPasteboardTypeForMyTagCells"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "moveItem"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "outlineView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "pasteboardItems"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "reloadItem"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sendActionSaveNSDocument"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setString"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "string"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "tags"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "tagsInStruct"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "uuid"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "DispatchQueue"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "NSPasteboardItem"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "asyncAfter"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "beginUpdates"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "changeTagsCheckbox"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "children"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "convertTagsToSavableForm"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "delayBetweenClicks"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "endUpdates"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "expandItem"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "itemPasteboardTypeForMyTagCells"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "main"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "moveItem"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "outlineView"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "pasteboardItems"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "reloadItem"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "sendActionSaveNSDocument"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setString"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "string"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "tags"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "tagsInStruct"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "uuid"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "first"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "beginUpdates"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "endUpdates"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "expandItem"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "moveItem"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "reloadItem"]
+- !private ["13MindNode_Tags9tagsClassC", "findTagAlongWithParentAndIndex"]
+- !private ["13MindNode_Tags9tagsClassC", "insertItem"]
+- !private ["13MindNode_Tags9tagsClassC", "list"]
+- !private ["13MindNode_Tags9tagsClassC", "removeItem"]
+depends-nominal:
+- !private "Sa"
+- !private "SK"
+- "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- !private "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
+- !private "So18OS_dispatch_objectC"
+- !private "So17OS_dispatch_queueC"
+- !private "8Dispatch0A4TimeV"
+- !private "SE"
+- "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- "SH"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- !private "So22NSAccessibilityElementP"
+- !private "So20NSAccessibilityGroupP"
+- !private "So22NSAccessibilityOutlineP"
+- !private "So15NSAccessibilityP"
+- !private "So20NSAccessibilityTableP"
+- !private "So29NSAnimatablePropertyContainerP"
+- !private "So25NSAppearanceCustomizationP"
+- "So8NSCodingP"
+- !private "So9NSControlC"
+- "So28NSControlTextEditingDelegateP"
+- !private "So15NSDragOperationV"
+- !private "So21NSDraggingDestinationP"
+- !private "So14NSDraggingInfoP"
+- !private "So16NSDraggingSourceP"
+- "So8NSEditorP"
+- "So26NSExtensionRequestHandlingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So13NSOutlineViewC"
+- "So23NSOutlineViewDataSourceP"
+- "So21NSOutlineViewDelegateP"
+- !private "So12NSPasteboardC"
+- !private "So16NSPasteboardItemC"
+- !private "So19NSPasteboardReadingP"
+- !private "So19NSPasteboardWritingP"
+- "So11NSResponderC"
+- "So17NSSeguePerformingP"
+- "So30NSStandardKeyBindingRespondingP"
+- !private "So11NSTableViewC"
+- !private "So14NSTextDelegateP"
+- !private "So18NSTextViewDelegateP"
+- "So18NSTouchBarProviderP"
+- "So23NSUserActivityRestoringP"
+- "So33NSUserInterfaceItemIdentificationP"
+- !private "So26NSUserInterfaceValidationsP"
+- !private "So6NSViewC"
+- "So16NSViewControllerC"
+- !private "So9OS_objectC"
+- !private "s9OptionSetP"
+- !private "Sk"
+- !private "Sm"
+- !private "SY"
+- !private "7Combine9SchedulerP"
+- !private "ST"
+- !private "s10SetAlgebraP"
+- !private "13MindNode_Tags3TagC"
+- "13MindNode_Tags14ViewControllerC"
+- !private "s14_ArrayProtocolP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s38__DefaultCustomPlaygroundQuickLookableP"
+- !private "13MindNode_Tags9tagsClassC"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/swift/XPC.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/swift/ObjectiveC.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/swift/CoreData.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/swift/CoreImage.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/swift/QuartzCore.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/swift/Dispatch.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/swift/Metal.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/swift/Darwin.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/swift/Foundation.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/swift/CoreFoundation.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/swift/CoreGraphics.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/swift/Swift.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/swift/IOKit.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/swift/AppKit.swiftmodule/x86_64.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Combine.framework/Modules/Combine.swiftmodule/x86_64-apple-macos.swiftinterface"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/XPC.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreData.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Combine.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Metal.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Swift.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/IOKit.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/AppKit.swiftmodule/x86_64-apple-macos.swiftmodule"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SPUDownloadData.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SPUDownloaderDeprecated.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/Sparkle.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SPUDownloaderDelegate.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SUUpdaterDelegate.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SUVersionComparisonProtocol.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SPUDownloaderProtocol.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SUVersionDisplayProtocol.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SUAppcastItem.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SPUDownloaderSession.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/MindNodeTags/PFMoveApplication.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/MindNodeTags/letsMove-Bridging-Header.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SPUDownloader.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SUCodeSigningVerifier.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SUUpdater.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SUStandardVersionComparator.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SUErrors.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SUExport.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SUAppcast.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Headers/SPUURLRequest.h"
+- "/Users/jonathan/Programming Files/Personal Programming Large/MindNodeTags/Pods/Sparkle/Sparkle.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/xpc/XPC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "576e84eb769983566a5c5b3f38543cc7"
