@@ -196,5 +196,21 @@
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "909DE41A-37C5-460D-8CBD-04111AA752C3"
+            shouldBeEnabled = "No"
+            ignoreCount = "8"
+            continueAfterRunningActions = "No"
+            filePath = "MindNodeTags/DataSource (Create Cell + Drag Drop).swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "outlineView(_:validateDrop:proposedItem:proposedChildIndex:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

@@ -5,7 +5,7 @@ I made this app as I love MindNode but wish that it had tags. This is my first M
 
 ![Example Image](images/IntroGif.gif)
 
-## [Download](https://github.com/jonpdw/MindNode-Tags/releases/latest/download/MindNode_Tags_Application.zip)
+## [Download](https://rebrand.ly/mindnode-tags-download-github)
 
 
 ## Compatability
