@@ -63,7 +63,7 @@ extension ViewController: NSOutlineViewDataSource {
     // if a proposed drop location should be accepted
     func outlineView(_ outlineView: NSOutlineView, validateDrop info: NSDraggingInfo, proposedItem item: Any?, proposedChildIndex index: Int) -> NSDragOperation {
         // make input variables more descriptive
-        let proposedParentForDrag = item
+        let proposedParentForDrag = item as? Tag
         let proposedChildIndex = index
         
         // get stuff from pasteboard
@@ -73,8 +73,17 @@ extension ViewController: NSOutlineViewDataSource {
         // find the actual tag that the pasteboard references
         let draggedItem = tags.findTagAlongWithParentAndIndex(itemsUUIDToFind: UUIDfromPasteboard, currentItem: nil)
         
-        // we try make a think a parent of itself don't allow it
-        if draggedItem?.Item.uuid == (proposedParentForDrag as? Tag)?.uuid {return []}
+        // we try make a thing a parent of itself don't allow it
+        if draggedItem?.Item.uuid == proposedParentForDrag?.uuid {return []}
+        
+        // don't allow a parent to be dragged into one of its children
+        var parent = proposedParentForDrag
+        while parent != nil {
+            if parent?.uuid == draggedItem?.Item.uuid {
+                return []
+            }
+            parent = tags.findTagAlongWithParentAndIndex(itemsUUIDToFind: parent!.uuid, currentItem: nil)?.Parent
+        }
         
         let canDrag = proposedChildIndex >= 0
         switch canDrag {

@@ -18,7 +18,7 @@ func mergeUnfilteredWithFilteredWithoutReset(unfiltered: nodeStruct, filtered: n
         // if parents don't match then the node has been dragged to a new spot. Treat it like it has been deleted
         let doParentsMatch: Bool
         if parent == nil || parentID == nil {
-            #warning("I am not sure if I have the logic quite right here. What should happen if the parent or parentID are nill. Is giving a false really the right thing to do")
+            #warning("I am not sure if I have the logic quite right here. What should happen if the parent or parentID are nil. Is giving a false really the right thing to do")
             doParentsMatch = false
             
         } else {
@@ -67,6 +67,11 @@ func mergeUnfilteredWithFilteredWithoutReset(unfiltered: nodeStruct, filtered: n
 
 
 func mergeUnfilteredWithFiltered(unfiltered: [nodeStruct], filtered: [nodeStruct]) -> [nodeStruct] {
+    // if all nodes are deleted from the map both filtered and unfiltered will have a count of 0. Some of the code below doesn't work if both of these are blank so we just handle this case here.
+    guard unfiltered.count > 0 && filtered.count > 0 else {
+        return []
+    }
+    
     var mUnfiltered = blankNodeStruct
     mUnfiltered.subnodes = unfiltered
 
@@ -182,13 +187,21 @@ func filterNodeByTag(subnode: nodeStruct, tagsToFilterBy: [String]) -> [nodeStru
     
     var listOfReturningSubNodes: [nodeStruct] = []
     
-    for node in subnode.subnodes {
-        if doesNodeContainTagsFromTagList(node: node, taglist: tagsToFilterBy) {
-            listOfReturningSubNodes += [node]
-        } else {
-            listOfReturningSubNodes += filterNodeByTag(subnode: node, tagsToFilterBy: tagsToFilterBy)
+    if doesNodeContainTagsFromTagList(node: subnode, taglist: tagsToFilterBy) {
+        // this is for the case where the Main node contains a tag. In this case all children of it should show.
+        listOfReturningSubNodes += subnode.subnodes
+    }
+    else {
+        for node in subnode.subnodes {
+            if doesNodeContainTagsFromTagList(node: node, taglist: tagsToFilterBy) {
+                listOfReturningSubNodes += [node]
+            } else {
+                listOfReturningSubNodes += filterNodeByTag(subnode: node, tagsToFilterBy: tagsToFilterBy)
+            }
         }
     }
+    
+    
     
     if (listOfReturningSubNodes.count == 0) && (!doesNodeContainTagsFromTagList(node: subnode, taglist: tagsToFilterBy)) {
         return [nodeStruct]()

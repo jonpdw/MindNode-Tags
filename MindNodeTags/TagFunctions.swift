@@ -52,6 +52,8 @@ class tagsClass{
     func replaceTagInTagList(replaceUUID: String, newCheckboxState: NSControl.StateValue) {
         list = MindNode_Tags.replaceTagInTagList(tagList: list, replaceUUID: replaceUUID, newCheckboxState: newCheckboxState)
     }
+    
+
 }
 
 func removeItemSingle(removeIndex: Int, parentOfItemToRemove: Tag, inputItem: Tag) -> Tag {

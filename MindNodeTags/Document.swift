@@ -21,6 +21,14 @@ class Document: NSDocument {
     
     override init() {
         super.init()
+        NotificationCenter.default.addObserver(self, selector: #selector(callSave), name: NSNotification.Name(rawValue: "callSave"), object: nil)
+        
+    }
+    
+    @objc func callSave(){
+        DispatchQueue.global(qos: .default).async {
+            self.save(nil)
+        }
     }
     
     override func write(to url: URL, ofType typeName: String) throws {

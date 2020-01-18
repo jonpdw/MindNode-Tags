@@ -169,6 +169,8 @@ class ViewController: NSViewController{
         
         NotificationCenter.default.addObserver(self, selector: #selector(noMindNodeDoc), name: NSNotification.Name(rawValue: "No MindNode Doc"), object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(addDocumentToBackup), name: NSNotification.Name(rawValue: "makeBackup"), object: nil)
+        
         NotificationCenter.default.addObserver(self, selector: #selector(highlightOnSelect), name: NSOutlineView.selectionDidChangeNotification, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(preferencesChanged), name: UserDefaults.didChangeNotification, object: nil)
@@ -299,7 +301,9 @@ class ViewController: NSViewController{
             nsDocumentMainNodeList = docToSave
             
             sendActionSaveNSDocument()
-            if counter == 10 {
+//            usleep(useconds_t(1000000*0.1))
+//            try! nsDocumentContent!.read(from: nsDocumentContent!.fileURL!, ofType: "")
+            if counter == 30 {
                 print("Broke out of unfilter save check after 10 attemps")
                 break
             }
@@ -354,6 +358,8 @@ class ViewController: NSViewController{
         }
     }
     @objc func addNewTagstoTagList() {
+        
+//        backupClass.indexOfCurrentBackup = 0
         
         //This happens when I close with command w
         if nsDocumentContent == nil {return}
@@ -441,7 +447,17 @@ class ViewController: NSViewController{
         
     }
     
+    
+    
     @IBAction func changeCurrentDocumentToHistory(_ sender: NSSegmentedControl) {
+        
+        changeUIto(newState: false)
+        
+        if getMindNodeOpenFileUrlMaster() == nil {
+            // sometimes this is nil and it causes problems in functions below. I thought I would nip it in the bud here.
+            print("Failed to get url. Can't change history")
+            return
+        }
         
         switch sender.selectedSegment {
         case 0: // back
@@ -464,6 +480,10 @@ class ViewController: NSViewController{
         }
         print("Current Pointer = \(backupClass.indexOfCurrentBackup+1)/\(backupClass.numberFiles)")
         addNewTagstoTagList()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6, execute: {
+            self.changeUIto(newState: true)
+        })
         
     }
     
@@ -524,7 +544,15 @@ class ViewController: NSViewController{
         //    DispatchQueue.main.asyncAfter(deadline: .now(), execute: thingToDo)
         // tried calling from inside an asyncAfter and calling: nsDocumentContent!.save("viewcontroller save action")
         // both froze on me. it seemed like the nsDocument one froze more often
-        NSApp.sendAction(#selector(NSDocument.save(_:)), to: nil, from: self)
+//        try! nsDocumentContent?.write(to: nsDocumentContent!.fileURL!, ofType: "")
+//        try! nsDocumentContent?.updateChangeCount(.changeAutosaved)
+//        nsDocumentContent?.save(nil)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "callSave"), object: nil)
+//        DispatchQueue.global(qos: .default).async {
+//
+//            NSApp.sendAction(#selector(NSDocument.save(_:)), to: nil, from: self)
+//        }
+        
         
     }
     

@@ -27,11 +27,22 @@ struct nodeStruct: Codable {
     var noteIndicatorColor: String?
     var fileLink: fileLinkStruct?
     var task: taskStruct?
+    
+    func simple() -> simpleNodeStruct{
+        return MindNode_Tags.simple(self)
+    }
 }
 
 struct nodeStructList: Codable {
     var nodeStructVar: [nodeStruct]
     var mindMapsForStruct6: [mindMapsStruct6]?
+}
+
+extension Array where Element == nodeStruct
+{
+    func simple() -> [simpleNodeStruct] {
+        return MindNode_Tags.simple(self)
+    }
 }
 
 struct taskStruct: Codable {

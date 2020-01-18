@@ -52,7 +52,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return true
     }
 
-
+    @IBAction func makeBackup(_ sender: Any) {
+        print("makeBackup")
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "makeBackup"), object: nil)
+    }
+    
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         return false
     }
