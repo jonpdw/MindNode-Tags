@@ -13,7 +13,7 @@ I made this app as I love MindNode but wish that it had tags. This is my first M
 
 ## Help
 
-Send me a [message](https://m.me/107546807437328)
+Send me a [message on Facebook Messenger ](https://m.me/107546807437328)
 
 ## Known Problem 
 * In some cases changes to a note will be lost. If you edit a note then strait to mindnode-tags and filter on one of the tags your changes will be lost. To stop this either click elsewhere on the map or save the document before filtering
