@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import Countly
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -36,6 +37,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        let config: CountlyConfig = CountlyConfig()
+        config.appKey = "b1ac4733c7bab0de2b09674b1a74e5a1639fec9b"
+        config.host = "https://asia-try.count.ly"
+        
+        Countly.sharedInstance().start(with: config)
+        
         PFMoveToApplicationsFolderIfNecessary()
         tryOpenCurrentMindNodeFile()
         

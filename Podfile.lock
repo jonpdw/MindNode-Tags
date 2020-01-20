@@ -1,20 +1,26 @@
 PODS:
+  - Countly (19.08):
+    - Countly/NotificationService (= 19.08)
+  - Countly/NotificationService (19.08)
   - Sparkle (1.22.0)
   - SwiftSoup (2.2.2)
 
 DEPENDENCIES:
+  - Countly
   - Sparkle
   - SwiftSoup
 
 SPEC REPOS:
   trunk:
+    - Countly
     - Sparkle
     - SwiftSoup
 
 SPEC CHECKSUMS:
+  Countly: 7c596e00a90a35b7978713a384455fe9a18f28aa
   Sparkle: 593ac2e677c07bcb6c3b22d621240e7cbedaab57
   SwiftSoup: 77147d707df716eb6dbd06c5c24d35ad5ba62ee1
 
-PODFILE CHECKSUM: fa45d726d8fbac3d0be2531e049f90a3c2daf87c
+PODFILE CHECKSUM: bd385b4d3abdd3a928d3516b0e48ee312bcd8cdd
 
 COCOAPODS: 1.8.4
